@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh_CN" style="overflow: hidden;">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -10,15 +10,15 @@
 <meta name="description" content="This is page-header (.page-header &gt; h1)">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="__ROOT__/statics/simpleboot/themes/{:C('SP_ADMIN_STYLE')}/theme.min.css" rel="stylesheet">
-<link href="__ROOT__/statics/simpleboot/css/simplebootadmin.css" rel="stylesheet">
-<link href="__ROOT__/statics/simpleboot/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
+<link href="/statics/simpleboot/themes/<?php echo C('SP_ADMIN_STYLE');?>/theme.min.css" rel="stylesheet">
+<link href="/statics/simpleboot/css/simplebootadmin.css" rel="stylesheet">
+<link href="/statics/simpleboot/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
 <!--[if IE 7]>
-	<link rel="stylesheet" href="__ROOT__/statics/simpleboot/font-awesome/4.2.0/css/font-awesome-ie7.min.css">
+	<link rel="stylesheet" href="/statics/simpleboot/font-awesome/4.2.0/css/font-awesome-ie7.min.css">
 <![endif]-->
-<link rel="stylesheet" href="__ROOT__/statics/simpleboot/themes/{:C('SP_ADMIN_STYLE')}/simplebootadminindex.min.css?">
+<link rel="stylesheet" href="/statics/simpleboot/themes/<?php echo C('SP_ADMIN_STYLE');?>/simplebootadminindex.min.css?">
 <!--[if lte IE 8]>
-	<link rel="stylesheet" href="__ROOT__/statics/simpleboot/css/simplebootadminindex-ie.css?" />
+	<link rel="stylesheet" href="/statics/simpleboot/css/simplebootadminindex-ie.css?" />
 <![endif]-->
 <style>
 .navbar .nav_shortcuts .btn{margin-top: 5px;}
@@ -37,26 +37,26 @@
 <script>
 //全局变量
 var GV = {
-	HOST:"{$_SERVER['HTTP_HOST']}",
-    DIMAUB: "__ROOT__/",
+	HOST:"<?php echo ($_SERVER['HTTP_HOST']); ?>",
+    DIMAUB: "/",
     JS_ROOT: "statics/js/",
     TOKEN: ""
 };
 </script>
-<php>$submenus=(array)json_decode($SUBMENU_CONFIG);</php>
+<?php $submenus=(array)json_decode($SUBMENU_CONFIG); ?>
 
-<php>function getsubmenu($submenus){</php>
-<php>foreach($submenus as $menu){ </php>
+<?php function getsubmenu($submenus){ ?>
+<?php foreach($submenus as $menu){ ?>
 					<li>
-						<php>if(empty($menu->items)){</php>
-							<a href="javascript:openapp('{$menu:url}','{$menu:id}','{$menu:name}');">
-								<i class="fa fa-{$menu:icon|default='desktop'}"></i>
-								<span class="menu-text">{$menu:name}</span>
+						<?php if(empty($menu->items)){ ?>
+							<a href="javascript:openapp('<?php echo ($menu->url); ?>','<?php echo ($menu->id); ?>','<?php echo ($menu->name); ?>');">
+								<i class="fa fa-<?php echo ((isset($menu->icon) && ($menu->icon !== ""))?($menu->icon):'desktop'); ?>"></i>
+								<span class="menu-text"><?php echo ($menu->name); ?></span>
 							</a>
-						<php>}else{</php>
+						<?php }else{ ?>
 							<a href="#" class="dropdown-toggle">
-								<i class="fa fa-{$menu:icon|default='desktop'} normal"></i>
-								<span class="menu-text normal">{$menu:name}</span>
+								<i class="fa fa-<?php echo ((isset($menu->icon) && ($menu->icon !== ""))?($menu->icon):'desktop'); ?> normal"></i>
+								<span class="menu-text normal"><?php echo ($menu->name); ?></span>
 								<b class="arrow fa fa-angle-right normal"></b>
 								<i class="fa fa-reply back"></i>
 								<span class="menu-text back">返回</span>
@@ -64,89 +64,87 @@ var GV = {
 							</a>
 							
 							<ul  class="submenu">
-									<php>getsubmenu1((array)$menu->items)</php>
+									<?php getsubmenu1((array)$menu->items) ?>
 							</ul>	
-						<php>}</php>
+						<?php } ?>
 						
 					</li>
 					
-				<php>}</php>
-<php>}</php>
+				<?php } ?>
+<?php } ?>
 
-<php>function getsubmenu1($submenus){</php>
-<php>foreach($submenus as $menu){</php>
+<?php function getsubmenu1($submenus){ ?>
+<?php foreach($submenus as $menu){ ?>
 					<li>
-						<php>if(empty($menu->items)){</php>
-							<a href="javascript:openapp('{$menu:url}','{$menu:id}','{$menu:name}');">
+						<?php if(empty($menu->items)){ ?>
+							<a href="javascript:openapp('<?php echo ($menu->url); ?>','<?php echo ($menu->id); ?>','<?php echo ($menu->name); ?>');">
 								<i class="fa fa-caret-right"></i>
-								<span class="menu-text">{$menu:name}</span>
+								<span class="menu-text"><?php echo ($menu->name); ?></span>
 							</a>
-						<php>}else{</php>
+						<?php }else{ ?>
 							<a href="#" class="dropdown-toggle">
 								<i class="fa fa-caret-right"></i>
-								<span class="menu-text">{$menu:name}</span>
+								<span class="menu-text"><?php echo ($menu->name); ?></span>
 								<b class="arrow fa fa-angle-right"></b>
 							</a>
 							<ul  class="submenu">
-									<php>getsubmenu2((array)$menu->items)</php>
+									<?php getsubmenu2((array)$menu->items) ?>
 							</ul>	
-						<php>}</php>
+						<?php } ?>
 						
 					</li>
 					
-				<php>}</php>
-<php>}</php>
+				<?php } ?>
+<?php } ?>
 
-<php>function getsubmenu2($submenus){</php>
-<php>foreach($submenus as $menu){</php>
+<?php function getsubmenu2($submenus){ ?>
+<?php foreach($submenus as $menu){ ?>
 					<li>
-						<a href="javascript:openapp('{$menu:url}','{$menu:id}','{$menu:name}');">
+						<a href="javascript:openapp('<?php echo ($menu->url); ?>','<?php echo ($menu->id); ?>','<?php echo ($menu->name); ?>');">
 								&nbsp;<i class="fa fa-angle-double-right"></i>
-								<span class="menu-text">{$menu:name}</span>
+								<span class="menu-text"><?php echo ($menu->name); ?></span>
 							</a>
 					</li>
 					
-				<php>}</php>
-<php>}</php>
+				<?php } ?>
+<?php } ?>
 
 
-<if condition="APP_DEBUG">
-<style>
+<?php if(APP_DEBUG): ?><style>
 #think_page_trace_open{left: 0 !important;
 right: initial !important;}			
-</style>
-</if>
+</style><?php endif; ?>
 
 </head>
 
 <body style="min-width:900px;" screen_capture_injected="true">
 	<div id="loading"><i class="loadingicon"></i><span>正在加载...</span></div>
 	<div id="right_tools_wrapper">
-		<!--<span id="right_tools_clearcache" title="清除缓存" onclick="javascript:openapp('{:u('admin/setting/clearcache')}','right_tool_clearcache','清除缓存');"><i class="fa fa-trash-o right_tool_icon"></i></span>
+		<!--<span id="right_tools_clearcache" title="清除缓存" onclick="javascript:openapp('<?php echo u('admin/setting/clearcache');?>','right_tool_clearcache','清除缓存');"><i class="fa fa-trash-o right_tool_icon"></i></span>
 		--><span id="refresh_wrapper" title="刷新当前页" ><i class="fa fa-refresh right_tool_icon"></i></span>
 	</div>
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-				<a href="__ROOT__/index.php?g=admin&m=index&a=index" class="brand"> <small> 
-				<img src="__ROOT__/statics/images/icon/logo-18.png">
+				<a href="/index.php?g=admin&m=index&a=index" class="brand"> <small> 
+				<img src="/statics/images/icon/logo-18.png">
 					微赢生物科技有限公司
 				</small>
 				</a>
 				<ul class="nav simplewind-nav pull-right">
 					<li class="light-blue">
 						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-							<img class="nav-user-photo" src="__ROOT__/statics/images/icon/logo-18.png" alt="{$admin.user_login}">
+							<img class="nav-user-photo" src="/statics/images/icon/logo-18.png" alt="<?php echo ($admin["user_login"]); ?>">
 							<span class="user-info">
-								<small>欢迎,</small>{$admin.user_nicename|default=$admin[user_login]}
+								<small>欢迎,</small><?php echo ((isset($admin["user_nicename"]) && ($admin["user_nicename"] !== ""))?($admin["user_nicename"]):$admin[user_login]); ?>
 							</span>
 							<i class="fa fa-caret-down"></i>
 						</a>
 						<ul class="user-menu pull-right dropdown-menu dropdown-yellow dropdown-caret dropdown-closer">
-							<li><a href="javascript:openapp('{:u('setting/site')}','index_site','站点管理');"><i class="fa fa-cog"></i> 站点管理</a></li>
-							<li><a href="javascript:openapp('{:u('user/userinfo')}','index_userinfo','个人资料');"><i class="fa fa-user"></i> 个人资料</a></li>
+							<li><a href="javascript:openapp('<?php echo u('setting/site');?>','index_site','站点管理');"><i class="fa fa-cog"></i> 站点管理</a></li>
+							<li><a href="javascript:openapp('<?php echo u('user/userinfo');?>','index_userinfo','个人资料');"><i class="fa fa-user"></i> 个人资料</a></li>
 							<li class="divider"></li>
-							<li><a href="{:U('Public/logout')}"><i class="fa fa-sign-out"></i> 退出</a></li>
+							<li><a href="<?php echo U('Public/logout');?>"><i class="fa fa-sign-out"></i> 退出</a></li>
 						</ul>
 					</li>
 				</ul>
@@ -161,7 +159,7 @@ right: initial !important;}
 			</div> -->
 			<div id="nav_wraper">
 			<ul class="nav nav-list">
-				{:getsubmenu($submenus)}
+				<?php echo getsubmenu($submenus);?>
 			</ul>
 			</div>
 			
@@ -172,7 +170,7 @@ right: initial !important;}
 				<a id="task-pre" class="task-changebt">←</a>
 				<div id="task-content">
 				<ul class="macro-component-tab" id="task-content-inner">
-					<li class="macro-component-tabitem noclose" app-id="0" app-url="{:u('main/index')}" app-name="首页">
+					<li class="macro-component-tabitem noclose" app-id="0" app-url="<?php echo u('main/index');?>" app-name="首页">
 						<span class="macro-tabs-item-text">首页</span>
 					</li>
 				</ul>
@@ -182,13 +180,13 @@ right: initial !important;}
 			</div>
 
 			<div class="page-content" id="content">
-				<iframe src="{:U('Main/index')}" style="width:100%;height: 100%;" frameborder="0" id="appiframe-0" class="appiframe"></iframe>
+				<iframe src="<?php echo U('Main/index');?>" style="width:100%;height: 100%;" frameborder="0" id="appiframe-0" class="appiframe"></iframe>
 			</div>
 		</div>
 	</div>
 	
-	<script src="__ROOT__/statics/js/jquery.js"></script>
-	<script src="__ROOT__/statics/simpleboot/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/statics/js/jquery.js"></script>
+	<script src="/statics/simpleboot/bootstrap/js/bootstrap.min.js"></script>
 	<script>
 	var b = $("#sidebar").hasClass("menu-min");
 	var a = "ontouchend" in document;
@@ -233,7 +231,7 @@ right: initial !important;}
 				return false;
 			});
 	</script>
-	<script src="__TMPL__assets/js/index.js"></script>
+	<script src="/tpl_admin/simpleboot/assets/js/index.js"></script>
 
 
 

@@ -186,3 +186,8 @@ nav.menu {
 .service-reasons {
 	background: url(../../img/bg.jpg) 50% 0 no-repeat fixed;
 }
+
+.open > .dropdown-menu {
+	display: block;
+	z-index: 10000;
+}
