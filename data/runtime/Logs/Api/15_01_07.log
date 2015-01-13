@@ -1,3 +1,0 @@
-[ 2015-01-07T16:26:14+08:00 ] ::1 /index.php?g=api&m=oauth&a=login&type=qq
-ERR: 请配置您申请的APP_KEY和APP_SECRET
-

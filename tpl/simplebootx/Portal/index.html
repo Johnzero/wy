@@ -1,143 +1,1088 @@
 <!DOCTYPE html>
-	<html>
-	<head>
-		<title>{$site_seo_title} {$site_name}</title>
-		<meta name="keywords" content="{$site_seo_keywords}" />
-		<meta name="description" content="{$site_seo_description}">
-		<tc_include file="Public:head" />
-		<link href="__TMPL__Public/css/slippry/slippry.css" rel="stylesheet">
-		<style>
-			.caption-wraper{position: absolute;left:50%;bottom:2em;}
-			.caption-wraper .caption{
-			position: relative;left:-50%;
-			background-color: rgba(0, 0, 0, 0.54);
-			padding: 0.4em 1em;
-			color:#fff;
-			-webkit-border-radius: 1.2em;
-			-moz-border-radius: 1.2em;
-			-ms-border-radius: 1.2em;
-			-o-border-radius: 1.2em;
-			border-radius: 1.2em;
-			}
-			@media (max-width: 767px){
-				.sy-box{margin: 12px -20px 0 -20px;}
-				.caption-wraper{left:0;bottom: 0.4em;}
-				.caption-wraper .caption{
-				left: 0;
-				padding: 0.2em 0.4em;
-				font-size: 0.92em;
-				-webkit-border-radius: 0;
-				-moz-border-radius: 0;
-				-ms-border-radius: 0;
-				-o-border-radius: 0;
-				border-radius: 0;}
-			}
-		</style>
-	</head>
-<body class="body-white">
-<tc_include file="Public:nav" />
+<!--[if IE 8]>
+<html class="ie ie8">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9">
+<![endif]-->
+<!--[if gt IE 9]>
+<!-->
+<html>
+<!--<![endif]-->
 
-<php>
-$home_slides=sp_getslide("portal_index");
+<head>
+    <meta charset="utf-8">
+    <title>{$site_seo_title} {$site_name}</title>
+    <meta name="keywords" content="{$site_seo_keywords}" />
+    <meta name="description" content="{$site_seo_description}">
+    <meta name="author" content="wangsong1233276@sina.com">
 
-$home_slides=empty($home_slides)?$default_home_slides:$home_slides;
-</php>
-<ul id="homeslider" class="unstyled">
-	<foreach name="home_slides" item="vo">
-	<li>
-		<div class="caption-wraper">
-			<div class="caption">{$vo.slide_name}</div>
-		</div>
-		<a href="{$vo.slide_url}"><img src="{:sp_get_asset_upload_path($vo['slide_pic'])}" alt=""></a>
-	</li>
-	</foreach>
-</ul>
-<div class="container">
-	
-	<div>
-		<h1 class="text-center">快速了解ThinkCMF</h1>
-		<h3 class="text-center">Quickly understand the ThinkCMF</h3>
-	</div>
-	<div class="row">
-		<div class="span4">
-			 <h2 class="font-large nospace"><i class="fa fa-bars"></i> MVC分层模式</h2>
-             <p>使用MVC应用程序被分成三个核心部件：模型（M）、视图（V）、控制器（C），他不是一个新的概念，只是ThinkCMF将其发挥到了极致。</p>
-		</div>
-		<div class="span4">
-			 <h2 class="font-large nospace"><i class="fa fa-group"></i> 用户管理</h2>
-             <p>ThinkCMF内置了灵活的用户管理方式，并可直接与第三方站点进行互联互通，如果你愿意甚至可以对单个用户或群体用户的行为进行记录及分享，为您的运营决策提供有效参考数据。</p>
-		</div>
-		<div class="span4">
-			  <h2 class="font-large nospace"><i class="fa fa-cloud"></i> 云端部署</h2>
-              <p>通过驱动的方式可以轻松支持云平台的部署，让你的网站无缝迁移，内置已经支持SAE、BAE，正式版将对云端部署进行进一步优化。</p>
-		</div>
-	</div>
-	
-	<div class="row">
-		<div class="span4">
-			 <h2 class="font-large nospace"><i class="fa fa-heart"></i> 安全策略</h2>
-             <p>提供的稳健的安全策略，包括备份恢复，容错，防治恶意攻击登陆，网页防篡改等多项安全管理功能，保证系统安全，可靠，稳定的运行。</p>
-		</div>
-		<div class="span4">
-			 <h2 class="font-large nospace"><i class="fa fa-cubes"></i> 应用模块化</h2>
-             <p>提出全新的应用模式进行扩展，不管是你开发一个小功能还是一个全新的站点，在ThinkCMF中你只是增加了一个APP，每个独立运行互不影响，便于灵活扩展和二次开发。</p>
-		</div>
-		<div class="span4">
-			  <h2 class="font-large nospace"><i class="fa fa-certificate"></i> 免费开源</h2>
-              <p>代码遵循Apache2开源协议，免费使用，对商业用户也无任何限制。</p>
-		</div>
-	</div>
-	
-	<div>
-		<h1 class="text-center">最新资讯</h1>
-		<h3 class="text-center">Last News</h3>
-	</div>
-	<php>
-		$lastnews=sp_sql_posts("cid:$portal_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:listorder asc;limit:4;"); 
-	</php>
-	<div class="row">
-		<foreach name="lastnews" item="vo">
-		<php>$smeta=json_decode($vo['smeta'],true);</php>
-		<div class="span3">
-			<div class="tc-gridbox">
-				<div class="header">
-					<div class="item-image">
-						<a href="{:leuu('article/index',array('id'=>$vo['tid']))}">
-							<if condition="empty($smeta['thumb'])"> 
-								<img src="__TMPL__Public/images/default_tupian1.png" class="img-responsive" alt="{$vo.post_title}"/>
-							<else /> 
-								<img src="{:sp_get_asset_upload_path($smeta['thumb'])}" class="img-responsive img-thumbnail" alt="{$vo.post_title}" />
-							</if>
-						</a>
-					</div>
-					<h3><a href="{:leuu('article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></h3>
-					<hr>
-				</div>
-				<div class="body">
-					<p><a href="{:leuu('article/index',array('id'=>$vo['tid']))}">{:msubstr($vo['post_excerpt'],0,32)}</a></p>
-				</div>
-			</div>
-		</div>
-		</foreach>
-	</div>
-<tc_include file="Public:footer"/>
-</div>
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Library CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/static/css/animations.css" media="screen">
+    <link rel="stylesheet" href="/static/css/superfish.css" media="screen">
+    <link rel="stylesheet" href="/static/css/revolution-slider/css/settings.css" media="screen">
+    <link rel="stylesheet" href="/static/css/prettyPhoto.css" media="screen">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Skin -->
+    <link rel="stylesheet" href="/static/css/colors/green.css" id="colors">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/static/css/theme-responsive.css">
+    <!-- Switcher CSS -->
+    <link href="/static/css/switcher.css" rel="stylesheet">
+    <link href="/static/css/spectrum.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/static/img/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/img/ico/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/img/ico/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/img/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/ico/apple-touch-icon-144.png">
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+        <script src="/static///html5shim.googlecode.com/svn/trunk/html5.js">
+        </script>
+        <script src="/static/js/respond.min.js">
+        </script>
+    <![endif]-->
+    <!--[if IE]>
+        <link rel="stylesheet" href="/static/css/ie.css">
+    <![endif]-->
+</head>
 
-<tc_include file="Public:scripts"/>
-<script src="__TMPL__Public/js/slippry.min.js"></script>
-<script>
-$(function() {
-	var demo1 = $("#homeslider").slippry({
-		transition: 'fade',
-		useCSS: true,
-		captions: false,
-		speed: 1000,
-		pause: 3000,
-		auto: true,
-		preload: 'visible'
-	});
-});
-</script>
-{:hook('footer_end')}
+<body class="home">
+    <div class="wrap">
+        <!-- Header Start -->
+        <header id="header">
+            <!-- Header Top Bar Start -->
+            <div class="top-bar">
+                <div class="slidedown collapse">
+                    <div class="container">
+                        <div class="phone-email pull-left">
+                            <a>
+                                <i class="icon-phone">
+                                </i>
+                                电话 : {$site_admin_tel}
+                            </a>
+                            <a href="/static/mail%40example.html">
+                                <i class="icon-envelope">
+                                </i>
+                                邮件 : {$site_admin_email}
+                            </a>
+                        </div>
+                        <div class="pull-right">
+                            <ul class="social pull-left">
+                                <li class="facebook">
+                                    <a href="/static/#">
+                                        <i class="icon-facebook">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="/static/#">
+                                        <i class="icon-twitter">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="dribbble">
+                                    <a href="/static/#">
+                                        <i class="icon-dribbble">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="linkedin">
+                                    <a href="/static/#">
+                                        <i class="icon-linkedin">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="rss">
+                                    <a href="/static/#">
+                                        <i class="icon-rss">
+                                        </i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header Top Bar End -->
+            <!-- Main Header Start -->
+            <div class="main-header">
+                <div class="container">
+                    <!-- TopNav Start -->
+                    <div class="topnav navbar-header">
+                        <a class="navbar-toggle down-button" data-toggle="collapse" data-target=".slidedown">
+                            <i class="icon-angle-down icon-current">
+                            </i>
+                        </a>
+                    </div>
+                    <!-- TopNav End -->
+                    <!-- Logo Start -->
+                    <div class="logo pull-left">
+                        <h1>
+                            <a href="/static/index-2.html">
+                                <img src="/static/img/logo.jpg" alt="pixma" width="340" height="70">
+                            </a>
+                        </h1>
+                    </div>
+                    <!-- Logo End -->
+                    <!-- Mobile Menu Start -->
+                    <div class="mobile navbar-header">
+                        <a class="navbar-toggle" data-toggle="collapse" href="/static/.html">
+                            <i class="icon-reorder icon-2x">
+                            </i>
+                        </a>
+                    </div>
+                    <!-- Mobile Menu End -->
+                    <!-- Menu Start -->
+                    <nav class="collapse navbar-collapse menu">
+                        <ul class="nav navbar-nav sf-menu">
+                            <li><a id="current" href="/static/contact.html">首页</a></li>
+                            <li>
+                               <a href="/static/index-2.html">
+                               走进微赢
+                               <span class="sf-sub-indicator">
+                               <i class="icon-angle-down "></i>
+                               </span>
+                               </a>
+                               <ul>
+                                  <li><a href="/static/index-3.html" class="sf-with-ul">微赢简介</a></li>
+                                  <li><a href="/static/index-4.html" class="sf-with-ul">微赢动态</a></li>
+                                  <li><a href="/static/index-nivo.html" class="sf-with-ul">微赢团队</a></li>
+                                  <li><a href="/static/index-nivo.html" class="sf-with-ul">微赢风貌</a></li>
+                               </ul>
+                            </li>
+                            <li>
+                               <a href="/static/#" class="sf-with-ul">
+                               品牌动态 
+                               <span class="sf-sub-indicator">
+                               <i class="icon-angle-down "></i>
+                               </span>
+                               </a>
+                               <ul>
+                                  <li><a href="/static/shortcodes.html" class="sf-with-ul">品牌简介</a></li>
+                                  <li><a href="/static/icons.html" class="sf-with-ul">品牌专利</a></li>
+                                  <li><a href="/static/pricing-table.html" class="sf-with-ul">产品安全</a></li>
+                                  <li style="display:none;">
+                                     <a href="/static/#" class="sf-with-ul"> 
+                                     Third Level Menu 
+                                     <span class="sf-sub-indicator pull-right">
+                                     <i class="icon-angle-right "></i>
+                                     </span>
+                                     </a>
+                                     <ul>
+                                        <li><a href="/static/#" class="sf-with-ul">Menu Item</a></li>
+                                        <li><a href="/static/#" class="sf-with-ul">Menu Item</a></li>
+                                        <li><a href="/static/#" class="sf-with-ul">Menu Item</a></li>
+                                     </ul>
+                                  </li>
+                               </ul>
+                            </li>
+                            <li>
+                               <a href="/static/#" class="sf-with-ul">
+                               微赢商学院
+                               <span class="sf-sub-indicator">
+                               <i class="icon-angle-down "></i>
+                               </span>
+                               </a>
+                               <ul>
+                                  <li><a href="/static/about.html" class="sf-with-ul">学院介绍</a></li>
+                                  <li><a href="/static/services.html" class="sf-with-ul">师资团队</a></li>
+                                  <li><a href="/static/testimonials.html" class="sf-with-ul">课程大纲</a></li>
+                                  <!-- <li><a href="/static/full-width.html" class="sf-with-ul">Full Width Page</a></li>
+                                  <li><a href="/static/page-left-sidebar.html" class="sf-with-ul">Left Sidebar</a></li>
+                                  <li><a href="/static/page-right-sidebar.html" class="sf-with-ul">Right Sidebar</a></li>
+                                  <li><a href="/static/page-left-navigation.html" class="sf-with-ul">Left Navigation</a></li>
+                                  <li><a href="/static/page-right-navigation.html" class="sf-with-ul">Right Navigation</a></li>
+                                  <li><a href="/static/faq.html" class="sf-with-ul">FAQ</a></li>
+                                  <li><a href="/static/page-404.html" class="sf-with-ul">404 Page</a></li>
+                                  <li><a href="/static/sitemap.html" class="sf-with-ul">Sitemap</a></li> -->
+                               </ul>
+                            </li>
+                            <li>
+                               <a href="/static/#" class="sf-with-ul">
+                               会员中心
+                               <span class="sf-sub-indicator">
+                               <i class="icon-angle-down "></i>
+                               </span>
+                               </a>
+                               <ul>
+                                  <li><a href="/static/portfolio-two.html" class="sf-with-ul">授权查询</a></li>
+                                  <li><a href="/static/portfolio-three.html" class="sf-with-ul">加盟政策</a></li>
+                                  <!-- <li><a href="/static/portfolio-four.html" class="sf-with-ul">4 Column</a></li>
+                                  <li><a href="/static/portfolio-single.html" class="sf-with-ul">Single Item Page</a></li>
+                                  <li><a href="/static/portfolio-single-big.html" class="sf-with-ul">Single Large Item Page</a></li> -->
+                               </ul>
+                            </li>
+
+                            <li>
+                               <a href="/static/#" class="sf-with-ul">
+                               会员登录
+                               <span class="sf-sub-indicator">
+                               <i class="icon-user"></i>
+                               </span>
+                               </a><ul class="display"></ul>
+                            </li>
+                           
+                        </ul>
+                        </nav>
+                    <!-- Menu End -->
+                </div>
+            </div>
+            <!-- Main Header End -->
+        </header>
+        <!-- Header End -->
+        <!-- Content Start -->
+        <div id="main">
+            <!-- Slider Start-->
+            <div class="fullwidthbanner-container">
+                <div class="fullwidthbanner rslider">
+                    <ul>
+                        <!-- THE FIRST SLIDE -->
+                        <li data-delay="6000" data-masterspeed="300" data-transition="fade">
+                            <div class="slotholder">
+                                <img src="/static/img/slider/slider-bg-1.jpg" data-fullwidthcentering="on" alt="Pixma">
+                            </div>
+                            <div class="caption modern_big_bluebg h1 lft tp-caption start" data-x="40"
+                            data-y="85" data-speed="700" data-endspeed="800" data-start="1000" data-easing="easeOutQuint"
+                            data-endeasing="easeOutQuint">
+                                <h3>
+                                    我们的产品
+                                </h3>
+                            </div>
+                            <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo"
+                            data-start="1400" data-speed="1050" data-y="180" data-x="40">
+                                <div class="list-slide">
+                                    <i class="icon-camera slide-icon">
+                                    </i>
+                                    <h5 class="dblue">
+                                        10 predefined color skins
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo"
+                            data-start="1800" data-speed="1200" data-y="220" data-x="40">
+                                <div class="list-slide">
+                                    <i class="icon-search slide-icon">
+                                    </i>
+                                    <h5 class="dblue">
+                                        SEO optimized template files
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo"
+                            data-start="2200" data-speed="1350" data-y="260" data-x="40">
+                                <div class="list-slide">
+                                    <i class="icon-code slide-icon">
+                                    </i>
+                                    <h5 class="dblue">
+                                        Working Ajax Contact Form
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="caption lfb caption_button_1 fadeout tp-caption start" data-x="40"
+                            data-y="330" data-speed="900" data-endspeed="300" data-start="2700" data-hoffset="-70"
+                            data-easing="easeOutExpo">
+                                <a class="btn-special hidden-xs btn-grey" href="/static/#">
+                                    详细了解
+                                </a>
+                            </div>
+                            <div class="caption lfb caption_button_2 fadeout tp-caption start" data-x="210"
+                            data-y="330" data-speed="800" data-endspeed="300" data-start="2900" data-hoffset="70"
+                            data-easing="easeOutExpo">
+                                <a class="btn-special hidden-xs btn-color" href="/static/#">
+                                    立即购买
+                                </a>
+                            </div>
+                        </li>
+                        <!-- THE RESPONSIVE SLIDE -->
+                        <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
+                            <img src="/static/img/slider/slider-bg-2.jpg" data-fullwidthcentering="on" alt="">
+                            <div class="caption large_text sft" data-x="660" data-y="54" data-speed="300"
+                            data-start="800" data-easing="easeOutExpo">
+                                TOUCH ENABLED
+                            </div>
+                            <div class="caption medium_text sfl" data-x="689" data-y="92" data-speed="300"
+                            data-start="1100" data-easing="easeOutExpo">
+                                AND
+                            </div>
+                            <div class="caption large_text sfr" data-x="738" data-y="88" data-speed="300"
+                            data-start="1100" data-easing="easeOutExpo">
+                                <span class="dblue">
+                                    RESPONSIVE
+                                </span>
+                            </div>
+                            <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo"
+                            data-start="1400" data-speed="1050" data-y="180" data-x="660">
+                                <div class="list-slide">
+                                    <i class="icon-eye-open slide-icon">
+                                    </i>
+                                    <h5>
+                                        Retina Ready
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo"
+                            data-start="1800" data-speed="1200" data-y="220" data-x="660">
+                                <div class="list-slide">
+                                    <i class="icon-table slide-icon">
+                                    </i>
+                                    <h5>
+                                        Responsive pricing tables
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo"
+                            data-start="2200" data-speed="1350" data-y="260" data-x="660">
+                                <div class="list-slide">
+                                    <i class="icon-ok slide-icon">
+                                    </i>
+                                    <h5>
+                                        Crossbrowser Compatible
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo"
+                            data-start="2600" data-speed="1350" data-y="300" data-x="660">
+                                <div class="list-slide">
+                                    <i class="icon-twitter slide-icon">
+                                    </i>
+                                    <h5>
+                                        Twitter 1.1 API Support
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo"
+                            data-start="3000" data-speed="1350" data-y="340" data-x="660">
+                                <div class="list-slide">
+                                    <i class="icon-th slide-icon">
+                                    </i>
+                                    <h5>
+                                        Bootstrap Framework
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="caption lfl" data-x="53" data-y="30" data-speed="300" data-start="1400"
+                            data-easing="easeOutExpo">
+                                <img src="/static/img/slider/responsive-imac.png" alt="iMac Responsive">
+                            </div>
+                            <div class="caption lfl" data-x="323" data-y="145" data-speed="300" data-start="1500"
+                            data-easing="easeOutExpo">
+                                <img src="/static/img/slider/responsive-ipad.png" alt="iPad Responsive">
+                            </div>
+                            <div class="caption lfl" data-x="472" data-y="253" data-speed="300" data-start="1600"
+                            data-easing="easeOutExpo">
+                                <img src="/static/img/slider/responsive-iphone.png" alt="iPhone Responsive">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- Slider End-->
+            <!-- Slogan Start-->
+            <!-- <div class="slogan">
+                <div class="container">
+                    <div class="row">
+                        <div class="slogan-content">
+                            <div class="col-lg-9 col-md-9">
+                                <h2 class="slogan-title">
+                                    帮助微赢所有经销商客户，帮助80后90后实现创业梦想！
+                                </h2>
+                            </div>
+                            <div class="col-lg-3 col-md-3">
+                                <div class="get-started">
+                                    <button class="btn btn-special btn-color pull-right">
+                                        经销商登陆
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="clearfix">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+            <!-- Slogan End-->
+            <!-- Main Content start-->
+            
+            <!-- Main Content end-->
+            <!-- Recent works start-->
+            <div class="recentworks">
+                <div class="container">
+                  <div class="row">
+                     <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 animate_afl d1">
+                        <div class="portfolio-desc">
+                           <h3 class="title">公司简介</h3>
+                           <p>公司秉承“微信，让世界认识你。”的企业宗旨，紧跟时代步伐，自主创新，依托强大的互联网平台，结合顶尖产品研发团队，通过整合移动领域核心技术、微营销、互联网、顶级策划人才、运营人才、高级工程师、优质资源打破传统商业模式，实现线上线下同步推广销售，让每一位消费者以最便捷的方式最合理的价格，用上好产品。</p>
+                           <div class="carousel-controls">
+                              <a class="prev" href="/static/#portfolio-carousel" data-slide="prev"><i class="icon-angle-left"></i></a>
+                              <a class="next" href="/static/#portfolio-carousel" data-slide="next"><i class="icon-angle-right"></i></a>
+                              <div class="clearfix"></div>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-lg-8 col-md-8 col-xs-12">
+                        <div class="row">
+                           <div id="portfolio-carousel" class="portfolio-carousel slide">
+                              <div class="carousel-inner">
+                                 <div class="item active">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d2">
+                                       <div class="portfolio-item">
+                                          <a href="/static/img/portfolio/po_1.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                          <span class="portfolio-item-hover"></span>
+                                          <span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/po_1.jpg" alt=" "/>
+                                          </a>
+                                          <div class="portfolio-item-title">
+                                             <a href="/static/single-project.html">刘总</a>
+                                             <p>
+                                                刘兴隆
+                                             </p>
+                                          </div>
+                                          <div class="clearfix"></div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d3">
+                                       <div class="portfolio-item">
+                                          <a href="/static/img/portfolio/po_2.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                          <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/po_2_1.jpg" alt=" "/>
+                                          </a>
+                                          <div class="portfolio-item-title">
+                                             <a href="/static/single-project.html">康总</a>
+                                             <p>
+                                                康咏铧
+                                             </p>
+                                          </div>
+                                          <div class="clearfix"></div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d4">
+                                       <div class="portfolio-item">
+                                          <a href="/static/img/portfolio/po_3.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                          <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/po_3_1.jpg" alt=" "/>
+                                          </a>
+                                          <div class="portfolio-item-title">
+                                             <a href="/static/single-project.html">营销策划师</a>
+                                             <p>
+                                                特聘讲师
+                                             </p>
+                                          </div>
+                                          <div class="clearfix"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="item">
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
+                                       <div class="portfolio-item">
+                                          <a href="/static/img/portfolio/portfolio-4.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                          <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/portfolio-4.jpg" alt=" "/>
+                                          </a>
+                                          <div class="portfolio-item-title">
+                                             <a href="/static/single-project.html">Camera Icon</a>
+                                             <p>
+                                                Icon / Device
+                                             </p>
+                                          </div>
+                                          <div class="clearfix"></div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
+                                       <div class="portfolio-item">
+                                          <a href="/static/img/portfolio/portfolio-5.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                          <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/portfolio-5.jpg" alt=" "/>
+                                          </a>
+                                          <div class="portfolio-item-title">
+                                             <a href="/static/single-project.html">Penguin</a>
+                                             <p>
+                                                Animal / Nature
+                                             </p>
+                                          </div>
+                                          <div class="clearfix"></div>
+                                       </div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
+                                       <div class="portfolio-item">
+                                          <a href="/static/images/portfolio/portfolio-6.html" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                          <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/portfolio-6.jpg" alt=" "/>
+                                          </a>
+                                          <div class="portfolio-item-title">
+                                             <a href="/static/single-project.html">Sound Box</a>
+                                             <p>
+                                                Audio / Sound
+                                             </p>
+                                          </div>
+                                          <div class="clearfix"></div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="clearfix"></div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Recent work end-->
+
+            <div class="service-reasons bottom-pad">
+               <div class="container">
+                  <div class="row">
+                     <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h3 class="title">我们的特点</h3>
+                     </div> -->
+                     <div class="divider"></div>
+                     <div class="reasons">
+                        <div class="col-lg-4 col-md-4 col-sm-4 animate_afc d1">
+                           <div class="content-box big ch-item bottom-pad-small">
+                              <div class="ch-info-wrap">
+                                 <div class="ch-info">
+                                    <div class="ch-info-front ch-img-1"><i class="icon-bullhorn"></i></div>
+                                    <div class="ch-info-back">
+                                       <i class="icon-bullhorn"></i>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="content-box-info">
+                                  <h3>媒体报道</h3>
+                                  <p>错过了十年前的淘宝， 你还要错过今天的微商吗？ 2015“首届中国微商博览会·暨微商&O2O行业发展趋势论坛”，由中国微商联盟和沸点天下（中国）联合主办。  中国微商博览会对微商行业的发展意义深远，将行业……
+                                  </p>
+                                  <a href="/static/#">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                               </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 animate_afc d2">
+                           <div class="content-box big ch-item bottom-pad-small">
+                              <div class="ch-info-wrap">
+                                 <div class="ch-info">
+                                    <div class="ch-info-front ch-img-1"><i class="icon-group"></i></div>
+                                    <div class="ch-info-back">
+                                       <i class="icon-group"></i>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="content-box-info">
+                                  <h3>创业故事</h3>
+                                  <p>
+                                    12月27日，由微赢生物科技有限公司举办的“微赢商学院第三届微商交流会”圆满结束。此次交流会共21微商大咖出席，由中国著名实战微营销培训顾问Jordan主持，微赢CEO康咏铧先生担任主讲嘉宾。
+                                  </p>
+                                  <a href="/static/#">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                               </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-4 col-sm-4 animate_afc d3">
+                           <div class="content-box big ch-item">
+                              <div class="ch-info-wrap">
+                                 <div class="ch-info">
+                                    <div class="ch-info-front ch-img-1"><i class="icon-book"></i></div>
+                                    <div class="ch-info-back">
+                                       <i class="icon-book"></i>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="content-box-info">
+                                  <h3>微赢商学院</h3>
+                                  <p>
+                                     半年前，微赢生物科技有限公司是谁都不知道的Nothing，甚至在招聘职员时，别人都以为是传销、是骗子。但是经过短暂的时间，微赢生物科技有限公司发生了天翻地覆的变化。目前微赢生物已经成为中国发展最快的微商企业之一。
+                                  </p>
+                                  <a href="/static/#">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                               </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Features start -->  
+            <div class="features bottom-pad">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <h3  class="title">我们的服务</h3>
+                        <div class="row">
+                           <div class="circular-nav">
+                              <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 animate_afl">
+                                 <div id="cn-tabs">
+                                    <div class="service service-1">
+                                       <div class="cn-content">
+                                          <h4>Premium Sliders</h4>
+                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                          <a href="/static/#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                                          <div class="clearfix"></div>
+                                       </div>
+                                       <div class="clearfix"></div>
+                                    </div>
+                                    <div class="service service-2">
+                                       <div class="cn-content">
+                                          <h4>Unlimited Colors</h4>
+                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                          <a href="/static/#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                                          <div class="clearfix"></div>
+                                       </div>
+                                    </div>
+                                    <div class="service service-3">
+                                       <div class="cn-content">
+                                          <h4>Shortcodes</h4>
+                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                          <a href="/static/#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                                       </div>
+                                       <div class="clearfix"></div>
+                                    </div>
+                                    <div class="service service-4">
+                                       <div class="cn-content">
+                                          <h4>300+ Icons</h4>
+                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                          <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                          <a href="/static/#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                                       </div>
+                                       <div class="clearfix"></div>
+                                    </div>
+                                 </div>
+                                 <div class="clearfix"></div>
+                              </div>
+                              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 animate_afr">
+                                 <div class="cn-wrapper">
+                                    <ul>
+                                       <li class="circle-1 circle"><a class="active" href="/static/#"><span class="icon-picture"></span></a></li>
+                                       <li class="circle-2 circle"><a href="/static/#"><span class="icon-rocket"></span></a></li>
+                                       <li class="circle-3 circle"><a href="/static/#"><span class="icon-puzzle-piece"></span> </a></li>
+                                       <li class="circle-4 circle"><a href="/static/#"><span class="icon-thumbs-up-alt"></span></a></li>
+                                    </ul>
+                                    <div class="clearfix"></div>
+                                 </div>
+                              </div>
+                              <div class="clearfix"></div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- Features End -->
+
+
+            <!-- Latest Posts start -->
+            <!-- <div class="latest-posts">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-12 col-md-12 com-sm-12 col-xs-12">
+                        <h3 class="title">微赢动态</h3>
+                     </div>
+                     <div class="clearfix"></div>
+                     <div class="blog-showcase col-lg-12 col-md-12 col-sm-12 col-xs-12 animate_afb d1">
+                        <ul>
+                           <li class="">
+                              <div class="blog-showcase-thumb col-lg-4">
+                                 <div class="post-body">
+                                    <a class="post-item-link" href="/static/img/portfolio/dt_1.jpg" data-rel="prettyPhoto"><span class="post-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img alt="" src="/static/img/portfolio/dt_1.jpg"></a>
+                                 </div>
+                              </div>
+                              <div class="blog-showcase-extra-info col-lg-4">
+                                 <span><a href="/static/#">2015-1-10</a></span>
+                                 <h4><a href="/static/#" class="title">微赢动态一</a></h4>
+                                 <p>微商作为中国新兴行业，他们没有丰富的微营销实战经验更没有接受过相关的专业培训。因此，微商在经营……</p>
+                                 <a href="/static/#">更多 <i class="icon-double-angle-right"></i></a>
+                              </div>
+                           </li>
+                           <li>
+                              <div class="blog-showcase-thumb col-lg-4">
+                                 <div class="post-body">
+                                    <a class="post-item-link" href="/static/img/portfolio/dt_2.jpg" data-rel="prettyPhoto"><span class="post-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img alt="" src="/static/img/portfolio/dt_2.jpg"></a>
+                                 </div>
+                              </div>
+                              <div class="blog-showcase-extra-info col-lg-4">
+                                 <span><a href="/static/#">2015-1-10</a></span>
+                                 <h4><a href="/static/#" class="title">微赢动态二</a></h4>
+                                 <p>康总以实际可行的方案及个人独到的见解实时与大家互动交流，会上就有三位微商大咖现场签约一生美蓝莓虾青素眼贴，成为微赢蓝莓虾青素眼贴的省级代理。</p>
+                                 <a href="/static/#">更多 <i class="icon-double-angle-right"></i></a>
+                              </div>
+                           </li>
+                           <li class="blog-first-el">
+                              <div class="blog-showcase-thumb col-lg-4">
+                                 <div class="post-body">
+                                    <a class="post-item-link" href="/static/img/portfolio/dt_3.jpg" data-rel="prettyPhoto"><span class="post-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img alt="" src="/static/img/portfolio/dt_3.jpg"></a>
+                                 </div>
+                              </div>
+                              <div class="blog-showcase-extra-info col-lg-4">
+                                 <span><a href="/static/#">2015-1-10</a></span>
+                                 <h4><a href="/static/#" class="title">微赢动态三</a></h4>
+                                 <p>对此，作为中国著名微营销专家的康总给出了自己一套独特的解决方案。康总每提出一……</p>
+                                 <a href="/static/#">更多 <i class="icon-double-angle-right"></i></a>
+                              </div>
+                           </li>
+                        </ul>
+                        <div class="clearfix"></div>
+                     </div>
+                  </div>
+                  <div class="divider"></div>
+               </div>
+            </div> -->
+            <!-- Latest Posts End -->
+            <!-- Our Clients Start-->
+            <div class="our-clients">
+                <div class="container">
+                    <div class="row">
+                        <div class="client">
+                            <div class="client-logo">
+                                <div class="col-lg-12 col-md-12 col-sm-8 col-xs-12">
+                                    <div class="clients-title">
+                                        <h3 class="title">
+                                            友情链接
+                                        </h3>
+                                        <div class="carousel-controls pull-right">
+                                            <a class="prev" href="/static/#client-carousel" data-slide="prev">
+                                                <i class="icon-angle-left">
+                                                </i>
+                                            </a>
+                                            <a class="next" href="/static/#client-carousel" data-slide="next">
+                                                <i class="icon-angle-right">
+                                                </i>
+                                            </a>
+                                            <div class="clearfix">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix">
+                                    </div>
+                                    <div class="row">
+                                        <div id="client-carousel" class="client-carousel slide">
+                                            <div class="carousel-inner">
+                                                <div class="item active">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d1">
+                                                        <div class="item-inner">
+                                                            <a href="/static/#">
+                                                                <img alt="Upportdash" src="/static/img/clientslogo/logo-1.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d2">
+                                                        <div class="item-inner">
+                                                            <a href="/static/#">
+                                                                <img alt="Upportdash" src="/static/img/clientslogo/logo-2.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d3">
+                                                        <div class="item-inner">
+                                                            <a href="/static/#">
+                                                                <img alt="Upportdash" src="/static/img/clientslogo/logo-3.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d4">
+                                                        <div class="item-inner">
+                                                            <a href="/static/#">
+                                                                <img alt="Upportdash" src="/static/img/clientslogo/logo-4.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d3">
+                                                        <div class="item-inner">
+                                                            <a href="/static/#">
+                                                                <img alt="Upportdash" src="/static/img/clientslogo/logo-3.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d4">
+                                                        <div class="item-inner">
+                                                            <a href="/static/#">
+                                                                <img alt="Upportdash" src="/static/img/clientslogo/logo-4.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="item">
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item">
+                                                        <div class="item-inner">
+                                                            <a href="/static/#">
+                                                                <img alt="Upportdash" src="/static/img/clientslogo/logo-5.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item">
+                                                        <div class="item-inner">
+                                                            <a href="/static/#">
+                                                                <img alt="Upportdash" src="/static/img/clientslogo/logo-4.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item">
+                                                        <div class="item-inner">
+                                                            <a href="/static/#">
+                                                                <img alt="Upportdash" src="/static/img/clientslogo/logo-3.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item">
+                                                        <div class="item-inner">
+                                                            <a href="/static/#">
+                                                                <img alt="Upportdash" src="/static/img/clientslogo/logo-2.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d3">
+                                                        <div class="item-inner">
+                                                            <a href="/static/#">
+                                                                <img alt="Upportdash" src="/static/img/clientslogo/logo-3.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d4">
+                                                        <div class="item-inner">
+                                                            <a href="/static/#">
+                                                                <img alt="Upportdash" src="/static/img/clientslogo/logo-4.png">
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                               <!--  <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+                                    <div class="row ">
+                                        <div class="testimonials widget">
+                                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                <div class="testimonials-title">
+                                                    <h3 class="title">
+                                                        Testimonials
+                                                    </h3>
+                                                </div>
+                                            </div>
+                                            <div class="clearfix">
+                                            </div>
+                                            <div id="testimonials-carousel" class="testimonials-carousel slide animate_afr d5">
+                                                <div class="carousel-inner">
+                                                    <div class="item active">
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="testimonial item">
+                                                                <p>
+                                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                                    Lorem Ipsum has been the industry's standard dummy text ever since the
+                                                                    1500s, when an unknown printer took a galley of type.
+                                                                </p>
+                                                                <div class="testimonials-arrow">
+                                                                </div>
+                                                                <div class="author">
+                                                                    <div class="testimonial-image ">
+                                                                        <img alt="" src="/static/img/testimonial/team-member-1.jpg">
+                                                                    </div>
+                                                                    <div class="testimonial-author-info">
+                                                                        <a href="/static/#">
+                                                                            <span class="color">
+                                                                                Monica Sing
+                                                                            </span>
+                                                                        </a>
+                                                                        FIFO Themes
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="testimonial item">
+                                                                <p>
+                                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                                    Lorem Ipsum has been the industry's standard dummy text ever since the
+                                                                    1500s, when an unknown printer took a galley of type.
+                                                                </p>
+                                                                <div class="testimonials-arrow">
+                                                                </div>
+                                                                <div class="author">
+                                                                    <div class="testimonial-image ">
+                                                                        <img alt="" src="/static/img/testimonial/team-member-2.jpg">
+                                                                    </div>
+                                                                    <div class="testimonial-author-info">
+                                                                        <a href="/static/#">
+                                                                            <span class="color">
+                                                                                Monzurul Haque
+                                                                            </span>
+                                                                        </a>
+                                                                        FIFO Themes
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="item">
+                                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                            <div class="testimonial item">
+                                                                <p>
+                                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                                                                    Lorem Ipsum has been the industry's standard dummy text ever since the
+                                                                    1500s, when an unknown printer took a galley of type.
+                                                                </p>
+                                                                <div class="testimonials-arrow">
+                                                                </div>
+                                                                <div class="author">
+                                                                    <div class="testimonial-image ">
+                                                                        <img alt="" src="/static/img/testimonial/team-member-3.jpg">
+                                                                    </div>
+                                                                    <div class="testimonial-author-info">
+                                                                        <a href="/static/#">
+                                                                            <span class="color">
+                                                                                Carol Johansen
+                                                                            </span>
+                                                                        </a>
+                                                                        FIFO Themes
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Our Clients End -->
+        </div>
+        <!-- Content End -->
+        <!-- Footer Start -->
+        <footer id="footer">
+            <!-- Footer Top Start -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <!-- <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-one">
+                            <h3>
+                                关于我们
+                            </h3>
+                            <p>
+                                微赢生物科技有限公司成立于2014年，注册资本金1000万，是华东地区专业的移动电商生物科技公司。
+                            </p>
+                        </section> -->
+
+                        <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-one">
+                            <h3>联系我们</h3>
+                            <ul class="contact-us">
+                               <li>
+                                  <i class="icon-map-marker"></i>
+                                  <p> 
+                                     <strong>地址:</strong> 合肥市庐阳区财富广场B座西楼604
+                                  </p>
+                               </li>
+                               <li>
+                                  <i class="icon-phone"></i>
+                                  <p><strong>电话:</strong> 0551-68998601</p>
+                               </li>
+                               <li>
+                                  <i class="icon-envelope"></i>
+                                  <p><strong>Email:</strong>info@fifothemes.com</p>
+                               </li>
+                            </ul>
+                        </section>
+
+                        <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-two">
+                            <h3>
+                                官方服务号
+                            </h3>
+                            <img src="/static/img/wx_1.jpg" style="width:50%">
+                        </section>
+
+                        <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-three">
+                            <h3>
+                                官方订阅号
+                            </h3>
+                            <img src="/static/img/wx_2.jpg" style="width:50%">
+                        </section>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top End -->
+            <!-- Footer Bottom Start -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 text-center">
+                            Copyright &copy; 2014.Company name All rights reserved.
+                        </div>
+                        <!-- <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+                            <ul class="social social-icons-footer-bottom">
+                                <li class="facebook">
+                                    <a href="/static/#" data-toggle="tooltip" title="Facebook">
+                                        <i class="icon-facebook">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="/static/#" data-toggle="tooltip" title="Twitter">
+                                        <i class="icon-twitter">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="dribbble">
+                                    <a href="/static/#" data-toggle="tooltip" title="Dribble">
+                                        <i class="icon-dribbble">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="linkedin">
+                                    <a href="/static/#" data-toggle="tooltip" title="LinkedIn">
+                                        <i class="icon-linkedin">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="rss">
+                                    <a href="/static/#" data-toggle="tooltip" title="Rss">
+                                        <i class="icon-rss">
+                                        </i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom End -->
+        </footer>
+        <!-- Scroll To Top -->
+        <a href="/static/#" class="scrollup">
+            <i class="icon-angle-up">
+            </i>
+        </a>
+    </div>
+    <!-- Wrap End -->
+
+    <!-- The Scripts -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/jquery.parallax.js"></script>
+    <script src="/static/js/modernizr-2.6.2.min.js"></script>
+    <script src="/static/js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="/static/js/jquery.nivo.slider.pack.js"></script>
+    <script src="/static/js/jquery.prettyPhoto.js"></script>
+    <script src="/static/js/superfish.js"></script>
+    <!-- // <script src="/static/js/tweetMachine.js"></script> -->
+    <script src="/static/js/tytabs.js"></script>
+    <script src="/static/js/jquery.gmap.min.js"></script>
+    <script src="/static/js/circularnav.js"></script>
+    <script src="/static/js/jquery.sticky.js"></script>
+    <!-- // <script src="/static/js/jflickrfeed.js"></script> -->
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/waypoints.min.js"></script>
+    <script src="/static/js/spectrum.js"></script>
+    <!-- // <script src="/static/js/switcher.js"></script> -->
+    <script src="/static/js/custom.js"></script>
 </body>
+
 </html>
