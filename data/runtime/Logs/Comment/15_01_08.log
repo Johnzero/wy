@@ -1,0 +1,22 @@
+[ 2015-01-08T10:45:30+08:00 ] ::1 /index.php?g=comment&m=comment&a=post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.003000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.005000s ]
+SQL: SHOW COLUMNS FROM `sp_comments` [ RunTime:0.0060s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0060s ]
+SQL: SELECT `user_login`,`user_email`,`user_nicename` FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW TABLES [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_comments` (`content`,`post_table`,`post_id`,`to_uid`,`parentid`,`url`,`uid`,`full_name`,`email`,`status`,`createtime`) VALUES ('asdasd','posts','1','0','0','index.php?g=&amp;m=article&amp;a=index&amp;id=1','1','admin','wangsong12332@sina.com','1','2015-01-08 10:45:30') [ RunTime:0.0010s ]
+SQL: UPDATE `sp_comments` SET `path`='0-1' WHERE ( id=1 ) [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0070s ]
+SQL: UPDATE `sp_posts` SET `comment_count`=comment_count+1 WHERE `id` = 1 [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: url E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 55 行.
+
+[ 2015-01-08T10:45:42+08:00 ] ::1 /index.php?g=comment&m=comment&a=post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+

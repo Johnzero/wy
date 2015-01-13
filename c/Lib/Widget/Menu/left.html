@@ -1,0 +1,38 @@
+{__NOLAYOUT__}
+<div class='sidebar-nav'>
+<div class="tab-content">
+<volist name="data" id="vo" empty="" >
+<eq name="pid" value="$vo.pid">
+		<li>
+			<a id="nav_link_{$vo['id']}" href="{:U($vo['link'])}" target="{$vo['target']}"><i class="icon-chevron-right"></i>{$vo['title']}</a>
+		</li>
+<else/>
+<neq name="i" value="1">
+	</ul>
+</div>
+</neq>
+	<div class='<eq name="i" value="1">tab-pane<else/>tab-pane</eq>' id="tab_{$vo.pid}">
+	  <ul class='nav nav-tabs nav-stacked'>
+		<li>
+			<a id="nav_link_{$vo['id']}" href="{:U($vo['link'])}" target="{$vo['target']}"><i class="icon-chevron-right"></i>{$vo['title']}</a>
+		</li>
+</eq>
+	<assign name="pid" value="$vo.pid" />
+</volist>
+		</ul>
+	</div>
+</div>
+</div>
+<script>
+  $(function () {
+  	var left_cur=$("#nav_link_{:W('Nav',array('link'=>(MODULE_NAME.'/'.ACTION_NAME),'type'=>'id','level'=>1),false)}");
+  	left_cur.closest('.tab-pane').addClass('active');
+	left_cur.parent('li').addClass("active");
+	left_cur.children('i').addClass('icon-white');
+  	var cur=$("#nav_link_{:W('Nav',array('link'=>(MODULE_NAME.'/'.ACTION_NAME),'type'=>'pid','level'=>2),false)}");
+    cur.closest('.tab-pane').addClass('active');
+	cur.parent('li').addClass("active");
+	cur.children('i').addClass('icon-white');
+	$('#nav-tab a[href="{:U(MODULE_NAME.'/'.ACTION_NAME)}"]').parent('li').addClass('active');
+  })
+</script>

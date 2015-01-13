@@ -1,0 +1,21 @@
+<include file="Comm:Index:header"/>
+<body>
+<include file="Comm:Index:nav"/>
+<div class="container-fluid">
+	<div class="row-fluid wrapper">
+		<div class="span2 sidebar affix " >
+			<include file="Comm:Index:sidebar"/>
+		</div>
+		<div class="span10 pull-right">
+			<div class="content">
+				{:W('Menu',array('location'=>'tab','level'=>'2'),false)}
+				{__CONTENT__}
+			</div>
+		</div>
+	</div>
+	<include file="Comm:Index:footer"/>
+	<include file="Comm:Index:modal"/>
+	<include file="Comm:Index:msg"/>
+</div>
+</body>
+</html>

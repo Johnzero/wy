@@ -1,0 +1,11 @@
+<div class="row-fluid">
+<form class="form-inline form-horizontal" action="{:U('save')}" method="post" id='form'>
+<div class="control-group hidden">
+    <label class="control-label" for="id"></label>
+    <div class="controls">
+        
+    <input type="hidden" value="{$data.id}" name="id" id="id" class="{required:true,digits:true,range:[0,4294967295]}" placeholder="">        <label class="help-inline"></label>
+    </div>
+</div>
+</form>
+</div>
