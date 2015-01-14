@@ -1,0 +1,89 @@
+<div class="sidebar col-lg-3 col-md-3 col-sm-4 col-xs-12">
+    <!-- Search Widget Start -->
+    <div class="widget search-form">
+        <form method="post" class="form-inline" action="{:U('portal/search/index')}">
+        <div class="input-group">
+            <input type="text" name="keyword" value="{:I('get.keyword')}" onfocus="if(this.value=='搜索...')this.value='';" onblur="if(this.value=='')this.value='搜索...';" class="search-input form-control">
+            <span class="input-group-btn">
+            <button type="submit" class="subscribe-btn btn"><i class="icon-search"></i></button>
+            </span>
+        </div>
+        </form>
+       <!-- /input-group -->
+    </div>
+    <!-- Search Widget End -->
+    <!-- Tab Start -->
+    <div class="widget tabs">
+       <div id="horizontal-tabs">
+          <ul class="tabs">
+             <li id="tab1" class="current">Popular</li>
+             <li id="tab2">Recent</li>
+          </ul>
+          <div class="contents">
+             <div class="tabscontent" id="content1" style="display: block;">
+                <ul class="posts">
+                   <li>
+                      <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="img/recent-post-img.jpg"></a>
+                      <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
+                      <span class="color">27 July 2013</span>
+                   </li>
+                   <li>
+                      <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="img/recent-post-img.jpg"></a>
+                      <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
+                      <span class="color">30 July 2013</span>
+                   </li>
+                </ul>
+             </div>
+             <div class="tabscontent" id="content2">
+                <ul class="posts">
+                   <li>
+                      <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="img/recent-post-img.jpg"></a>
+                      <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
+                      <span class="color">27 July 2013</span>
+                   </li>
+                   <li>
+                      <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="img/recent-post-img.jpg"></a>
+                      <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
+                      <span class="color">30 July 2013</span>
+                   </li>
+                </ul>
+             </div>
+          </div>
+       </div>
+    </div>
+    <!-- Tab End -->
+    
+    <!-- Category Widget Start -->
+    <div class="widget category">
+       <h3 class="title">Categories</h3>
+       <ul class="category-list slide">
+          <li><a href="#">Web Design</a></li>
+          <li><a href="#">Graphic Design</a></li>
+          <li><a href="#">Illustration</a></li>
+          <li><a href="#">Logo Design</a></li>
+          <li><a href="#">Wordpress Themes</a></li>
+       </ul>
+    </div>
+    <!-- Category Widget End -->
+    <!-- Ads Widget Start -->
+    <div class="widget ads">
+       <h3 class="title">Advertisement</h3>
+       <div class="ads-img row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+             <img class="img-thumbnail" alt="" src="img/ads-small.jpg">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+             <img class="img-thumbnail" alt="" src="img/ads-small.jpg">
+          </div>
+       </div>
+       <div class="ads-img row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+             <img class="img-thumbnail" alt="" src="img/ads-small.jpg">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+             <img class="img-thumbnail" alt="" src="img/ads-small.jpg">
+          </div>
+       </div>
+    </div>
+    <!-- Ads Widget End -->
+</div>

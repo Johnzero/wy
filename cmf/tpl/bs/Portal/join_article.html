@@ -1,0 +1,86 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+<meta name="viewport" content="width=1024" />
+<meta name="keywords"  content="{$post_keywords}、" />
+<meta name="description" content="{$post_excerpt}" />
+<script type="text/javascript" src="__TMPL__Public/Js/domassistantcompressed-2.8.1.js"></script>
+<script type="text/javascript" src="__TMPL__Public/Js/ie-css3.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="__TMPL__Public/Css/style.css" />
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="Js/html5.js"></script>
+	<![endif]-->
+<title>{$post_title}-{$site_name}</title>
+</head>
+    <body>
+<div class="theblankblock"></div>
+ <header >
+	 <!--导航开始-->
+<tc_include file="Public:nav" />
+	<!--导航结束-->
+</header><section id="insbanner" ><img src="__TMPL__Public/Pic/insbanner.jpg" alt="" />
+<div class="wp"><h2>人力资源</h2>
+	<div class="ent">PERSON WITH ABILITY</div>
+</div>
+</section><section class="resourcont wp">
+		<h5 class="tit">{$post_title}</h5>
+		<div class="time">发布时间:{$post_date}</div></div>
+		<span style="color: rgb(97, 97, 98); font-family: 'Microsoft YaHei UI', 'Microsoft YaHei', Arial, SimSun, 'Segoe UI', Tahoma, Helvetica, sans-serif; font-size: 14px; line-height: 30px; ">岗位描述：</span>{$post_content}
+<script charset="UTF-8" id="huaban_inject_script" type="text/javascript">
+window.HUABAN_PRESETTINGS = { autoInitialize: false };</script><script charset="UTF-8" id="huaban_script" src="__TMPL__Public/Js/widgets.min.js" type="text/javascript">
+</script>
+<script charset="UTF-8" id="huaban_inject_script" type="text/javascript">
+window.HUABAN_PRESETTINGS = { autoInitialize: false };</script>
+<script charset="UTF-8" id="huaban_script" src="__TMPL__Public/Js/widgets.min.js" type="text/javascript">
+</script>
+
+</section>
+			<div class="wp returnpage">
+            <a class="" href="__ROOT__/list/index/id/{$term_id}">返回上级</a></div>
+<footer >
+			
+	<tc_include file="Public:footer" />
+
+</footer>
+<script type="text/javascript" src="__TMPL__Public/Js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__TMPL__Public/Js/easing.js"></script>
+<script type="text/javascript" src="__TMPL__Public/Js/lazyload.js"></script>
+<script type="text/javascript">
+//导航
+$("nav li").hover(function(){
+	$("i",this).addClass("hover");
+	
+},function(){
+	$("i",this).removeClass("hover");
+})
+	
+   
+	$(window).scroll(function(){
+	
+		  var stp=$(window).scrollTop();
+			if(stp==0){
+				$(".theblankblock").height(0);
+				$("#submen").addClass("nofix").css({"top":401})
+					$("header").stop(true,false).css({"top":0})
+					$("header").removeClass("fix").removeClass("aboutheader")
+			}
+			else if(stp>0){
+				$(".theblankblock").height(145);
+				$("#submen").removeClass("nofix").css({"top":64})
+				$("header").stop(true,false).css({"top":-55})
+				$("header").addClass("fix").addClass("aboutheader")
+			}
+		})
+		
+ 	
+	
+	
+	
+	
+
+</script>
+</body>
+</html>

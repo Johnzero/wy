@@ -1,0 +1,122 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+<meta name="viewport" content="width=1024" />
+<meta name="keywords"  content="{$seo_keywords}" />
+<meta name="description" content="{$description}" />
+<script type="text/javascript" src="__TMPL__Public/Js/domassistantcompressed-2.8.1.js"></script>
+<script type="text/javascript" src="__TMPL__Public/Js/ie-css3.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="__TMPL__Public/Css/style.css" />
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="Js/html5.js"></script>
+	<![endif]-->
+<title>{$name}-{$site_name}</title>
+</head>
+    <body>
+<div class="theblankblock"></div>
+ <header >
+ <!--导航开始-->
+<tc_include file="Public:nav" />
+	<!--导航结束-->
+</header><section id="insbanner" ><img src="__TMPL__Public/Pic/insbanner.jpg" alt="" />
+<div class="wp"><h2>{$name}</h2>
+	<div class="ent">News</div>
+</div>
+</section><section id="submen" class="nofix">
+	<div class="wp">
+		<ul class="clearfix">
+				  		<php>
+    $term_id=18;
+     $terms=sp_get_child_terms($term_id ); //获取子分类信息
+</php>
+<foreach name="terms" item="vo">
+<li><a href='__ROOT__/list/index/id/{$vo.term_id}'>{$vo.name}</a> </li>
+</foreach>
+                  		</ul>
+	</div>
+</section> 
+<section id="newslist">
+       		<article class="wp">
+		  <ul>
+		  			<php>
+					$lists = sp_sql_posts_paged("cid:19,20;order:post_date DESC;",10);
+				</php>        
+                              <volist name="lists['posts']" id="vo">
+                              			<php>
+					$smeta=json_decode($vo['smeta'], true);
+				</php>
+                 				<li>
+					<a class="clearfix pop_box" href="{:U('article/index',array('id'=>$vo['tid']))}"> <!-- http://bz32.luyoba.com/news/company/19.html -->
+						<img class="fl" src="__ROOT__/data/upload/{$smeta.thumb}" alt="{$vo.post_title}" />
+						<div class="fr cont">
+							 <h5 class="clearfix">{$vo.post_title}<span class="fr"> {$vo.post_date}</span></h5>
+							 <div class="deta">{$vo.post_excrept}
+							 </div>
+							 <div class="more clearfix"><span class="fr">more<i></i></span></div>
+						</div>
+					</a>
+				</li>	
+				</volist>
+		  </ul>
+			<div class="pager"><a class="a1">{$lists['page']}</a>
+</div>
+		</article>
+	   </section>
+<footer >
+	
+		<tc_include file="Public:footer" />
+
+</footer>
+<script type="text/javascript" src="__TMPL__Public/Js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__TMPL__Public/Js/easing.js"></script>
+<script type="text/javascript" src="__TMPL__Public/Js/lazyload.js"></script>
+<script type="text/javascript">
+//导航
+$("nav li").hover(function(){
+	$("i",this).addClass("hover");
+	
+},function(){
+	$("i",this).removeClass("hover");
+})
+	
+   
+	$(window).scroll(function(){
+	
+		  var stp=$(window).scrollTop();
+			if(stp==0){
+				$(".theblankblock").height(0);
+				$("#submen").addClass("nofix").css({"top":401})
+					$("header").stop(true,false).css({"top":0})
+					$("header").removeClass("fix").removeClass("aboutheader")
+			}
+			else if(stp>0){
+				$(".theblankblock").height(145);
+				$("#submen").removeClass("nofix").css({"top":64})
+				$("header").stop(true,false).css({"top":-55})
+				$("header").addClass("fix").addClass("aboutheader")
+			}
+		})
+		
+ 	
+	
+	
+	
+	
+
+</script>
+
+<script type="text/javascript">
+
+$("#newslist li").hover(function(){
+	$(this).addClass("hover");
+},function(){
+	$(this).removeClass("hover");
+})
+
+	
+</script>
+</body>
+</html>

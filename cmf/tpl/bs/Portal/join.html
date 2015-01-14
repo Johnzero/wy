@@ -1,0 +1,118 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+<meta name="viewport" content="width=1024" />
+<meta name="keywords"  content="" />
+<meta name="description" content="凭借五大优势花三年时间实现从新锐到引领者的跨越选择一个引领变革的成功者全过程合作，创造长远的价值！携手，共同站在了潮流的尖端来吧，让我们携手奋进，在绿色节能建材市场中赢得财富，赢得未来！" />
+<script type="text/javascript" src="__TMPL__Public/Js/domassistantcompressed-2.8.1.js"></script>
+<script type="text/javascript" src="__TMPL__Public/Js/ie-css3.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="__TMPL__Public/Css/style.css" />
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="Js/html5.js"></script>
+	<![endif]-->
+<title>人力资源-我的网站</title>
+</head>
+    <body>
+<div class="theblankblock"></div>
+ <header >
+	 <!--导航开始-->
+<tc_include file="Public:nav" />
+	<!--导航结束-->
+</header><section id="insbanner" ><img src="__TMPL__Public/Pic/insbanner.jpg" alt="" />
+<div class="wp"><h2>人力资源</h2>
+	<div class="ent">PERSON WITH ABILITY</div>
+</div>
+</section><section class="rencailinian wp">
+  <h2>
+	我们期待<em style="color:#03b6dd;">您的加入！</em></h2>
+<p>
+	&nbsp;</p>
+<p>
+	凭借五大优势</p>
+<p>
+	花三年时间实现从新锐到引领者的跨越</p>
+<p>
+	选择一个引领变革的成功者全过程合作，创造长远的价值！</p>
+<p>
+	携手我们，共同站在了潮流的尖端</p>
+<p style="color:#03b6dd;font-size:14px;">
+	来吧，让我们携手奋进，在绿色节能建材市场中赢得财富，赢得未来！</p>
+<script charset="UTF-8" id="huaban_inject_script" type="text/javascript">
+window.HUABAN_PRESETTINGS = { autoInitialize: false };</script><script charset="UTF-8" id="huaban_script" src="__TMPL__Public/Js/widgets.min.js" type="text/javascript">
+</script>
+<script charset="UTF-8" id="huaban_inject_script" type="text/javascript">
+window.HUABAN_PRESETTINGS = { autoInitialize: false };</script>
+<script charset="UTF-8" id="huaban_script" src="__TMPL__Public/Js/widgets.min.js" type="text/javascript">
+</script>
+
+  
+  
+  </section>
+<section class="zhaopin wp">
+<div class="tit">招聘职位</div>
+<ul class="mesg">
+  	<li class="biaotou"> 
+		<span>招聘职位</span><span>发布时间</span>
+	</li>
+	<php>
+					$lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;",10);
+				</php>    
+				<volist name="lists['posts']" id="vo">    
+     <li class=""> 
+		<span><a href="{:U('article/index',array('id'=>$vo['tid']))}">{$vo.post_title}</a></span>
+        <span>{$vo.post_date}</span><span><a href="{:U('article/index',array('id'=>$vo['tid']))}">详请</a></span>
+	</li>  
+	</volist>
+     </ul>
+
+<br /><br />
+</section>
+<footer >
+		
+	<tc_include file="Public:footer" />
+
+</footer>
+<script type="text/javascript" src="__TMPL__Public/Js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__TMPL__Public/Js/easing.js"></script>
+<script type="text/javascript" src="__TMPL__Public/Js/lazyload.js"></script>
+<script type="text/javascript">
+//导航
+$("nav li").hover(function(){
+	$("i",this).addClass("hover");
+	
+},function(){
+	$("i",this).removeClass("hover");
+})
+	
+   
+	$(window).scroll(function(){
+	
+		  var stp=$(window).scrollTop();
+			if(stp==0){
+				$(".theblankblock").height(0);
+				$("#submen").addClass("nofix").css({"top":401})
+					$("header").stop(true,false).css({"top":0})
+					$("header").removeClass("fix").removeClass("aboutheader")
+			}
+			else if(stp>0){
+				$(".theblankblock").height(145);
+				$("#submen").removeClass("nofix").css({"top":64})
+				$("header").stop(true,false).css({"top":-55})
+				$("header").addClass("fix").addClass("aboutheader")
+			}
+		})
+		
+ 	
+	
+	
+	
+	
+
+</script>
+
+</body>
+</html>
+<!-- 2014-5-11 -->

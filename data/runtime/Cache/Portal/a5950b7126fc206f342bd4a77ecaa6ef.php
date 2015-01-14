@@ -304,14 +304,14 @@
                     <div class="caption lfb caption_button_1 fadeout tp-caption start" data-x="40"
                     data-y="330" data-speed="900" data-endspeed="300" data-start="2700" data-hoffset="-70"
                     data-easing="easeOutExpo">
-                        <a class="btn-special hidden-xs btn-grey" href="/static/#">
+                        <a class="btn-special hidden-xs btn-grey" href="#">
                             详细了解
                         </a>
                     </div>
                     <div class="caption lfb caption_button_2 fadeout tp-caption start" data-x="210"
                     data-y="330" data-speed="800" data-endspeed="300" data-start="2900" data-hoffset="70"
                     data-easing="easeOutExpo">
-                        <a class="btn-special hidden-xs btn-color" href="/static/#">
+                        <a class="btn-special hidden-xs btn-color" href="#">
                             立即购买
                         </a>
                     </div>
@@ -428,7 +428,7 @@
     
     <!-- Main Content end-->
     <!-- Recent works start-->
-    <div class="recentworks">
+    <div class="recentworks bottom-pad">
         <div class="container">
           <div class="row">
              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 animate_afl d1">
@@ -436,8 +436,8 @@
                    <h3 class="title">公司简介</h3>
                    <p>公司秉承“微信，让世界认识你。”的企业宗旨，紧跟时代步伐，自主创新，依托强大的互联网平台，结合顶尖产品研发团队，通过整合移动领域核心技术、微营销、互联网、顶级策划人才、运营人才、高级工程师、优质资源打破传统商业模式，实现线上线下同步推广销售，让每一位消费者以最便捷的方式最合理的价格，用上好产品。</p>
                    <div class="carousel-controls">
-                      <a class="prev" href="/static/#portfolio-carousel" data-slide="prev"><i class="icon-angle-left"></i></a>
-                      <a class="next" href="/static/#portfolio-carousel" data-slide="next"><i class="icon-angle-right"></i></a>
+                      <a class="prev" href="#portfolio-carousel" data-slide="prev"><i class="icon-angle-left"></i></a>
+                      <a class="next" href="#portfolio-carousel" data-slide="next"><i class="icon-angle-right"></i></a>
                       <div class="clearfix"></div>
                    </div>
                 </div>
@@ -449,12 +449,12 @@
                          <div class="item active">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d2">
                                <div class="portfolio-item">
-                                  <a href="/static/img/portfolio/po_1.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                  <a href="img/portfolio/po_1.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
                                   <span class="portfolio-item-hover"></span>
                                   <span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/po_1.jpg" alt=" "/>
                                   </a>
                                   <div class="portfolio-item-title">
-                                     <a href="/static/single-project.html">刘总</a>
+                                     <a href="single-project.html">刘总</a>
                                      <p>
                                         刘兴隆
                                      </p>
@@ -464,11 +464,11 @@
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d3">
                                <div class="portfolio-item">
-                                  <a href="/static/img/portfolio/po_2.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                  <a href="img/portfolio/po_2.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
                                   <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/po_2_1.jpg" alt=" "/>
                                   </a>
                                   <div class="portfolio-item-title">
-                                     <a href="/static/single-project.html">康总</a>
+                                     <a href="single-project.html">康总</a>
                                      <p>
                                         康咏铧
                                      </p>
@@ -478,11 +478,11 @@
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d4">
                                <div class="portfolio-item">
-                                  <a href="/static/img/portfolio/po_3.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                  <a href="img/portfolio/po_3.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
                                   <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/po_3_1.jpg" alt=" "/>
                                   </a>
                                   <div class="portfolio-item-title">
-                                     <a href="/static/single-project.html">营销策划师</a>
+                                     <a href="single-project.html">营销策划师</a>
                                      <p>
                                         特聘讲师
                                      </p>
@@ -494,11 +494,11 @@
                          <div class="item">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
                                <div class="portfolio-item">
-                                  <a href="/static/img/portfolio/portfolio-4.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                  <a href="img/portfolio/portfolio-4.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
                                   <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/portfolio-4.jpg" alt=" "/>
                                   </a>
                                   <div class="portfolio-item-title">
-                                     <a href="/static/single-project.html">Camera Icon</a>
+                                     <a href="single-project.html">Camera Icon</a>
                                      <p>
                                         Icon / Device
                                      </p>
@@ -508,11 +508,11 @@
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
                                <div class="portfolio-item">
-                                  <a href="/static/img/portfolio/portfolio-5.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                  <a href="img/portfolio/portfolio-5.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
                                   <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/portfolio-5.jpg" alt=" "/>
                                   </a>
                                   <div class="portfolio-item-title">
-                                     <a href="/static/single-project.html">Penguin</a>
+                                     <a href="single-project.html">Penguin</a>
                                      <p>
                                         Animal / Nature
                                      </p>
@@ -522,11 +522,11 @@
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
                                <div class="portfolio-item">
-                                  <a href="/static/images/portfolio/portfolio-6.html" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                  <a href="images/portfolio/portfolio-6.html" class="portfolio-item-link" data-rel="prettyPhoto" >
                                   <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/portfolio-6.jpg" alt=" "/>
                                   </a>
                                   <div class="portfolio-item-title">
-                                     <a href="/static/single-project.html">Sound Box</a>
+                                     <a href="single-project.html">Sound Box</a>
                                      <p>
                                         Audio / Sound
                                      </p>
@@ -545,7 +545,81 @@
     </div>
     <!-- Recent work end-->
 
-    <div class="service-reasons bottom-pad">
+    <!-- Features start -->  
+    <div class="features bottom-pad">
+       <div class="container">
+          <div class="row">
+             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <h3  class="title">我们的服务</h3>
+                <div class="row">
+                   <div class="circular-nav">
+                      <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 animate_afl">
+                         <div id="cn-tabs">
+                            <div class="service service-1">
+                               <div class="cn-content">
+                                  <h4>Premium Sliders</h4>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                  <a href="#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                                  <div class="clearfix"></div>
+                               </div>
+                               <div class="clearfix"></div>
+                            </div>
+                            <div class="service service-2">
+                               <div class="cn-content">
+                                  <h4>Unlimited Colors</h4>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                  <a href="#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                                  <div class="clearfix"></div>
+                               </div>
+                            </div>
+                            <div class="service service-3">
+                               <div class="cn-content">
+                                  <h4>Shortcodes</h4>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                  <a href="#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                               </div>
+                               <div class="clearfix"></div>
+                            </div>
+                            <div class="service service-4">
+                               <div class="cn-content">
+                                  <h4>300+ Icons</h4>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                                  <a href="#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                               </div>
+                               <div class="clearfix"></div>
+                            </div>
+                         </div>
+                         <div class="clearfix"></div>
+                      </div>
+                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 animate_afr">
+                         <div class="cn-wrapper">
+                            <ul>
+                               <li class="circle-1 circle"><a class="active" href="#"><span class="icon-picture"></span></a></li>
+                               <li class="circle-2 circle"><a href="#"><span class="icon-rocket"></span></a></li>
+                               <li class="circle-3 circle"><a href="#"><span class="icon-puzzle-piece"></span> </a></li>
+                               <li class="circle-4 circle"><a href="#"><span class="icon-thumbs-up-alt"></span></a></li>
+                            </ul>
+                            <div class="clearfix"></div>
+                         </div>
+                      </div>
+                      <div class="clearfix"></div>
+                   </div>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+    <!-- Features End -->
+    
+    <div class="service-reasons">
        <div class="container">
           <div class="row">
              <!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
@@ -565,9 +639,10 @@
                       </div>
                       <div class="content-box-info">
                           <h3>媒体报道</h3>
+                          <img src="/static/img/portfolio/po_1.jpg" alt="">
                           <p>错过了十年前的淘宝， 你还要错过今天的微商吗？ 2015“首届中国微商博览会·暨微商&O2O行业发展趋势论坛”，由中国微商联盟和沸点天下（中国）联合主办。  中国微商博览会对微商行业的发展意义深远，将行业……
                           </p>
-                          <a href="/static/#">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                          <a href="#">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
                        </div>
                    </div>
                 </div>
@@ -583,10 +658,11 @@
                       </div>
                       <div class="content-box-info">
                           <h3>创业故事</h3>
+                          <img src="/static/img/portfolio/po_1.jpg" alt=" ">
                           <p>
-                            12月27日，由微赢生物科技有限公司举办的“微赢商学院第三届微商交流会”圆满结束。此次交流会共21微商大咖出席，由中国著名实战微营销培训顾问Jordan主持，微赢CEO康咏铧先生担任主讲嘉宾。
+                             12月27日，由微赢生物科技有限公司举办的“微赢商学院第三届微商交流会”圆满结束。此次交流会共21微商大咖出席，由中国著名实战微营销培训顾问Jordan主持，微赢CEO康咏铧先生担任主讲嘉宾。
                           </p>
-                          <a href="/static/#">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                          <a href="#">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
                        </div>
                    </div>
                 </div>
@@ -602,10 +678,11 @@
                       </div>
                       <div class="content-box-info">
                           <h3>微赢商学院</h3>
+                          <img src="/static/img/portfolio/po_1.jpg" alt=" ">
                           <p>
                              半年前，微赢生物科技有限公司是谁都不知道的Nothing，甚至在招聘职员时，别人都以为是传销、是骗子。但是经过短暂的时间，微赢生物科技有限公司发生了天翻地覆的变化。目前微赢生物已经成为中国发展最快的微商企业之一。
                           </p>
-                          <a href="/static/#">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                          <a href="#">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
                        </div>
                    </div>
                 </div>
@@ -614,138 +691,6 @@
        </div>
     </div>
 
-    <!-- Features start -->  
-    <div class="features bottom-pad">
-       <div class="container">
-          <div class="row">
-             <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h3  class="title">我们的服务</h3>
-                <div class="row">
-                   <div class="circular-nav">
-                      <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 animate_afl">
-                         <div id="cn-tabs">
-                            <div class="service service-1">
-                               <div class="cn-content">
-                                  <h4>Premium Sliders</h4>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <a href="/static/#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
-                                  <div class="clearfix"></div>
-                               </div>
-                               <div class="clearfix"></div>
-                            </div>
-                            <div class="service service-2">
-                               <div class="cn-content">
-                                  <h4>Unlimited Colors</h4>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <a href="/static/#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
-                                  <div class="clearfix"></div>
-                               </div>
-                            </div>
-                            <div class="service service-3">
-                               <div class="cn-content">
-                                  <h4>Shortcodes</h4>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <a href="/static/#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
-                               </div>
-                               <div class="clearfix"></div>
-                            </div>
-                            <div class="service service-4">
-                               <div class="cn-content">
-                                  <h4>300+ Icons</h4>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <a href="/static/#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
-                               </div>
-                               <div class="clearfix"></div>
-                            </div>
-                         </div>
-                         <div class="clearfix"></div>
-                      </div>
-                      <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 animate_afr">
-                         <div class="cn-wrapper">
-                            <ul>
-                               <li class="circle-1 circle"><a class="active" href="/static/#"><span class="icon-picture"></span></a></li>
-                               <li class="circle-2 circle"><a href="/static/#"><span class="icon-rocket"></span></a></li>
-                               <li class="circle-3 circle"><a href="/static/#"><span class="icon-puzzle-piece"></span> </a></li>
-                               <li class="circle-4 circle"><a href="/static/#"><span class="icon-thumbs-up-alt"></span></a></li>
-                            </ul>
-                            <div class="clearfix"></div>
-                         </div>
-                      </div>
-                      <div class="clearfix"></div>
-                   </div>
-                </div>
-             </div>
-          </div>
-       </div>
-    </div>
-    <!-- Features End -->
-
-
-    <!-- Latest Posts start -->
-    <!-- <div class="latest-posts">
-       <div class="container">
-          <div class="row">
-             <div class="col-lg-12 col-md-12 com-sm-12 col-xs-12">
-                <h3 class="title">微赢动态</h3>
-             </div>
-             <div class="clearfix"></div>
-             <div class="blog-showcase col-lg-12 col-md-12 col-sm-12 col-xs-12 animate_afb d1">
-                <ul>
-                   <li class="">
-                      <div class="blog-showcase-thumb col-lg-4">
-                         <div class="post-body">
-                            <a class="post-item-link" href="/static/img/portfolio/dt_1.jpg" data-rel="prettyPhoto"><span class="post-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img alt="" src="/static/img/portfolio/dt_1.jpg"></a>
-                         </div>
-                      </div>
-                      <div class="blog-showcase-extra-info col-lg-4">
-                         <span><a href="/static/#">2015-1-10</a></span>
-                         <h4><a href="/static/#" class="title">微赢动态一</a></h4>
-                         <p>微商作为中国新兴行业，他们没有丰富的微营销实战经验更没有接受过相关的专业培训。因此，微商在经营……</p>
-                         <a href="/static/#">更多 <i class="icon-double-angle-right"></i></a>
-                      </div>
-                   </li>
-                   <li>
-                      <div class="blog-showcase-thumb col-lg-4">
-                         <div class="post-body">
-                            <a class="post-item-link" href="/static/img/portfolio/dt_2.jpg" data-rel="prettyPhoto"><span class="post-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img alt="" src="/static/img/portfolio/dt_2.jpg"></a>
-                         </div>
-                      </div>
-                      <div class="blog-showcase-extra-info col-lg-4">
-                         <span><a href="/static/#">2015-1-10</a></span>
-                         <h4><a href="/static/#" class="title">微赢动态二</a></h4>
-                         <p>康总以实际可行的方案及个人独到的见解实时与大家互动交流，会上就有三位微商大咖现场签约一生美蓝莓虾青素眼贴，成为微赢蓝莓虾青素眼贴的省级代理。</p>
-                         <a href="/static/#">更多 <i class="icon-double-angle-right"></i></a>
-                      </div>
-                   </li>
-                   <li class="blog-first-el">
-                      <div class="blog-showcase-thumb col-lg-4">
-                         <div class="post-body">
-                            <a class="post-item-link" href="/static/img/portfolio/dt_3.jpg" data-rel="prettyPhoto"><span class="post-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img alt="" src="/static/img/portfolio/dt_3.jpg"></a>
-                         </div>
-                      </div>
-                      <div class="blog-showcase-extra-info col-lg-4">
-                         <span><a href="/static/#">2015-1-10</a></span>
-                         <h4><a href="/static/#" class="title">微赢动态三</a></h4>
-                         <p>对此，作为中国著名微营销专家的康总给出了自己一套独特的解决方案。康总每提出一……</p>
-                         <a href="/static/#">更多 <i class="icon-double-angle-right"></i></a>
-                      </div>
-                   </li>
-                </ul>
-                <div class="clearfix"></div>
-             </div>
-          </div>
-          <div class="divider"></div>
-       </div>
-    </div> -->
-    <!-- Latest Posts End -->
     <!-- Our Clients Start-->
     <div class="our-clients">
         <div class="container">
@@ -758,11 +703,11 @@
                                     友情链接
                                 </h3>
                                 <div class="carousel-controls pull-right">
-                                    <a class="prev" href="/static/#client-carousel" data-slide="prev">
+                                    <a class="prev" href="#client-carousel" data-slide="prev">
                                         <i class="icon-angle-left">
                                         </i>
                                     </a>
-                                    <a class="next" href="/static/#client-carousel" data-slide="next">
+                                    <a class="next" href="#client-carousel" data-slide="next">
                                         <i class="icon-angle-right">
                                         </i>
                                     </a>
@@ -778,42 +723,42 @@
                                         <div class="item active">
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d1">
                                                 <div class="item-inner">
-                                                    <a href="/static/#">
+                                                    <a href="#">
                                                         <img alt="Upportdash" src="/static/img/clientslogo/logo-1.png">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d2">
                                                 <div class="item-inner">
-                                                    <a href="/static/#">
+                                                    <a href="#">
                                                         <img alt="Upportdash" src="/static/img/clientslogo/logo-2.png">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d3">
                                                 <div class="item-inner">
-                                                    <a href="/static/#">
+                                                    <a href="#">
                                                         <img alt="Upportdash" src="/static/img/clientslogo/logo-3.png">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d4">
                                                 <div class="item-inner">
-                                                    <a href="/static/#">
+                                                    <a href="#">
                                                         <img alt="Upportdash" src="/static/img/clientslogo/logo-4.png">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d3">
                                                 <div class="item-inner">
-                                                    <a href="/static/#">
+                                                    <a href="#">
                                                         <img alt="Upportdash" src="/static/img/clientslogo/logo-3.png">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d4">
                                                 <div class="item-inner">
-                                                    <a href="/static/#">
+                                                    <a href="#">
                                                         <img alt="Upportdash" src="/static/img/clientslogo/logo-4.png">
                                                     </a>
                                                 </div>
@@ -822,42 +767,42 @@
                                         <div class="item">
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item">
                                                 <div class="item-inner">
-                                                    <a href="/static/#">
+                                                    <a href="#">
                                                         <img alt="Upportdash" src="/static/img/clientslogo/logo-5.png">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item">
                                                 <div class="item-inner">
-                                                    <a href="/static/#">
+                                                    <a href="#">
                                                         <img alt="Upportdash" src="/static/img/clientslogo/logo-4.png">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item">
                                                 <div class="item-inner">
-                                                    <a href="/static/#">
+                                                    <a href="#">
                                                         <img alt="Upportdash" src="/static/img/clientslogo/logo-3.png">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item">
                                                 <div class="item-inner">
-                                                    <a href="/static/#">
+                                                    <a href="#">
                                                         <img alt="Upportdash" src="/static/img/clientslogo/logo-2.png">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d3">
                                                 <div class="item-inner">
-                                                    <a href="/static/#">
+                                                    <a href="#">
                                                         <img alt="Upportdash" src="/static/img/clientslogo/logo-3.png">
                                                     </a>
                                                 </div>
                                             </div>
                                             <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d4">
                                                 <div class="item-inner">
-                                                    <a href="/static/#">
+                                                    <a href="#">
                                                         <img alt="Upportdash" src="/static/img/clientslogo/logo-4.png">
                                                     </a>
                                                 </div>
@@ -896,7 +841,7 @@
                                                                 <img alt="" src="/static/img/testimonial/team-member-1.jpg">
                                                             </div>
                                                             <div class="testimonial-author-info">
-                                                                <a href="/static/#">
+                                                                <a href="#">
                                                                     <span class="color">
                                                                         Monica Sing
                                                                     </span>
@@ -922,7 +867,7 @@
                                                                 <img alt="" src="/static/img/testimonial/team-member-2.jpg">
                                                             </div>
                                                             <div class="testimonial-author-info">
-                                                                <a href="/static/#">
+                                                                <a href="#">
                                                                     <span class="color">
                                                                         Monzurul Haque
                                                                     </span>
@@ -948,7 +893,7 @@
                                                                 <img alt="" src="/static/img/testimonial/team-member-3.jpg">
                                                             </div>
                                                             <div class="testimonial-author-info">
-                                                                <a href="/static/#">
+                                                                <a href="#">
                                                                     <span class="color">
                                                                         Carol Johansen
                                                                     </span>

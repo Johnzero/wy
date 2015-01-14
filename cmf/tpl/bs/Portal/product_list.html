@@ -1,0 +1,171 @@
+﻿
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />   
+<meta name="viewport" content="width=1024" />
+<title>{$name}-{$site_name}</title>
+<meta name="keywords"  content="{$seo_keywords}" />
+<meta name="description" content="{$description}" />
+<script type="text/javascript" src="__TMPL__Public/Js/domassistantcompressed-2.8.1.js"></script>
+<script type="text/javascript" src="__TMPL__Public/Js/ie-css3.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+<link rel="stylesheet" href="__TMPL__Public/Css/style.css" />
+<!--[if lt IE 9]>
+	<script type="text/javascript" src="Js/html5.js"></script>
+	<![endif]-->
+</head>
+    <body>
+<div class="theblankblock"></div>
+ <header >
+ <!--导航开始-->
+<tc_include file="Public:nav" />
+	<!--导航结束-->
+</header><section id="insbanner" ><img src="__TMPL__Public/Pic/insbanner.jpg" alt="" />
+<div class="wp"><h2>{$name}</h2>
+	<div class="ent">PRODUCT</div>
+</div>
+</section><section id="submen" class="nofix">
+	<div class="wp">
+		<ul class="clearfix">    		
+            				  		<php>
+    $term_id=4;
+     $terms=sp_get_child_terms($term_id ); //获取子分类信息
+</php>
+<foreach name="terms" item="vo">
+<li><a href='__ROOT__/list/index/id/{$vo.term_id}'>{$vo.name}</a> </li>
+</foreach>
+
+            
+                        
+                        
+                        </ul>
+	</div>
+</section><section id="productlist" class="liststyle">
+	<div class="wp">
+		<div class="formtit clearfix">		
+		</div>
+		
+                           	
+        		<div class="prcont">
+			<ul class="clearfix">
+            			<php>
+					$lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;",10);
+				</php>    
+				  <volist name="lists['posts']" id="vo">
+
+				              			<php>
+					$smeta=json_decode($vo['smeta'], true);
+				</php>
+                        <li  class="fourth"><a  class="mian"  href="{:U('article/index',array('id'=>$vo['tid']))}"><img src="__ROOT__/data/upload/{$smeta.thumb}" alt="{$vo.post_title}" /></a>
+					<div class="despt">
+						<span class="fl">{$vo.post_title}</span>
+						<a class="fr" href="{:U('article/index',array('id'=>$vo['tid']))}">详情<i></i></a>
+					</div> 
+				</li>
+                      </volist>  
+			</ul>
+		</div>
+	<div class="pager"><a class="a1">首页</a>
+<span>1</span>
+<a href='list_2_2.html'>{$lists['page']}</a>
+<a href='list_2_2.html' class="a1">下一页</a>
+<a href='list_2_2.html' class="a1">末页</a>
+</div>
+			</div>
+</section>
+
+
+<footer >
+	
+		<tc_include file="Public:footer" />
+
+</footer>
+<script type="text/javascript" src="__TMPL__Public/Js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="__TMPL__Public/Js/easing.js"></script>
+<script type="text/javascript" src="__TMPL__Public/Js/lazyload.js"></script>
+<script type="text/javascript">
+//导航
+$("nav li").hover(function(){
+	$("i",this).addClass("hover");
+	
+},function(){
+	$("i",this).removeClass("hover");
+})
+	
+   
+	$(window).scroll(function(){
+	
+		  var stp=$(window).scrollTop();
+			if(stp==0){
+				$(".theblankblock").height(0);
+				$("#submen").addClass("nofix").css({"top":401})
+					$("header").stop(true,false).css({"top":0})
+					$("header").removeClass("fix").removeClass("aboutheader")
+			}
+			else if(stp>0){
+				$(".theblankblock").height(145);
+				$("#submen").removeClass("nofix").css({"top":64})
+				$("header").stop(true,false).css({"top":-55})
+				$("header").addClass("fix").addClass("aboutheader")
+			}
+		})
+		
+ 	
+	
+	
+	
+	
+
+</script><script type="text/javascript">
+
+$(".despt .fr").hover(function(){
+	$(this).addClass("hover");
+},function(){
+		$(this).removeClass("hover");
+})
+$(".top label,.bottom label").click(function(){
+    var toggstate = $(this).attr("class");
+	if(toggstate=='checked'){ 
+		$(this).removeClass("checked");
+	}else{
+		$(this).addClass("checked");
+	}
+	var arr = [];
+	var arr2 = [];
+	var str_apply ="";
+	var str_texture ="";
+	$(".top label.checked").each(function(k,v){
+		arr[k] = $(v).attr("data-id");
+	});
+	$(".bottom label.checked").each(function(k,v){
+		arr2[k] = $(v).attr("data-id");
+	});
+
+    str_apply = arr.join(",");
+    str_texture = arr2.join(",");
+    var path="http://www.scefox.com/index.php?module=content&controll=index&action=lists";
+    var config = {
+         catid:"14",
+         str_apply : str_apply ,
+         str_texture : str_texture ,
+         
+    }
+    $.post(path,config,function(data){
+    		window.location.reload();
+    });	
+})
+
+var chose1 = "";
+var chose2 = "";
+var chosed;
+if(chose1!="" && chose2!=""){
+	chosed=chose1+">"+chose2;
+}else{
+	chosed=chose1+chose2;
+}
+$(".chosed").empty().append(chosed);		
+			
+</script>
+</body>
+</html>
