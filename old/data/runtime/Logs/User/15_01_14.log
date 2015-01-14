@@ -1,0 +1,9 @@
+[ 2015-01-14T14:18:25+08:00 ] ::1 /old/index.php?g=user&m=favorite&a=do_favorite&id=2
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_user_favorites` [ RunTime:1.2471s ]
+SQL: SELECT * FROM `sp_user_favorites` WHERE `table` = 'posts' AND `object_id` = 2 AND `uid` = '3' LIMIT 1   [ RunTime:0.0000s ]
+SQL: INSERT INTO `sp_user_favorites` (`url`,`title`,`table`,`object_id`,`uid`,`createtime`) VALUES ('/old/index.php?g=portal&amp;m=article&amp;a=index&amp;id=2','微赢简介','posts','2','3','1421216305') [ RunTime:0.0000s ]
+

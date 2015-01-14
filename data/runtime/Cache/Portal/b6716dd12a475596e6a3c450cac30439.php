@@ -1,288 +1,572 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
+<!--[if IE 8]>
+<html class="ie ie8">
+<![endif]-->
+<!--[if IE 9]>
+<html class="ie ie9">
+<![endif]-->
+<!--[if gt IE 9]>
+<!-->
 <html>
-<head>
-	<title><?php echo ($name); ?> <?php echo ($seo_title); ?> <?php echo ($site_name); ?></title>
-	<meta name="keywords" content="<?php echo ($seo_keywords); ?>" />
-	<meta name="description" content="<?php echo ($seo_description); ?>">
-    	<?php $portal_index_lastnews=2; $portal_hot_articles="1,2"; $portal_last_post="1,2"; $tmpl=sp_get_theme_path(); $default_home_slides=array( array( "slide_name"=>"ThinkCMFX1.4.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/1.jpg", "slide_url"=>"", ), array( "slide_name"=>"ThinkCMFX1.4.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/2.jpg", "slide_url"=>"", ), array( "slide_name"=>"ThinkCMFX1.4.0发布啦！", "slide_pic"=>$tmpl."Public/images/demo/3.jpg", "slide_url"=>"", ), ); ?>
-	<meta name="author" content="ThinkCMF">
-	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--<![endif]-->
 
-    <!-- HTML5 shim for IE8 support of HTML5 elements -->
+<head>
+    <meta charset="utf-8">
+    <title><?php echo ($site_seo_title); ?> <?php echo ($site_name); ?></title>
+    <meta name="keywords" content="<?php echo ($site_seo_keywords); ?>" />
+    <meta name="description" content="<?php echo ($site_seo_description); ?>">
+    <meta name="author" content="wangsong1233276@sina.com">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Library CSS -->
+    <link rel="stylesheet" href="/static/css/bootstrap.css">
+    <link rel="stylesheet" href="/static/css/fonts/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="/static/css/animations.css" media="screen">
+    <link rel="stylesheet" href="/static/css/superfish.css" media="screen">
+    <link rel="stylesheet" href="/static/css/revolution-slider/css/settings.css" media="screen">
+    <link rel="stylesheet" href="/static/css/prettyPhoto.css" media="screen">
+    <!-- Theme CSS -->
+    <link rel="stylesheet" href="/static/css/style.css">
+    <!-- Skin -->
+    <link rel="stylesheet" href="/static/css/colors/green.css" id="colors">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="/static/css/theme-responsive.css">
+    <!-- Switcher CSS -->
+    <link href="/static/css/switcher.css" rel="stylesheet">
+    <link href="/static/css/spectrum.css" rel="stylesheet">
+    <!-- Favicons -->
+    <link rel="shortcut icon" href="/static/img/ico/favicon.ico">
+    <link rel="apple-touch-icon" href="/static/img/ico/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/static/img/ico/apple-touch-icon-72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/static/img/ico/apple-touch-icon-114.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/ico/apple-touch-icon-144.png">
+    <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="/static///html5shim.googlecode.com/svn/trunk/html5.js">
+        </script>
+        <script src="/static/js/respond.min.js">
+        </script>
     <![endif]-->
-	<link rel="icon" href="/tpl/simplebootx/Public/images/favicon.ico" mce_href="/tpl/simplebootx/Public/images/favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="/tpl/simplebootx/Public/images/favicon.ico" mce_href="/tpl/simplebootx/Public/images/favicon.ico" type="image/x-icon">
-    <link href="/tpl/simplebootx/Public/simpleboot/themes/cmf/theme.min.css" rel="stylesheet">
-    <link href="/tpl/simplebootx/Public/simpleboot/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="/tpl/simplebootx/Public/simpleboot/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
-	<!--[if IE 7]>
-	<link rel="stylesheet" href="/tpl/simplebootx/Public/simpleboot/font-awesome/4.2.0/css/font-awesome-ie7.min.css">
-	<![endif]-->
-	<link href="/tpl/simplebootx/Public/css/style.css" rel="stylesheet">
-	<style>
-		/*html{filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter: grayscale(1);}*/
-		#backtotop{position: fixed;bottom: 50px;right:20px;display: none;cursor: pointer;font-size: 50px;z-index: 9999;}
-		#backtotop:hover{color:#333}
-	</style>
+    <!--[if IE]>
+        <link rel="stylesheet" href="/static/css/ie.css">
+    <![endif]-->
 </head>
-<body>
-<div class="navbar navbar-fixed-top">
-   <div class="navbar-inner">
-     <div class="container">
-       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-       </a>
-       <a class="brand" href="/"><img src="/tpl/simplebootx/Public/images/logo.png"/></a>
-       <div class="nav-collapse collapse" id="main-menu">
-       	<?php
- $effected_id=""; $filetpl="<a href='\$href' target='\$target'>\$label</a>"; $foldertpl="<a href='\$href' target='\$target' class='dropdown-toggle' data-toggle='dropdown'>\$label <b class='caret'></b></a>"; $ul_class="dropdown-menu" ; $li_class="" ; $style="nav"; $showlevel=6; $dropdown='dropdown'; echo sp_get_menu("main",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown); ?>
-		
-		<ul class="nav pull-right" id="main-menu-left">
-			<li class="dropdown">
-			<?php if(sp_is_user_login()): ?><a class="dropdown-toggle user" data-toggle="dropdown" href="#">
-	            <?php if(empty($user['avatar'])): ?><img src="/tpl/simplebootx//Public/images/headicon.png" class="headicon"/>
-	            <?php else: ?>
-	            <img src="<?php echo sp_get_user_avatar_url($user['avatar']);?>" class="headicon"/><?php endif; ?>
-	            <?php echo ($user["user_nicename"]); ?><b class="caret"></b></a>
-	            <ul class="dropdown-menu pull-right">
-	               <li><a href="<?php echo u('user/center/index');?>"><i class="fa fa-user"></i> &nbsp;个人中心</a></li>
-	               <li class="divider"></li>
-	               <li><a href="<?php echo u('user/index/logout');?>"><i class="fa fa-sign-out"></i> &nbsp;退出</a></li>
-	            </ul>
-	        <?php else: ?>
-	            <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
-	           		<img src="/tpl/simplebootx//Public/images/headicon.png" class="headicon"/>登录<b class="caret"></b>
-	            </a>
-	            <ul class="dropdown-menu pull-right">
-	               <li><a href="<?php echo U('api/oauth/login',array('type'=>'sina'));?>"><i class="fa fa-weibo"></i> &nbsp;微博登录</a></li>
-	               <li><a href="<?php echo U('api/oauth/login',array('type'=>'qq'));?>"><i class="fa fa-qq"></i> &nbsp;QQ登录</a></li>
-	               <li><a href="<?php echo u('user/login/index');?>"><i class="fa fa-sign-in"></i> &nbsp;登录</a></li>
-	               <li class="divider"></li>
-	               <li><a href="<?php echo u('user/register/index');?>"><i class="fa fa-user"></i> &nbsp;注册</a></li>
-	            </ul><?php endif; ?>
-          	</li>
-		</ul>
-		<div class="pull-right">
-        	<form method="post" class="form-inline" action="<?php echo U('portal/search/index');?>" style="margin:18px 0;">
-				 <input type="text" class="" placeholder="Search" name="keyword" value="<?php echo I('get.keyword');?>"/>
-				 <input type="submit" class="btn btn-info" value="Go" style="margin:0"/>
-			</form>
-		</div>
+
+<body class="home">
+    <div class="wrap">
+        <!-- Header Start -->
+        <header id="header">
+            <!-- Header Top Bar Start -->
+            <div class="top-bar">
+                <div class="slidedown collapse">
+                    <div class="container">
+                        <div class="phone-email pull-left">
+                            <a>
+                                <i class="icon-phone">
+                                </i>
+                                电话 : <?php echo ($site_admin_tel); ?>
+                            </a>
+                            <a href="/static/mail%40example.html">
+                                <i class="icon-envelope">
+                                </i>
+                                邮件 : <?php echo ($site_admin_email); ?>
+                            </a>
+                        </div>
+                        <div class="pull-right">
+                            <ul class="social pull-left">
+                                <li class="facebook">
+                                    <a href="/static/#">
+                                        <i class="icon-facebook">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="/static/#">
+                                        <i class="icon-twitter">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="dribbble">
+                                    <a href="/static/#">
+                                        <i class="icon-dribbble">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="linkedin">
+                                    <a href="/static/#">
+                                        <i class="icon-linkedin">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="rss">
+                                    <a href="/static/#">
+                                        <i class="icon-rss">
+                                        </i>
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="nav pull-right" id="main-menu-left">
+                                <li class="dropdown">
+                                <?php if(sp_is_user_login()): ?><a class="dropdown-toggle user" data-toggle="dropdown" href="#">
+                                    <?php if(empty($user['avatar'])): ?><img src="/tpl/simplebootx//Public/images/headicon.png" class="headicon"/>
+                                    <?php else: ?>
+                                    <img src="<?php echo sp_get_user_avatar_url($user['avatar']);?>" class="headicon"/><?php endif; ?>
+                                    <?php echo ($user["user_nicename"]); ?><b class="caret"></b></a>
+                                    <ul class="dropdown-menu pull-right">
+                                       <li><a href="<?php echo u('user/center/index');?>"><i class="fa fa-user"></i> &nbsp;个人中心</a></li>
+                                       <li class="divider"></li>
+                                       <li><a href="<?php echo u('user/index/logout');?>"><i class="fa fa-sign-out"></i> &nbsp;退出</a></li>
+                                    </ul>
+                                <?php else: ?>
+                                    <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
+                                        <img src="/tpl/simplebootx//Public/images/headicon.png" class="headicon"/>登录<b class="caret"></b>
+                                    </a>
+                                    <ul class="dropdown-menu pull-right">
+                                       <li><a href="<?php echo U('api/oauth/login',array('type'=>'sina'));?>"><i class="fa fa-weibo"></i> &nbsp;微博登录</a></li>
+                                       <li><a href="<?php echo U('api/oauth/login',array('type'=>'qq'));?>"><i class="fa fa-qq"></i> &nbsp;QQ登录</a></li>
+                                       <li><a href="<?php echo u('user/login/index');?>"><i class="fa fa-sign-in"></i> &nbsp;登录</a></li>
+                                       <li class="divider"></li>
+                                       <li><a href="<?php echo u('user/register/index');?>"><i class="fa fa-user"></i> &nbsp;注册</a></li>
+                                    </ul><?php endif; ?>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Header Top Bar End -->
+            <!-- Main Header Start -->
+            <div class="main-header">
+                <div class="container">
+                    <!-- TopNav Start -->
+                    <div class="topnav navbar-header">
+                        <a class="navbar-toggle down-button" data-toggle="collapse" data-target=".slidedown">
+                            <i class="icon-angle-down icon-current">
+                            </i>
+                        </a>
+                    </div>
+                    <!-- TopNav End -->
+                    <!-- Logo Start -->
+                    <div class="logo pull-left">
+                        <h1>
+                            <a href="/">
+                                <img src="/static/img/logo.jpg" alt="pixma" width="340" height="70">
+                            </a>
+                        </h1>
+                    </div>
+                    <!-- Logo End -->
+                    <!-- Mobile Menu Start -->
+                    <div class="mobile navbar-header">
+                        <a class="navbar-toggle" data-toggle="collapse" href="/static/.html">
+                            <i class="icon-reorder icon-2x">
+                            </i>
+                        </a>
+                    </div>
+                    <!-- Mobile Menu End -->
+                    <!-- Menu Start -->
+                    <nav class="collapse navbar-collapse menu">
+                        <ul class="nav navbar-nav sf-menu">
+                            <li><a id="current" href="/static/contact.html">首页</a></li>
+                            <li>
+                               <a href="/index.php?g=portal&m=list&a=index&id=1">
+                                    走进微赢
+                                   <span class="sf-sub-indicator">
+                                   <i class="icon-angle-down "></i>
+                                   </span>
+                               </a>
+                               <ul>
+                                  <li><a href="<?php echo U('portal/article/index',array('id'=>2));?>" class="sf-with-ul" target="_blank">微赢简介</a></li>
+                                  <li><a href="/static/index-4.html" class="sf-with-ul" target="_blank">微赢动态</a></li>
+                                  <li><a href="/static/index-nivo.html" class="sf-with-ul" target="_blank">微赢团队</a></li>
+                                  <li><a href="/static/index-nivo.html" class="sf-with-ul" target="_blank">微赢风貌</a></li>
+                               </ul>
+                            </li>
+                            <li>
+                               <a  href="/index.php?g=portal&m=list&a=index&id=3" class="sf-with-ul">
+                               品牌动态 
+                               <span class="sf-sub-indicator">
+                               <i class="icon-angle-down "></i>
+                               </span>
+                               </a>
+                               <ul>
+                                  <li><a href="/static/shortcodes.html" class="sf-with-ul" target="_blank">品牌简介</a></li>
+                                  <li><a href="/static/icons.html" class="sf-with-ul" target="_blank">品牌专利</a></li>
+                                  <li><a href="/static/pricing-table.html" class="sf-with-ul" target="_blank">产品安全</a></li>
+                                  <li style="display:none;">
+                                     <a href="/static/#" class="sf-with-ul"> 
+                                     Third Level Menu 
+                                     <span class="sf-sub-indicator pull-right">
+                                     <i class="icon-angle-right "></i>
+                                     </span>
+                                     </a>
+                                     <ul>
+                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
+                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
+                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
+                                     </ul>
+                                  </li>
+                               </ul>
+                            </li>
+                            <li>
+                               <a href="/index.php?g=portal&m=list&a=index&id=4" class="sf-with-ul">
+                               微赢商学院
+                               <span class="sf-sub-indicator">
+                               <i class="icon-angle-down "></i>
+                               </span>
+                               </a>
+                               <ul>
+                                  <li><a href="/static/about.html" class="sf-with-ul" target="_blank">学院介绍</a></li>
+                                  <li><a href="/static/services.html" class="sf-with-ul" target="_blank">师资团队</a></li>
+                                  <li><a href="/static/testimonials.html" class="sf-with-ul" target="_blank">课程大纲</a></li>
+                               </ul>
+                            </li>
+                            <li>
+                               <a href="/index.php?g=portal&m=list&a=index&id=5" class="sf-with-ul">
+                               会员中心
+                               <span class="sf-sub-indicator">
+                               <i class="icon-angle-down "></i>
+                               </span>
+                               </a>
+                               <ul>
+                                  <li><a href="/static/portfolio-two.html" class="sf-with-ul" target="_blank">授权查询</a></li>
+                                  <li><a href="/static/portfolio-three.html" class="sf-with-ul" target="_blank">加盟政策</a></li>
+                               </ul>
+                            </li>
+
+                            <li>
+                               <a href="/static/#" class="sf-with-ul">
+                               会员登录
+                               <span class="sf-sub-indicator">
+                               <i class="icon-user"></i>
+                               </span>
+                               </a><ul class="display"></ul>
+                            </li>
+                           
+                        </ul>
+                        </nav>
+                    <!-- Menu End -->
+                </div>
+            </div>
+            <!-- Main Header End -->
+        </header>
+        <!-- Header End -->
+
+
+<!-- Content Start -->
+<div id="main">
+    <!-- Title, Breadcrumb Start-->
+    <div class="breadcrumb-wrapper">
+       <div class="container">
+          <div class="row">
+             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <h2 class="title"><?php echo ($term_obj["name"]); ?></h2>
+             </div>
+             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <div class="breadcrumbs pull-right">
+                   <ul>
+                      <li>您的位置 : </li>
+                      <li><a href="/">首页</a></li>
+                      <li><a href="<?php echo leuu('list/index',array('id'=>$term_obj['term_id']));?>"><?php echo ($term_obj["name"]); ?></a></li>
+                   </ul>
+                </div>
+             </div>
+          </div>
        </div>
-     </div>
-   </div>
- </div>
-<div class="container tc-main">
-	
-	
-    <div class="pg-opt pin">
-        <div class="container">
-            <h2><?php echo ($name); ?></h2>
-        </div>
     </div>
-    <div class="row">
-		<div class="span9">
-			<div class="">
-				<?php $lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;",10); ?>
+    <!-- Title, Breadcrumb End-->
+    <!-- Main Content start-->
+    <div class="content">
+       <div class="container">
+          <div class="row">
+            <div class="sidebar col-lg-3 col-md-3 col-sm-4 col-xs-12">
+    <!-- Search Widget Start -->
+    <div class="widget search-form">
+        <form method="post" class="form-inline" action="<?php echo U('portal/search/index');?>">
+        <div class="input-group">
+            <input type="text" name="keyword" value="<?php echo I('get.keyword');?>" onfocus="if(this.value=='搜索...')this.value='';" onblur="if(this.value=='')this.value='搜索...';" class="search-input form-control">
+            <span class="input-group-btn">
+            <button type="submit" class="subscribe-btn btn"><i class="icon-search"></i></button>
+            </span>
+        </div>
+        </form>
+       <!-- /input-group -->
+    </div>
+    <!-- Search Widget End -->
+    <!-- Tab Start -->
+    <div class="widget tabs">
+       <div id="horizontal-tabs">
+          <ul class="tabs">
+             <li id="tab1" class="current">热门文章</li>
+             <li id="tab2">最新文章</li>
+             <li id="tab3">经销商</li>
+          </ul>
+          <div class="contents">
+             <div class="tabscontent" id="content1" style="display: block;">
+                <ul class="posts">
+                    <?php $hot_articles=sp_sql_posts("smeta;order:post_hits desc;limit:5;"); ?>
+                    <?php if(is_array($hot_articles)): foreach($hot_articles as $key=>$vo): $smeta=json_decode($vo['smeta'],true); ?>
+                        <li>
+                            <a href="<?php echo leuu('article/index',array('id'=>$vo['tid']));?>">
+                                <img class="img-thumbnail recent-post-img" alt="" src="/data/upload/<?php echo ($smeta["thumb"]); ?>">
+                            </a>
+                            <p><a href="#"><?php echo ($vo["post_title"]); ?></a></p>
+                            <?php $n_d = explode(" ", $vo['post_date']); ?>
+                            <span class="color"><?php echo ($n_d[0]); ?></span>
+                        </li><?php endforeach; endif; ?>
+                </ul>
+             </div>
+             <div class="tabscontent" id="content2">
+                <ul class="posts">
+                    <?php $new_articles=sp_sql_posts("smeta;order:post_date desc;limit:5;"); ?>
+                    <?php if(is_array($new_articles)): foreach($new_articles as $key=>$vo): $smeta=json_decode($vo['smeta'],true); ?>
+                        <li>
+                            <a href="<?php echo leuu('article/index',array('id'=>$vo['tid']));?>">
+                                <img class="img-thumbnail recent-post-img" alt="" src="/data/upload/<?php echo ($smeta["thumb"]); ?>">
+                            </a>
+                            <p><a href="#"><?php echo ($vo["post_title"]); ?></a></p>
+                            <?php $n_d = explode(" ", $vo['post_date']); ?>
+                            <span class="color"><?php echo ($n_d[0]); ?></span>
+                        </li><?php endforeach; endif; ?>
+                </ul>
+             </div>
+             <div class="tabscontent" id="content3">
+                <ul class="posts">
+                    <?php $last_users = sp_get_users("field:*;limit:0,8;order:create_time desc;"); ?>
+                    <?php if(is_array($last_users)): foreach($last_users as $key=>$vo): ?><li>
+                            <a href="<?php echo U('user/index/index',array('id'=>$vo['id']));?>"><img class="img-thumbnail recent-post-img" alt="" src="<?php echo U('user/public/avatar',array('id'=>$vo['id']));?>"></a>
+                            <p><a href="#"><?php echo ($vo["user_nicename"]); ?></a></p>
+                            <!-- <span class="color">27 July 2013</span> -->
+                        </li><?php endforeach; endif; ?>
+                </ul>
+             </div>
+          </div>
+       </div>
+    </div>
+    <!-- Tab End -->
+    
+    <!-- Category Widget Start -->
+    <div class="widget category">
+       <h3 class="title">Categories</h3>
+       <ul class="category-list slide">
+          <li><a href="/">首页</a></li>
+          <li><a href="/index.php?g=portal&m=list&a=index&id=1">走进微赢</a></li>
+          <li><a href="/index.php?g=portal&m=list&a=index&id=3">品牌动态</a></li>
+          <li><a href="/index.php?g=portal&m=list&a=index&id=4">微赢商学院</a></li>
+          <li><a href="/index.php?g=portal&m=list&a=index&id=5">会员中心</a></li>
+       </ul>
+    </div>
+    <!-- Category Widget End -->
+    <!-- Ads Widget Start -->
+    <div class="widget ads">
+       <h3 class="title">广告</h3>
+       <div class="ads-img row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+             <img class="img-thumbnail" alt="" src="/static/img/ads-small.jpg">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+             <img class="img-thumbnail" alt="" src="/static/img/ads-small.jpg">
+          </div>
+       </div>
+       <div class="ads-img row">
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+             <img class="img-thumbnail" alt="" src="/static/img/ads-small.jpg">
+          </div>
+          <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+             <img class="img-thumbnail" alt="" src="/static/img/ads-small.jpg">
+          </div>
+       </div>
+    </div>
+    <!-- Ads Widget End -->
+</div>
+			<!-- Sidebar End -->                
+			<div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12">
+				<?php $lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;",5); ?>
 				<?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
+					<article class="post hentry">
+						<?php if($smeta['thumb']) { ?>
+					    <div class="post-image">
+					      <a href="/data/upload/<?php echo ($smeta["thumb"]); ?>" data-rel="prettyPhoto">
+					      <span class="img-hover"></span>
+					      <span class="fullscreen"><i class="icon-search"></i></span>
+					      <img src="/data/upload/<?php echo ($smeta["thumb"]); ?>" alt="">
+					      </a>
+					    </div>
+					    <?php } ?>
+					    <header class="post-header">
+					      <h3 class="content-title"><?php echo ($vo["post_title"]); ?></h3>
+					      <div class="blog-entry-meta">
+					         <div class="blog-entry-meta-date">
+					            <i class="icon-time"></i>
+					            <span class="blog-entry-meta-date-month"><?php echo ($vo["post_date"]); ?></span>
+					         </div>
+					         <div class="blog-entry-meta-author">
+					            <i class="icon-user"></i>
+					            <a href="#" class="blog-entry-meta-author"><?php echo ($vo["post_author"]); ?></a>
+					         </div>
+					         <div class="blog-entry-meta-tags">
+					            <i class="icon-tags"></i>
+					            <?php echo ($vo["post_keywords"]); ?>
+					         </div>
+					         <div class="blog-entry-meta-comments">
+					            <i class="icon-comments"></i>
+					            <a href="#" class="blog-entry-meta-comments"><?php echo ($vo["post_hits"]); ?></a>
+					         </div>
+					      </div>
+					   </header>
+					   <div class="post-content">
+					      <p>
+					        <?php echo ($vo["post_excerpt"]); ?>
+					      </p>
+					   </div>
+					   <footer class="post-footer">
+					      <a href="<?php echo leuu('article/index',array('id'=>$vo['tid']));?>" class="btn-small btn-color">查看更多</a>
+					   </footer>
+					</article>
+					<div class="blog-divider"></div><?php endforeach; endif; else: echo "" ;endif; ?>
 				
-				<div class="list-boxes">
-					<h2><a href="<?php echo leuu('article/index',array('id'=>$vo['tid']));?>"><?php echo ($vo["post_title"]); ?></a></h2>
-					<p><?php echo ($vo["post_excerpt"]); ?></p>
-					<div>
-						<div class="pull-left">
-							<div class="list-actions">
-							<a href="javascript:;"><i class="fa fa-eye"></i><span><?php echo ($vo["post_hits"]); ?></span></a>
-							<a href="<?php echo U('article/do_like',array('id'=>$vo['object_id']));?>" class="J_count_btn"><i class="fa fa-thumbs-up"></i><span class="count"><?php echo ($vo["post_like"]); ?></span></a>
-							<a href="<?php echo U('user/favorite/do_favorite',array('id'=>$vo['object_id']));?>" class="J_favorite_btn" data-title="<?php echo ($vo["post_title"]); ?>" data-url="<?php echo U('portal/article/index',array('id'=>$vo['tid']));?>" data-key="<?php echo sp_get_favorite_key('posts',$vo['object_id']);?>">
-								<i class="fa fa-star-o"></i>
-							</a>
-							</div>
-						</div>
-						<a class="btn btn-warning pull-right" href="<?php echo leuu('article/index',array('id'=>$vo['tid']));?>">查看更多</a>
-					</div>
-				</div><?php endforeach; endif; else: echo "" ;endif; ?>
-				
-			</div>
-			<div class="pagination">
-				<ul>
-					<?php echo ($lists['page']); ?>
-				</ul>
-			</div>
-		</div>
-		<div class="span3">
-			<div class="tc-box first-box">
-			<div class="headtitle">
-          		<h2>分享</h2>
-          	</div>
-			<div class="bdsharebuttonbox"><a href="#" class="bds_more" data-cmd="more"></a><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_tqf" data-cmd="tqf" title="分享到腾讯朋友"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a></div>
-			<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"32"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=86835285.js?cdnversion='+~(-new Date()/36e5)];</script>          
-        	</div>
-        	
-        	<div class="tc-box">
-	        	<div class="headtitle">
-	        		<h2>热门文章</h2>
-	        	</div>
-	        	<div class="ranking">
-	        		<?php $hot_articles=sp_sql_posts("cid:$portal_index_lastnews;field:post_title,post_excerpt,tid,smeta;order:post_hits desc;limit:5;"); ?>
-		        	<ul class="unstyled">
-		        		<?php if(is_array($hot_articles)): foreach($hot_articles as $key=>$vo): $top=$key<3?"top3":""; ?>
-							<li class="<?php echo ($top); ?>"><i><?php echo ($key+1); ?></i><a title="<?php echo ($vo["post_title"]); ?>" href="<?php echo leuu('article/index',array('id'=>$vo['tid']));?>"><?php echo ($vo["post_title"]); ?></a></li><?php endforeach; endif; ?>
+				<div class="pagination-centered">
+					<ul class="pagination">
+						<?php echo ($lists['page']); ?>
 					</ul>
 				</div>
 			</div>
-			<div class="tc-box">
-	        	<div class="headtitle">
-	        		<h2>最新评论</h2>
-	        	</div>
-	        	<div class="comment-ranking">
-	        		<?php $last_comments=sp_get_comments("field:*;limit:0,5;order:createtime desc;"); ?>
-	        		<?php if(is_array($last_comments)): foreach($last_comments as $key=>$vo): ?><div class="comment-ranking-inner">
-	                        <i class="fa fa-comment"></i>
-	                        <a href="<?php echo U('user/index/index',array('id'=>$vo['uid']));?>"><?php echo ($vo["full_name"]); ?>:</a>
-	                        <span><?php echo ($vo["content"]); ?></span>
-	                        <a href="/<?php echo ($vo["url"]); ?>#comment<?php echo ($vo["id"]); ?>">查看原文</a>
-	                        <span class="comment-time"><?php echo date('m月d日  H:i',strtotime($vo['createtime']));?></span>
-	                    </div><?php endforeach; endif; ?>
-                </div>
-			</div>
-			
-			<div class="tc-box">
-	        	<div class="headtitle">
-	        		<h2>最新加入</h2>
-	        	</div>
-	        	<?php $last_users=sp_get_users("field:*;limit:0,8;order:create_time desc;"); ?>
-	        	<ul class="list-unstyled tc-photos margin-bottom-30">
-	        		<?php if(is_array($last_users)): foreach($last_users as $key=>$vo): ?><li>
-	                    <a href="<?php echo U('user/index/index',array('id'=>$vo['id']));?>">
-	                    <img alt="" src="<?php echo U('user/public/avatar',array('id'=>$vo['id']));?>">
-	                    </a>
-                    </li><?php endforeach; endif; ?>
-                </ul>
-			</div>
-			
-			<div class="tc-box">
-	        	<div class="headtitle">
-	        		<h2>最新发布</h2>
-	        	</div>
-	        	<?php $last_post=sp_sql_posts("cid:$portal_last_post;field:post_title,post_excerpt,tid,smeta;order:listorder asc;limit:4;"); ?>
-	        	<div class="posts">
-	        		<?php if(is_array($last_post)): foreach($last_post as $key=>$vo): $smeta=json_decode($vo['smeta'],true); ?>
-			        	<dl class="dl-horizontal">
-				            <dt>
-					            <a class="img-wraper" href="<?php echo U('article/index',array('id'=>$vo['tid']));?>">
-					            	<?php if(empty($smeta['thumb'])): ?><img src="/tpl/simplebootx/Public/images/default_tupian4.png" class="img-responsive" alt="<?php echo ($vo["post_title"]); ?>"/>
-									<?php else: ?> 
-										<img src="<?php echo sp_get_asset_upload_path($smeta['thumb']);?>" class="img-responsive img-thumbnail" alt="<?php echo ($vo["post_title"]); ?>" /><?php endif; ?>
-					            </a>
-				            </dt>
-				            <dd><a href="<?php echo leuu('article/index',array('id'=>$vo['tid']));?>"><?php echo msubstr($vo['post_excerpt'],0,32);?></a></dd>
-				        </dl><?php endforeach; endif; ?>
-		        </div>
-			</div>
-			
-			<?php $ad=sp_getad("portal_list_right_aside"); ?>
-			<?php if(!empty($ad)): ?><div class="tc-box">
-	        	<div class="headtitle">
-	        		<h2>赞助商</h2>
-	        	</div>
-	        	<div>
-		        	<?php echo ($ad); ?>
-		        </div>
-			</div><?php endif; ?>
-		</div>
+          </div>
+       </div>
     </div>
-    
-    
-    <br><br><br>
-<!-- Footer
-      ================================================== -->
-      <hr>
-<?php echo hook('footer');?>
-      <div id="footer">
-        <div class="links">
-        <?php $links=sp_getlinks(); ?>
-        <?php if(is_array($links)): foreach($links as $key=>$vo): ?><a href="<?php echo ($vo["link_url"]); ?>" target="<?php echo ($vo["link_target"]); ?>"><?php echo ($vo["link_name"]); ?></a><?php endforeach; endif; ?>
-        </div>
-        <p>
-        Made by <a href="http://www.thinkcmf.com">ThinkCMF</a>
-        Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" rel="nofollow" target="_blank">Apache License v2.0</a>.<br/>
-        Based on <a href="http://getbootstrap.com/2.3.2/" target="_blank">Bootstrap</a>.  Icons from <a href="http://fortawesome.github.com/Font-Awesome/" target="_blank">Font Awesome</a>
-        </p>
-      </div>
-      <div id="backtotop"><i class="fa fa-arrow-circle-up"></i></div>
-      <?php echo ($site_tongji); ?>
-
+    <!-- Main Content end-->
 </div>
+<!-- Content End -->
 
+<!-- Footer Start -->
+        <footer id="footer">
+            <!-- Footer Top Start -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <!-- <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-one">
+                            <h3>
+                                关于我们
+                            </h3>
+                            <p>
+                                微赢生物科技有限公司成立于2014年，注册资本金1000万，是华东地区专业的移动电商生物科技公司。
+                            </p>
+                        </section> -->
+
+                        <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-one">
+                            <h3>联系我们</h3>
+                            <ul class="contact-us">
+                               <li>
+                                  <i class="icon-map-marker"></i>
+                                  <p> 
+                                     <strong>地址:</strong> 合肥市庐阳区财富广场B座西楼604
+                                  </p>
+                               </li>
+                               <li>
+                                  <i class="icon-phone"></i>
+                                  <p><strong>电话:</strong> 0551-68998601</p>
+                               </li>
+                               <li>
+                                  <i class="icon-envelope"></i>
+                                  <p><strong>Email:</strong>info@fifothemes.com</p>
+                               </li>
+                            </ul>
+                        </section>
+
+                        <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-two">
+                            <h3>
+                                官方服务号
+                            </h3>
+                            <img src="/static/img/wx_1.jpg" style="width:50%">
+                        </section>
+
+                        <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-three">
+                            <h3>
+                                官方订阅号
+                            </h3>
+                            <img src="/static/img/wx_2.jpg" style="width:50%">
+                        </section>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top End -->
+            <!-- Footer Bottom Start -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 text-center">
+                            Copyright &copy; 2014.Company name All rights reserved.
+                        </div>
+                        <!-- <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+                            <ul class="social social-icons-footer-bottom">
+                                <li class="facebook">
+                                    <a href="/static/#" data-toggle="tooltip" title="Facebook">
+                                        <i class="icon-facebook">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="/static/#" data-toggle="tooltip" title="Twitter">
+                                        <i class="icon-twitter">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="dribbble">
+                                    <a href="/static/#" data-toggle="tooltip" title="Dribble">
+                                        <i class="icon-dribbble">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="linkedin">
+                                    <a href="/static/#" data-toggle="tooltip" title="LinkedIn">
+                                        <i class="icon-linkedin">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="rss">
+                                    <a href="/static/#" data-toggle="tooltip" title="Rss">
+                                        <i class="icon-rss">
+                                        </i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom End -->
+        </footer>
+        <!-- Scroll To Top -->
+        <a href="/static/#" class="scrollup">
+            <i class="icon-angle-up">
+            </i>
+        </a>
     
-<!-- JavaScript -->
-<script type="text/javascript">
-//全局变量
-var GV = {
-    DIMAUB: "/",
-    JS_ROOT: "statics/js/",
-    TOKEN: ""
-};
-</script>
-<!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/statics/js/jquery.js"></script>
-    <script src="/statics/js/wind.js"></script>
-    <script src="/tpl/simplebootx/Public/simpleboot/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/statics/js/frontend.js"></script>
-	<script>
-	$(function(){
-		$('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
-		
-		$("#main-menu li.dropdown").hover(function(){
-			$(this).addClass("open");
-		},function(){
-			$(this).removeClass("open");
-		});
-		
-		;(function($){
-			$.fn.totop=function(opt){
-				var scrolling=false;
-				return this.each(function(){
-					var $this=$(this);
-					$(window).scroll(function(){
-						if(!scrolling){
-							var sd=$(window).scrollTop();
-							if(sd>100){
-								$this.fadeIn();
-							}else{
-								$this.fadeOut();
-							}
-						}
-					});
-					
-					$this.click(function(){
-						scrolling=true;
-						$('html, body').animate({
-							scrollTop : 0
-						}, 500,function(){
-							scrolling=false;
-							$this.fadeOut();
-						});
-					});
-				});
-			};
-		})(jQuery); 
-		
-		$("#backtotop").totop();
-		
-		
-	});
-	</script>
 
-
+    </div>
+    <!-- Wrap End -->
+    <?php echo ($site_tongji); ?>
+    <!-- The Scripts -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/jquery.parallax.js"></script>
+    <script src="/static/js/modernizr-2.6.2.min.js"></script>
+    <script src="/static/js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="/static/js/jquery.nivo.slider.pack.js"></script>
+    <script src="/static/js/jquery.prettyPhoto.js"></script>
+    <script src="/static/js/superfish.js"></script>
+    <!-- // <script src="/static/js/tweetMachine.js"></script> -->
+    <script src="/static/js/tytabs.js"></script>
+    <script src="/static/js/jquery.gmap.min.js"></script>
+    <script src="/static/js/circularnav.js"></script>
+    <script src="/static/js/jquery.sticky.js"></script>
+    <!-- // <script src="/static/js/jflickrfeed.js"></script> -->
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/waypoints.min.js"></script>
+    <script src="/static/js/spectrum.js"></script>
+    <!-- // <script src="/static/js/switcher.js"></script> -->
+    <script src="/static/js/custom.js"></script>
 </body>
+
 </html>

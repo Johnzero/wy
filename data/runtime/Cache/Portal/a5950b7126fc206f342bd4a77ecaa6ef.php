@@ -169,7 +169,7 @@
                         <ul class="nav navbar-nav sf-menu">
                             <li><a id="current" href="/static/contact.html">首页</a></li>
                             <li>
-                               <a>
+                               <a href="/index.php?g=portal&m=list&a=index&id=1">
                                     走进微赢
                                    <span class="sf-sub-indicator">
                                    <i class="icon-angle-down "></i>
@@ -183,7 +183,7 @@
                                </ul>
                             </li>
                             <li>
-                               <a class="sf-with-ul">
+                               <a  href="/index.php?g=portal&m=list&a=index&id=3" class="sf-with-ul">
                                品牌动态 
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
@@ -209,7 +209,7 @@
                                </ul>
                             </li>
                             <li>
-                               <a class="sf-with-ul">
+                               <a href="/index.php?g=portal&m=list&a=index&id=4" class="sf-with-ul">
                                微赢商学院
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
@@ -222,7 +222,7 @@
                                </ul>
                             </li>
                             <li>
-                               <a class="sf-with-ul">
+                               <a href="/index.php?g=portal&m=list&a=index&id=5" class="sf-with-ul">
                                会员中心
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>

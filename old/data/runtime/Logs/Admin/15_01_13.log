@@ -1,0 +1,60 @@
+[ 2015-01-13T15:03:00+08:00 ] ::1 /index.php?g=Admin&m=nav&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0110s ]
+SQL: UPDATE `sp_nav` SET `cid`='1',`parentid`='0',`label`='走进微赢',`href`='a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"1\";}}',`target`='_blank',`icon`='',`status`='1',`path`='0-2' WHERE `id` = 2 [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-13T15:03:22+08:00 ] ::1 /index.php?g=Admin&m=nav&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0090s ]
+SQL: UPDATE `sp_nav` SET `cid`='1',`parentid`='0',`label`='品牌动态',`href`='a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"2\";}}',`target`='_blank',`icon`='',`status`='1',`path`='0-3' WHERE `id` = 3 [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-13T15:03:28+08:00 ] ::1 /index.php?g=Admin&m=nav&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0070s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0080s ]
+SQL: UPDATE `sp_nav` SET `cid`='1',`parentid`='0',`label`='走进微赢',`href`='a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"1\";}}',`target`='',`icon`='',`status`='1',`path`='0-2' WHERE `id` = 2 [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-13T15:03:33+08:00 ] ::1 /index.php?g=Admin&m=nav&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0060s ]
+SQL: UPDATE `sp_nav` SET `cid`='1',`parentid`='0',`label`='走进微赢',`href`='a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"1\";}}',`target`='_blank',`icon`='',`status`='1',`path`='0-2' WHERE `id` = 2 [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-13T15:03:39+08:00 ] ::1 /index.php?g=Admin&m=nav&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_nav` [ RunTime:0.0220s ]
+SQL: SHOW COLUMNS FROM `sp_nav_cat` [ RunTime:0.0080s ]
+SQL: UPDATE `sp_nav` SET `cid`='1',`parentid`='0',`label`='走进微赢',`href`='a:2:{s:6:\"action\";s:17:\"Portal/List/index\";s:5:\"param\";a:1:{s:2:\"id\";s:1:\"1\";}}',`target`='',`icon`='',`status`='1',`path`='0-2' WHERE `id` = 2 [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+

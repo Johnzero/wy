@@ -170,7 +170,7 @@
                         <ul class="nav navbar-nav sf-menu">
                             <li><a id="current" href="/static/contact.html">首页</a></li>
                             <li>
-                               <a>
+                               <a href="/index.php?g=portal&m=list&a=index&id=1">
                                     走进微赢
                                    <span class="sf-sub-indicator">
                                    <i class="icon-angle-down "></i>
@@ -184,7 +184,7 @@
                                </ul>
                             </li>
                             <li>
-                               <a class="sf-with-ul">
+                               <a  href="/index.php?g=portal&m=list&a=index&id=3" class="sf-with-ul">
                                品牌动态 
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
@@ -210,7 +210,7 @@
                                </ul>
                             </li>
                             <li>
-                               <a class="sf-with-ul">
+                               <a href="/index.php?g=portal&m=list&a=index&id=4" class="sf-with-ul">
                                微赢商学院
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
@@ -223,7 +223,7 @@
                                </ul>
                             </li>
                             <li>
-                               <a class="sf-with-ul">
+                               <a href="/index.php?g=portal&m=list&a=index&id=5" class="sf-with-ul">
                                会员中心
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
@@ -255,19 +255,33 @@
 
 
 <div id="main">
+	
+	<div class="breadcrumb-wrapper">
+       <div class="container">
+          <div class="row">
+             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <h2 class="title"><?php echo ($term["name"]); ?></h2>
+             </div>
+             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <div class="breadcrumbs pull-right">
+                   <ul>
+                      <li>您的位置 : </li>
+                      <li><a href="/">首页</a></li>
+                      <li><a href="<?php echo leuu('list/index',array('id'=>$term['term_id']));?>"><?php echo ($term["name"]); ?></a></li>
+                      <li><a><?php echo ($post_title); ?></a></li>
+                   </ul>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+
     <!-- Main Content start-->
     <div class="content">
        <div class="container">
           	<div class="row">
             <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12 bottom-pad">
                 <article class="post hentry">
-<!--                    <div class="post-image">
-                      <a href="img/blog/blog-post3.jpg" data-rel="prettyPhoto">
-                      <span class="img-hover"></span>
-                      <span class="fullscreen"><i class="icon-search"></i></span>
-                      <img src="img/blog/blog-post3.jpg" alt="">
-                      </a>
-                   </div> -->
                    <header class="post-header bottom-pad" style="border-bottom: 1px dashed #CCCCCC;">
                       <h3 class="content-title" style="font-size: 28px;color: #59ab02;"><?php echo ($post_title); ?></h3>
                       <div class="blog-entry-meta">
@@ -297,10 +311,10 @@
                    </div>
                 </article>
                 <div class="blog-divider"></div>
-                <ul class="pager">
-                   <li class="previous"><a href="#">&larr; 前一篇</a></li>
-                   <li class="next"><a href="#">后一篇 &rarr;</a></li>
-                </ul>
+                <!-- <ul class="pager">
+                   <li class="previous"><a href="<?php echo U('article/index',array('id'=>$object_id-1));?>">&larr; 前一篇</a></li>
+                   <li class="next"><a href="<?php echo U('article/index',array('id'=>$object_id+1));?>">后一篇 &rarr;</a></li>
+                </ul> -->
                 
             </div>
              
@@ -322,36 +336,47 @@
     <div class="widget tabs">
        <div id="horizontal-tabs">
           <ul class="tabs">
-             <li id="tab1" class="current">Popular</li>
-             <li id="tab2">Recent</li>
+             <li id="tab1" class="current">热门文章</li>
+             <li id="tab2">最新文章</li>
+             <li id="tab3">经销商</li>
           </ul>
           <div class="contents">
              <div class="tabscontent" id="content1" style="display: block;">
                 <ul class="posts">
-                   <li>
-                      <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="img/recent-post-img.jpg"></a>
-                      <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
-                      <span class="color">27 July 2013</span>
-                   </li>
-                   <li>
-                      <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="img/recent-post-img.jpg"></a>
-                      <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
-                      <span class="color">30 July 2013</span>
-                   </li>
+                    <?php $hot_articles=sp_sql_posts("smeta;order:post_hits desc;limit:5;"); ?>
+                    <?php if(is_array($hot_articles)): foreach($hot_articles as $key=>$vo): $smeta=json_decode($vo['smeta'],true); ?>
+                        <li>
+                            <a href="<?php echo leuu('article/index',array('id'=>$vo['tid']));?>">
+                                <img class="img-thumbnail recent-post-img" alt="" src="/data/upload/<?php echo ($smeta["thumb"]); ?>">
+                            </a>
+                            <p><a href="#"><?php echo ($vo["post_title"]); ?></a></p>
+                            <?php $n_d = explode(" ", $vo['post_date']); ?>
+                            <span class="color"><?php echo ($n_d[0]); ?></span>
+                        </li><?php endforeach; endif; ?>
                 </ul>
              </div>
              <div class="tabscontent" id="content2">
                 <ul class="posts">
-                   <li>
-                      <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="img/recent-post-img.jpg"></a>
-                      <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
-                      <span class="color">27 July 2013</span>
-                   </li>
-                   <li>
-                      <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="img/recent-post-img.jpg"></a>
-                      <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
-                      <span class="color">30 July 2013</span>
-                   </li>
+                    <?php $new_articles=sp_sql_posts("smeta;order:post_date desc;limit:5;"); ?>
+                    <?php if(is_array($new_articles)): foreach($new_articles as $key=>$vo): $smeta=json_decode($vo['smeta'],true); ?>
+                        <li>
+                            <a href="<?php echo leuu('article/index',array('id'=>$vo['tid']));?>">
+                                <img class="img-thumbnail recent-post-img" alt="" src="/data/upload/<?php echo ($smeta["thumb"]); ?>">
+                            </a>
+                            <p><a href="#"><?php echo ($vo["post_title"]); ?></a></p>
+                            <?php $n_d = explode(" ", $vo['post_date']); ?>
+                            <span class="color"><?php echo ($n_d[0]); ?></span>
+                        </li><?php endforeach; endif; ?>
+                </ul>
+             </div>
+             <div class="tabscontent" id="content3">
+                <ul class="posts">
+                    <?php $last_users = sp_get_users("field:*;limit:0,8;order:create_time desc;"); ?>
+                    <?php if(is_array($last_users)): foreach($last_users as $key=>$vo): ?><li>
+                            <a href="<?php echo U('user/index/index',array('id'=>$vo['id']));?>"><img class="img-thumbnail recent-post-img" alt="" src="<?php echo U('user/public/avatar',array('id'=>$vo['id']));?>"></a>
+                            <p><a href="#"><?php echo ($vo["user_nicename"]); ?></a></p>
+                            <!-- <span class="color">27 July 2013</span> -->
+                        </li><?php endforeach; endif; ?>
                 </ul>
              </div>
           </div>
@@ -363,31 +388,31 @@
     <div class="widget category">
        <h3 class="title">Categories</h3>
        <ul class="category-list slide">
-          <li><a href="#">Web Design</a></li>
-          <li><a href="#">Graphic Design</a></li>
-          <li><a href="#">Illustration</a></li>
-          <li><a href="#">Logo Design</a></li>
-          <li><a href="#">Wordpress Themes</a></li>
+          <li><a href="/">首页</a></li>
+          <li><a href="/index.php?g=portal&m=list&a=index&id=1">走进微赢</a></li>
+          <li><a href="/index.php?g=portal&m=list&a=index&id=3">品牌动态</a></li>
+          <li><a href="/index.php?g=portal&m=list&a=index&id=4">微赢商学院</a></li>
+          <li><a href="/index.php?g=portal&m=list&a=index&id=5">会员中心</a></li>
        </ul>
     </div>
     <!-- Category Widget End -->
     <!-- Ads Widget Start -->
     <div class="widget ads">
-       <h3 class="title">Advertisement</h3>
+       <h3 class="title">广告</h3>
        <div class="ads-img row">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-             <img class="img-thumbnail" alt="" src="img/ads-small.jpg">
+             <img class="img-thumbnail" alt="" src="/static/img/ads-small.jpg">
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-             <img class="img-thumbnail" alt="" src="img/ads-small.jpg">
+             <img class="img-thumbnail" alt="" src="/static/img/ads-small.jpg">
           </div>
        </div>
        <div class="ads-img row">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-             <img class="img-thumbnail" alt="" src="img/ads-small.jpg">
+             <img class="img-thumbnail" alt="" src="/static/img/ads-small.jpg">
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-             <img class="img-thumbnail" alt="" src="img/ads-small.jpg">
+             <img class="img-thumbnail" alt="" src="/static/img/ads-small.jpg">
           </div>
        </div>
     </div>

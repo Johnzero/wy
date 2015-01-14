@@ -8,7 +8,10 @@ class ListController extends HomeBaseController {
 
 	//文章内页
 	public function index() {
+		$id = intval($_GET['id']);
 		$term=sp_get_term($_GET['id']);
+    	$term_obj=M("Terms")->where("term_id='$id'")->find();
+    	$this->assign("term_obj",$term_obj);
 		$tplname=$term["list_tpl"];
     	$tplname=sp_get_apphome_tpl($tplname, "list");
     	$this->assign($term);

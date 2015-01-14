@@ -2,19 +2,33 @@
 <tc_include file="Public:head" />
 
 <div id="main">
+	
+	<div class="breadcrumb-wrapper">
+       <div class="container">
+          <div class="row">
+             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <h2 class="title">{$term.name}</h2>
+             </div>
+             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <div class="breadcrumbs pull-right">
+                   <ul>
+                      <li>您的位置 : </li>
+                      <li><a href="/">首页</a></li>
+                      <li><a href="{:leuu('list/index',array('id'=>$term['term_id']))}">{$term.name}</a></li>
+                      <li><a>{$post_title}</a></li>
+                   </ul>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+
     <!-- Main Content start-->
     <div class="content">
        <div class="container">
           	<div class="row">
             <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12 bottom-pad">
                 <article class="post hentry">
-<!--                    <div class="post-image">
-                      <a href="img/blog/blog-post3.jpg" data-rel="prettyPhoto">
-                      <span class="img-hover"></span>
-                      <span class="fullscreen"><i class="icon-search"></i></span>
-                      <img src="img/blog/blog-post3.jpg" alt="">
-                      </a>
-                   </div> -->
                    <header class="post-header bottom-pad" style="border-bottom: 1px dashed #CCCCCC;">
                       <h3 class="content-title" style="font-size: 28px;color: #59ab02;">{$post_title}</h3>
                       <div class="blog-entry-meta">
@@ -44,10 +58,10 @@
                    </div>
                 </article>
                 <div class="blog-divider"></div>
-                <ul class="pager">
-                   <li class="previous"><a href="#">&larr; 前一篇</a></li>
-                   <li class="next"><a href="#">后一篇 &rarr;</a></li>
-                </ul>
+                <!-- <ul class="pager">
+                   <li class="previous"><a href="{:U('article/index',array('id'=>$object_id-1))}">&larr; 前一篇</a></li>
+                   <li class="next"><a href="{:U('article/index',array('id'=>$object_id+1))}">后一篇 &rarr;</a></li>
+                </ul> -->
                 
             </div>
              

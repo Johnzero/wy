@@ -1,0 +1,242 @@
+[ 2015-01-14T15:19:02+08:00 ] ::1 /index.php?g=&m=AdminTerm&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0100s ]
+SQL: UPDATE `sp_terms` SET `parent`='0',`name`='公司新闻',`description`='公司新闻',`taxonomy`='article',`seo_title`='',`seo_keywords`='',`seo_description`='',`list_tpl`='list',`one_tpl`='article' WHERE `term_id` = '1' [ RunTime:0.0010s ]
+SQL: UPDATE `sp_terms` SET `path`='0-1' WHERE ( term_id=1 ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( path like '%-1-%' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\ThinkCMFX\application\Common\Model\TermsModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:30:47+08:00 ] ::1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0520s ]
+SQL: SELECT * FROM `sp_terms` ORDER BY `listorder` asc  [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`post_title`,`post_keywords`,`post_excerpt`,`post_content`,`post_date`,`smeta`,`post_author`) VALUES ('2015-01-14 15:30:39','1','test','testtest','testtest','<p>testtest</p>','2015-01-14 15:30:47','{\"thumb\":\"\"}','1') [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('1','28') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:32:57+08:00 ] ::1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0100s ]
+SQL: SELECT * FROM `sp_terms` ORDER BY `listorder` asc  [ RunTime:0.0000s ]
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`post_title`,`post_keywords`,`post_excerpt`,`post_date`,`smeta`,`post_author`) VALUES ('2015-01-14 15:32:51','1','阿萨德发',' 阿萨德发','阿萨德发','2015-01-14 15:32:57','{\"thumb\":\"\"}','1') [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('1','29') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:33:00+08:00 ] ::1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.004000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0140s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0280s ]
+SQL: SELECT * FROM `sp_terms` ORDER BY `listorder` asc  [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`post_title`,`post_keywords`,`post_excerpt`,`post_date`,`smeta`,`post_author`) VALUES ('2015-01-14 15:32:58','1','1213','123','123123123','2015-01-14 15:33:00','{\"thumb\":\"\"}','1') [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('1','30') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:33:05+08:00 ] ::1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0220s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0150s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `sp_terms` ORDER BY `listorder` asc  [ RunTime:0.0000s ]
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`post_title`,`post_keywords`,`post_excerpt`,`post_date`,`smeta`,`post_author`) VALUES ('2015-01-14 15:33:01','1','从自行车','撒旦法师','啊阿萨德','2015-01-14 15:33:05','{\"thumb\":\"\"}','1') [ RunTime:0.0000s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('1','31') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:33:10+08:00 ] ::1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0270s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0260s ]
+SQL: SELECT * FROM `sp_terms` ORDER BY `listorder` asc  [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`post_title`,`post_keywords`,`post_excerpt`,`post_date`,`smeta`,`post_author`) VALUES ('2015-01-14 15:33:06','1','V字形啊所发生的',' 阿萨德发','阿萨德发生后','2015-01-14 15:33:10','{\"thumb\":\"\"}','1') [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('1','32') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:33:16+08:00 ] ::1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.1290s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0190s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0390s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `sp_terms` ORDER BY `listorder` asc  [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`post_title`,`post_keywords`,`post_excerpt`,`post_date`,`smeta`,`post_author`) VALUES ('2015-01-14 15:33:11','1','发达输入法额2 ','12312','1231231','2015-01-14 15:33:16','{\"thumb\":\"\"}','1') [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('1','33') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:33:22+08:00 ] ::1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0560s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0350s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sp_terms` ORDER BY `listorder` asc  [ RunTime:0.0000s ]
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`post_title`,`post_keywords`,`post_excerpt`,`post_date`,`smeta`,`post_author`) VALUES ('2015-01-14 15:33:17','1','自行车V字形成','在V字形成',' 在V字形成v','2015-01-14 15:33:22','{\"thumb\":\"\"}','1') [ RunTime:0.0000s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('1','34') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:33:27+08:00 ] ::1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0110s ]
+SQL: SELECT * FROM `sp_terms` ORDER BY `listorder` asc  [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`post_title`,`post_keywords`,`post_excerpt`,`post_date`,`smeta`,`post_author`) VALUES ('2015-01-14 15:33:23','1','121','沙发松岛枫','阿萨德发斯蒂芬','2015-01-14 15:33:27','{\"thumb\":\"\"}','1') [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('1','35') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:33:30+08:00 ] ::1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0150s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0120s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `sp_terms` ORDER BY `listorder` asc  [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`post_title`,`post_keywords`,`post_excerpt`,`post_date`,`smeta`,`post_author`) VALUES ('2015-01-14 15:33:27','1','13123','1231','13123','2015-01-14 15:33:30','{\"thumb\":\"\"}','1') [ RunTime:0.0010s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('1','36') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:33:36+08:00 ] ::1 /index.php?g=&m=AdminPost&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0090s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0110s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0130s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0250s ]
+SQL: SELECT * FROM `sp_terms` ORDER BY `listorder` asc  [ RunTime:0.0000s ]
+SQL: INSERT INTO `sp_posts` (`post_modified`,`post_status`,`post_title`,`post_keywords`,`post_excerpt`,`post_date`,`smeta`,`post_author`) VALUES ('2015-01-14 15:33:31','1','次在V字','发生的 阿萨德发',' 大法师','2015-01-14 15:33:36','{\"thumb\":\"\"}','1') [ RunTime:0.0000s ]
+SQL: INSERT INTO `sp_term_relationships` (`term_id`,`object_id`) VALUES ('1','37') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:41:01+08:00 ] ::1 /index.php?g=&m=AdminTerm&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0130s ]
+SQL: INSERT INTO `sp_terms` (`parent`,`name`,`description`,`taxonomy`,`seo_title`,`seo_keywords`,`seo_description`,`list_tpl`,`one_tpl`) VALUES ('0','走进微赢','','article','','','','list','article') [ RunTime:0.0000s ]
+SQL: UPDATE `sp_terms` SET `path`='0-3' WHERE ( term_id=3 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:41:33+08:00 ] ::1 /index.php?g=&m=AdminTerm&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0160s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0120s ]
+SQL: UPDATE `sp_terms` SET `parent`='0',`name`='走进微赢',`description`='走进微赢',`taxonomy`='article',`seo_title`='',`seo_keywords`='',`seo_description`='',`list_tpl`='list',`one_tpl`='article' WHERE `term_id` = '1' [ RunTime:0.0000s ]
+SQL: UPDATE `sp_terms` SET `path`='0-1' WHERE ( term_id=1 ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( path like '%-1-%' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\ThinkCMFX\application\Common\Model\TermsModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:41:36+08:00 ] ::1 /index.php?g=&m=AdminTerm&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0070s ]
+SQL: UPDATE `sp_terms` SET `parent`='0',`name`='走进微赢',`description`='走进微赢',`taxonomy`='article',`seo_title`='',`seo_keywords`='',`seo_description`='',`list_tpl`='list',`one_tpl`='article' WHERE `term_id` = '1' [ RunTime:0.0010s ]
+SQL: UPDATE `sp_terms` SET `path`='0-1' WHERE ( term_id=1 ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( path like '%-1-%' )  [ RunTime:0.0010s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\ThinkCMFX\application\Common\Model\TermsModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:41:54+08:00 ] ::1 /index.php?g=&m=AdminTerm&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0300s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0090s ]
+SQL: UPDATE `sp_terms` SET `parent`='0',`name`='品牌动态',`description`='品牌动态',`taxonomy`='article',`seo_title`='',`seo_keywords`='',`seo_description`='',`list_tpl`='list',`one_tpl`='article' WHERE `term_id` = '3' [ RunTime:0.0010s ]
+SQL: UPDATE `sp_terms` SET `path`='0-3' WHERE ( term_id=3 ) [ RunTime:0.0010s ]
+SQL: SELECT * FROM `sp_terms` WHERE ( path like '%-3-%' )  [ RunTime:0.0000s ]
+NOTIC: [2] Invalid argument supplied for foreach() E:\ThinkCMFX\application\Common\Model\TermsModel.class.php 第 43 行.
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:42:11+08:00 ] ::1 /index.php?g=&m=AdminTerm&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0130s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0120s ]
+SQL: INSERT INTO `sp_terms` (`parent`,`name`,`description`,`taxonomy`,`seo_title`,`seo_keywords`,`seo_description`,`list_tpl`,`one_tpl`) VALUES ('0','微赢商学院','微赢商学院','article','','','','list','article') [ RunTime:0.0000s ]
+SQL: UPDATE `sp_terms` SET `path`='0-4' WHERE ( term_id=4 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-14T15:42:23+08:00 ] ::1 /index.php?g=&m=AdminTerm&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002001s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003001s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0270s ]
+SQL: INSERT INTO `sp_terms` (`parent`,`name`,`description`,`taxonomy`,`seo_title`,`seo_keywords`,`seo_description`,`list_tpl`,`one_tpl`) VALUES ('0','会员中心','会员中心','article','','','','list','article') [ RunTime:0.0010s ]
+SQL: UPDATE `sp_terms` SET `path`='0-5' WHERE ( term_id=5 ) [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+

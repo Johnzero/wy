@@ -16,36 +16,63 @@
     <div class="widget tabs">
        <div id="horizontal-tabs">
           <ul class="tabs">
-             <li id="tab1" class="current">Popular</li>
-             <li id="tab2">Recent</li>
+             <li id="tab1" class="current">热门文章</li>
+             <li id="tab2">最新文章</li>
+             <li id="tab3">经销商</li>
           </ul>
           <div class="contents">
              <div class="tabscontent" id="content1" style="display: block;">
                 <ul class="posts">
-                   <li>
-                      <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="img/recent-post-img.jpg"></a>
-                      <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
-                      <span class="color">27 July 2013</span>
-                   </li>
-                   <li>
-                      <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="img/recent-post-img.jpg"></a>
-                      <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
-                      <span class="color">30 July 2013</span>
-                   </li>
+                    <php>
+                        $hot_articles=sp_sql_posts("smeta;order:post_hits desc;limit:5;"); 
+                    </php>
+                    <foreach name="hot_articles" item="vo">
+                        <php>
+                            $smeta=json_decode($vo['smeta'],true);
+                        </php>
+                        <li>
+                            <a href="{:leuu('article/index',array('id'=>$vo['tid']))}">
+                                <img class="img-thumbnail recent-post-img" alt="" src="/data/upload/{$smeta.thumb}">
+                            </a>
+                            <p><a href="#">{$vo.post_title}</a></p>
+                            <?php $n_d = explode(" ", $vo['post_date']); ?>
+                            <span class="color">{$n_d[0]}</span>
+                        </li>
+                    </foreach>
                 </ul>
              </div>
              <div class="tabscontent" id="content2">
                 <ul class="posts">
-                   <li>
-                      <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="img/recent-post-img.jpg"></a>
-                      <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
-                      <span class="color">27 July 2013</span>
-                   </li>
-                   <li>
-                      <a href="#"><img class="img-thumbnail recent-post-img" alt="" src="img/recent-post-img.jpg"></a>
-                      <p><a href="#">Lorem Ipsum is simply dummy text.</a></p>
-                      <span class="color">30 July 2013</span>
-                   </li>
+                    <php>
+                        $new_articles=sp_sql_posts("smeta;order:post_date desc;limit:5;"); 
+                    </php>
+                    <foreach name="new_articles" item="vo">
+                        <php>
+                            $smeta=json_decode($vo['smeta'],true);
+                        </php>
+                        <li>
+                            <a href="{:leuu('article/index',array('id'=>$vo['tid']))}">
+                                <img class="img-thumbnail recent-post-img" alt="" src="/data/upload/{$smeta.thumb}">
+                            </a>
+                            <p><a href="#">{$vo.post_title}</a></p>
+                            <?php $n_d = explode(" ", $vo['post_date']); ?>
+                            <span class="color">{$n_d[0]}</span>
+                        </li>
+                    </foreach>
+                </ul>
+             </div>
+             <div class="tabscontent" id="content3">
+                <ul class="posts">
+                    <php>
+                        $last_users = sp_get_users("field:*;limit:0,8;order:create_time desc;");
+                    </php>
+                    <foreach name="last_users" item="vo">
+                        <li>
+                            <a href="{:U('user/index/index',array('id'=>$vo['id']))}"><img class="img-thumbnail recent-post-img" alt="" src="{:U('user/public/avatar',array('id'=>$vo['id']))}"></a>
+                            <p><a href="#">{$vo.user_nicename}</a></p>
+                            <!-- <span class="color">27 July 2013</span> -->
+                        </li>
+                    </foreach>
                 </ul>
              </div>
           </div>
@@ -57,31 +84,31 @@
     <div class="widget category">
        <h3 class="title">Categories</h3>
        <ul class="category-list slide">
-          <li><a href="#">Web Design</a></li>
-          <li><a href="#">Graphic Design</a></li>
-          <li><a href="#">Illustration</a></li>
-          <li><a href="#">Logo Design</a></li>
-          <li><a href="#">Wordpress Themes</a></li>
+          <li><a href="/">首页</a></li>
+          <li><a href="/index.php?g=portal&m=list&a=index&id=1">走进微赢</a></li>
+          <li><a href="/index.php?g=portal&m=list&a=index&id=3">品牌动态</a></li>
+          <li><a href="/index.php?g=portal&m=list&a=index&id=4">微赢商学院</a></li>
+          <li><a href="/index.php?g=portal&m=list&a=index&id=5">会员中心</a></li>
        </ul>
     </div>
     <!-- Category Widget End -->
     <!-- Ads Widget Start -->
     <div class="widget ads">
-       <h3 class="title">Advertisement</h3>
+       <h3 class="title">广告</h3>
        <div class="ads-img row">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-             <img class="img-thumbnail" alt="" src="img/ads-small.jpg">
+             <img class="img-thumbnail" alt="" src="/static/img/ads-small.jpg">
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-             <img class="img-thumbnail" alt="" src="img/ads-small.jpg">
+             <img class="img-thumbnail" alt="" src="/static/img/ads-small.jpg">
           </div>
        </div>
        <div class="ads-img row">
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-             <img class="img-thumbnail" alt="" src="img/ads-small.jpg">
+             <img class="img-thumbnail" alt="" src="/static/img/ads-small.jpg">
           </div>
           <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-             <img class="img-thumbnail" alt="" src="img/ads-small.jpg">
+             <img class="img-thumbnail" alt="" src="/static/img/ads-small.jpg">
           </div>
        </div>
     </div>
