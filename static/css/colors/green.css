@@ -183,6 +183,13 @@ nav.menu {
 
 .footer-three {text-align: center;}
 
+.open > .dropdown-menu {
+	z-index: 1000000;
+}
+.user {
+	padding: 3px 15px !important;
+}
+
 /*.service-reasons {
 	background: url(../../img/bg.jpg) 50% 0 no-repeat fixed;
 }

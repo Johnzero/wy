@@ -9,30 +9,38 @@
 	<meta name="author" content="ThinkCMF">
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+
+   	<!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp"/>
 
     <!-- HTML5 shim for IE8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <![endif]-->
-	<link rel="icon" href="/tpl/simplebootx/Public/images/favicon.ico" mce_href="/tpl/simplebootx/Public/images/favicon.ico" type="image/x-icon">
-	<link rel="shortcut icon" href="/tpl/simplebootx/Public/images/favicon.ico" mce_href="/tpl/simplebootx/Public/images/favicon.ico" type="image/x-icon">
-    <link href="/tpl/simplebootx/Public/simpleboot/themes/cmf/theme.min.css" rel="stylesheet">
-    <link href="/tpl/simplebootx/Public/simpleboot/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
-    <link href="/tpl/simplebootx/Public/simpleboot/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
+	<link rel="icon" href="/old/tpl/simplebootx/Public/images/favicon.ico" type="image/x-icon">
+	<link rel="shortcut icon" href="/old/tpl/simplebootx/Public/images/favicon.ico" type="image/x-icon">
+    <link href="/old/tpl/simplebootx/Public/simpleboot/themes/cmf/theme.min.css" rel="stylesheet">
+    <link href="/old/tpl/simplebootx/Public/simpleboot/bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="/old/tpl/simplebootx/Public/simpleboot/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
 	<!--[if IE 7]>
-	<link rel="stylesheet" href="/tpl/simplebootx/Public/simpleboot/font-awesome/4.2.0/css/font-awesome-ie7.min.css">
+	<link rel="stylesheet" href="/old/tpl/simplebootx/Public/simpleboot/font-awesome/4.2.0/css/font-awesome-ie7.min.css">
 	<![endif]-->
-	<link href="/tpl/simplebootx/Public/css/style.css" rel="stylesheet">
+	<link href="/old/tpl/simplebootx/Public/css/style.css" rel="stylesheet">
 	<style>
 		/*html{filter:progid:DXImageTransform.Microsoft.BasicImage(grayscale=1);-webkit-filter: grayscale(1);}*/
 		#backtotop{position: fixed;bottom: 50px;right:20px;display: none;cursor: pointer;font-size: 50px;z-index: 9999;}
 		#backtotop:hover{color:#333}
 	</style>
+	
 </head>
 
 <body class="body-white">
-	<div class="navbar navbar-fixed-top">
+	<?php echo hook('body_start');?>
+<div class="navbar navbar-fixed-top">
    <div class="navbar-inner">
      <div class="container">
        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -40,7 +48,7 @@
          <span class="icon-bar"></span>
          <span class="icon-bar"></span>
        </a>
-       <a class="brand" href="/"><img src="/tpl/simplebootx/Public/images/logo.png"/></a>
+       <a class="brand" href="/old/"><img src="/old/tpl/simplebootx/Public/images/logo.png"/></a>
        <div class="nav-collapse collapse" id="main-menu">
        	<?php
  $effected_id=""; $filetpl="<a href='\$href' target='\$target'>\$label</a>"; $foldertpl="<a href='\$href' target='\$target' class='dropdown-toggle' data-toggle='dropdown'>\$label <b class='caret'></b></a>"; $ul_class="dropdown-menu" ; $li_class="" ; $style="nav"; $showlevel=6; $dropdown='dropdown'; echo sp_get_menu("main",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown); ?>
@@ -48,7 +56,7 @@
 		<ul class="nav pull-right" id="main-menu-left">
 			<li class="dropdown">
 			<?php if(sp_is_user_login()): ?><a class="dropdown-toggle user" data-toggle="dropdown" href="#">
-	            <?php if(empty($user['avatar'])): ?><img src="/tpl/simplebootx//Public/images/headicon.png" class="headicon"/>
+	            <?php if(empty($user['avatar'])): ?><img src="/old/tpl/simplebootx//Public/images/headicon.png" class="headicon"/>
 	            <?php else: ?>
 	            <img src="<?php echo sp_get_user_avatar_url($user['avatar']);?>" class="headicon"/><?php endif; ?>
 	            <?php echo ($user["user_nicename"]); ?><b class="caret"></b></a>
@@ -59,7 +67,7 @@
 	            </ul>
 	        <?php else: ?>
 	            <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
-	           		<img src="/tpl/simplebootx//Public/images/headicon.png" class="headicon"/>登录<b class="caret"></b>
+	           		<img src="/old/tpl/simplebootx//Public/images/headicon.png" class="headicon"/>登录<b class="caret"></b>
 	            </a>
 	            <ul class="dropdown-menu pull-right">
 	               <li><a href="<?php echo U('api/oauth/login',array('type'=>'sina'));?>"><i class="fa fa-weibo"></i> &nbsp;微博登录</a></li>
@@ -161,7 +169,7 @@
 	<script type="text/javascript">
 //全局变量
 var GV = {
-    DIMAUB: "/",
+    DIMAUB: "/old/",
     JS_ROOT: "statics/js/",
     TOKEN: ""
 };
@@ -169,10 +177,10 @@ var GV = {
 <!-- Le javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="/statics/js/jquery.js"></script>
-    <script src="/statics/js/wind.js"></script>
-    <script src="/tpl/simplebootx/Public/simpleboot/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/statics/js/frontend.js"></script>
+    <script src="/old/statics/js/jquery.js"></script>
+    <script src="/old/statics/js/wind.js"></script>
+    <script src="/old/tpl/simplebootx/Public/simpleboot/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/old/statics/js/frontend.js"></script>
 	<script>
 	$(function(){
 		$('body').on('touchstart.dropdown', '.dropdown-menu', function (e) { e.stopPropagation(); });
