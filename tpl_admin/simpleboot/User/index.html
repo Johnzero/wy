@@ -14,7 +14,6 @@
 	            <th>E-mail</th>
 	            <th>注册时间</th>
 	            <th>最后登录时间</th>
-	            <th>最后登录IP</th>
 	            <th>状态</th>
 	            <th align='center'>操作</th>
 	          </tr>
@@ -30,11 +29,14 @@
 	            <td>{$vo.user_email}</td>
 	            <td>{$vo.create_time}</td>
 	            <td>{$vo.last_login_time}</td>
-	            <td>{$vo.last_login_ip}</td>
+	            <!-- <td>{$vo.last_login_ip}</td> -->
 	            <td>{$user_statuses[$vo['user_status']]}</td>
 	            <td align='center'>
-		            <a href="{:U('indexadmin/ban',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要拉黑此用户吗？">拉黑</a>|
-		            <a href="{:U('indexadmin/cancelban',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要启用此用户吗？">启用</a>
+		            <a href="{:U('indexadmin/ban',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要拉黑此用户吗？">拉黑</a> | 
+		            <a href="{:U('indexadmin/cancelban',array('id'=>$vo['id']))}" class="J_ajax_dialog_btn" data-msg="您确定要启用此用户吗？">启用</a> | 
+
+		            <a href='{:U("indexadmin/authorize",array("id"=>$vo["id"]))}'>供应商授权</a>
+
 		        </td>
 	          	</tr>
 	          	</foreach>

@@ -1,9 +1,12 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
 <head>
+    <title>微赢生物科技有限公司</title>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':8080/livereload.js?snipver=1"></' + 'script>')</script>
 
     <!-- HTML5 shim for IE8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -54,7 +57,6 @@ var GV = {
 	            <th>E-mail</th>
 	            <th>注册时间</th>
 	            <th>最后登录时间</th>
-	            <th>最后登录IP</th>
 	            <th>状态</th>
 	            <th align='center'>操作</th>
 	          </tr>
@@ -69,11 +71,14 @@ var GV = {
 	            <td><?php echo ($vo["user_email"]); ?></td>
 	            <td><?php echo ($vo["create_time"]); ?></td>
 	            <td><?php echo ($vo["last_login_time"]); ?></td>
-	            <td><?php echo ($vo["last_login_ip"]); ?></td>
+	            <!-- <td><?php echo ($vo["last_login_ip"]); ?></td> -->
 	            <td><?php echo ($user_statuses[$vo['user_status']]); ?></td>
 	            <td align='center'>
-		            <a href="<?php echo U('indexadmin/ban',array('id'=>$vo['id']));?>" class="J_ajax_dialog_btn" data-msg="您确定要拉黑此用户吗？">拉黑</a>|
-		            <a href="<?php echo U('indexadmin/cancelban',array('id'=>$vo['id']));?>" class="J_ajax_dialog_btn" data-msg="您确定要启用此用户吗？">启用</a>
+		            <a href="<?php echo U('indexadmin/ban',array('id'=>$vo['id']));?>" class="J_ajax_dialog_btn" data-msg="您确定要拉黑此用户吗？">拉黑</a> | 
+		            <a href="<?php echo U('indexadmin/cancelban',array('id'=>$vo['id']));?>" class="J_ajax_dialog_btn" data-msg="您确定要启用此用户吗？">启用</a> | 
+
+		            <a href='<?php echo U("indexadmin/authorize",array("id"=>$vo["id"]));?>'>供应商授权</a>
+
 		        </td>
 	          	</tr><?php endforeach; endif; ?>
 			</tbody>

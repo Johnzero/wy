@@ -235,6 +235,7 @@ hello;
     	//exit();
     	if($result != null)
     	{
+            
     		if($result['user_pass'] == sp_password($password)|| $ucenter_login_ok)
     		{
     			$_SESSION["user"]=$result;

@@ -1,7 +1,6 @@
 <?php if (!defined('THINK_PATH')) exit();?><!doctype html>
 <html>
 <head>
-    <title>微赢生物科技有限公司</title>
 	<meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -44,48 +43,47 @@ var GV = {
 	</style><?php endif; ?>
 <body class="J_scroll_fixed">
 <div class="wrap jj">
+	<ul class="nav nav-tabs">
+     <li><a href="<?php echo U('user/index');?>">管理员</a></li>
+     <li><a href="<?php echo U('user/add');?>">添加管理员</a></li>
+  </ul>
   <div class="common-form">
-    <form method="post" class="J_ajaxForm" action="#">
+    <form method="post" class="form-horizontal J_ajaxForm" action="<?php echo U('User/edit_post');?>">
       <div class="table_list">
-	    <table class="table table-hover">
-	        <thead>
-	          <tr>
-	            <th align='center'>ID</th>
-	            <th>来源</th>
-	            <th>用户名</th>
-	            <th>头像</th>
-	            <th>绑定账号</th>
-	            <th>首次登录时间</th>
-	            <th>最后登录时间</th>
-	            <th>最后登录IP</th>
-	            <th>登录次数</th>
-	            <th align='center'>操作</th>
-	          </tr>
-	        </thead>
-	        <tbody>
-	        	<?php if(is_array($lists)): foreach($lists as $key=>$vo): ?><tr>
-	            <td align='center'><?php echo ($vo["id"]); ?></td>
-	            <td><?php echo ($vo["from"]); ?></td>
-	            <td><?php echo ($vo["name"]); ?></td>
-	            <td><img width="25" height="25" src="<?php echo ($vo["head_img"]); ?>" /></td>
-	            <td><?php echo ((isset($vo['uid']) && ($vo['uid'] !== ""))?($vo['uid']):'无'); ?></td>
-	            <td><?php echo ($vo['create_time']); ?></td>
-	            <td><?php echo ($vo['last_login_time']); ?></td>
-	            <td><?php echo ($vo["last_login_ip"]); ?></td>
-	            <td><?php echo ($vo["login_times"]); ?></td>
-	            <td align='center'>
-		            <a href="<?php echo U('oauthadmin/delete',array('id'=>$vo['id']));?>" class="J_ajax_del" >删除</a>
-		        </td>
-	          	</tr><?php endforeach; endif; ?>
-			</tbody>
-	      </table>
-	      <div class="pagination"><?php echo ($page); ?></div>
-  </div>
+        <table cellpadding="2" cellspacing="2" width="100%">
+          <tbody>
+            <tr>
+              <td width="180">用户名:</td>
+              <td><input type="text" class="input" name="user_login" value="<?php echo ($user_login); ?>"></td>
+            </tr>
+            <tr>
+              <td>密码:</td>
+              <td><input type="password" class="input" name="user_pass" value="" placeholder="******"></td>
+            </tr>
+            <tr>
+              <td>邮箱:</td>
+              <td><input type="text" class="input" name="user_email" value="<?php echo ($user_email); ?>"></td>
+            </tr>
+            <tr>
+              <td>角色:</td>
+              <td>
+ 				<select name="role_id" class="normal_select">
+ 					<?php if(is_array($roles)): foreach($roles as $key=>$vo): $role_id_selected=$vo['id']==$role_id?"selected":""; ?>
+ 						<option value="<?php echo ($vo["id"]); ?>" <?php echo ($role_id_selected); ?>><?php echo ($vo["name"]); ?></option><?php endforeach; endif; ?>
+                </select>
+				</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+       <div class="form-actions">
+       		<input type="hidden" name="id" value="<?php echo ($id); ?>"/>
+            <button type="submit" class="btn btn-primary btn_submit J_ajax_submit_btn">更新</button>
+            <a class="btn" href="/index.php/Admin/User">返回</a>
+      </div>
     </form>
   </div>
 </div>
 <script src="/statics/js/common.js"></script>
-<script>
-</script>
 </body>
 </html>

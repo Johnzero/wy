@@ -1,24 +1,24 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
 <html lang="zh_CN" style="overflow: hidden;">
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=edge" />
-<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<!-- Set render engine for 360 browser -->
+<meta name="renderer" content="webkit">
 <meta charset="utf-8">
 <title>ThinkCMF</title>
 
 <meta name="description" content="This is page-header (.page-header &gt; h1)">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="/statics/simpleboot/themes/<?php echo C('SP_ADMIN_STYLE');?>/theme.min.css" rel="stylesheet">
-<link href="/statics/simpleboot/css/simplebootadmin.css" rel="stylesheet">
-<link href="/statics/simpleboot/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
+<link href="/old/statics/simpleboot/themes/<?php echo C('SP_ADMIN_STYLE');?>/theme.min.css" rel="stylesheet">
+<link href="/old/statics/simpleboot/css/simplebootadmin.css" rel="stylesheet">
+<link href="/old/statics/simpleboot/font-awesome/4.2.0/css/font-awesome.min.css"  rel="stylesheet" type="text/css">
 <!--[if IE 7]>
-	<link rel="stylesheet" href="/statics/simpleboot/font-awesome/4.2.0/css/font-awesome-ie7.min.css">
+	<link rel="stylesheet" href="/old/statics/simpleboot/font-awesome/4.2.0/css/font-awesome-ie7.min.css">
 <![endif]-->
-<link rel="stylesheet" href="/statics/simpleboot/themes/<?php echo C('SP_ADMIN_STYLE');?>/simplebootadminindex.min.css?">
+<link rel="stylesheet" href="/old/statics/simpleboot/themes/<?php echo C('SP_ADMIN_STYLE');?>/simplebootadminindex.min.css?">
 <!--[if lte IE 8]>
-	<link rel="stylesheet" href="/statics/simpleboot/css/simplebootadminindex-ie.css?" />
+	<link rel="stylesheet" href="/old/statics/simpleboot/css/simplebootadminindex-ie.css?" />
 <![endif]-->
 <style>
 .navbar .nav_shortcuts .btn{margin-top: 5px;}
@@ -38,7 +38,7 @@
 //全局变量
 var GV = {
 	HOST:"<?php echo ($_SERVER['HTTP_HOST']); ?>",
-    DIMAUB: "/",
+    DIMAUB: "/old/",
     JS_ROOT: "statics/js/",
     TOKEN: ""
 };
@@ -126,15 +126,32 @@ right: initial !important;}
 	<div class="navbar">
 		<div class="navbar-inner">
 			<div class="container-fluid">
-				<a href="/index.php?g=admin&m=index&a=index" class="brand"> <small> 
-				<img src="/statics/images/icon/logo-18.png">
-					微赢生物科技有限公司
+				<a href="/old/index.php?g=admin&m=index&a=index" class="brand"> <small> 
+				<img src="/old/statics/images/icon/logo-18.png">
+						ThinkCMF 后台
 				</small>
 				</a>
+				<div class="pull-left nav_shortcuts" >
+					<a class="btn btn-small btn-success" href="javascript:openapp('<?php echo u('portal/AdminTerm/index');?>','index_termlist','分类管理');" title="分类管理">
+						<i class="fa fa-th"></i>
+					</a>
+					
+					<a class="btn btn-small btn-info" href="javascript:openapp('<?php echo u('portal/AdminPost/index');?>','index_postlist','文章管理');" title="文章管理">
+						<i class="fa fa-pencil"></i>
+					</a>
+
+					<a class="btn btn-small btn-warning" href="/old/" title="前台首页" target="_blank">
+						<i class="fa fa-home"></i>
+					</a>
+
+					<a class="btn btn-small btn-danger" href="javascript:openapp('<?php echo u('admin/setting/clearcache');?>','index_clearcache','清除缓存');" title="清除缓存">
+						<i class="fa fa-trash-o"></i>
+					</a>
+				</div>
 				<ul class="nav simplewind-nav pull-right">
 					<li class="light-blue">
 						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-							<img class="nav-user-photo" src="/statics/images/icon/logo-18.png" alt="<?php echo ($admin["user_login"]); ?>">
+							<img class="nav-user-photo" src="/old/statics/images/icon/logo-18.png" alt="<?php echo ($admin["user_login"]); ?>">
 							<span class="user-info">
 								<small>欢迎,</small><?php echo ((isset($admin["user_nicename"]) && ($admin["user_nicename"] !== ""))?($admin["user_nicename"]):$admin[user_login]); ?>
 							</span>
@@ -185,8 +202,8 @@ right: initial !important;}
 		</div>
 	</div>
 	
-	<script src="/statics/js/jquery.js"></script>
-	<script src="/statics/simpleboot/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/old/statics/js/jquery.js"></script>
+	<script src="/old/statics/simpleboot/bootstrap/js/bootstrap.min.js"></script>
 	<script>
 	var b = $("#sidebar").hasClass("menu-min");
 	var a = "ontouchend" in document;
@@ -231,7 +248,7 @@ right: initial !important;}
 				return false;
 			});
 	</script>
-	<script src="/tpl_admin/simpleboot/assets/js/index.js"></script>
+	<script src="/old/tpl_admin/simpleboot/assets/js/index.js"></script>
 
 
 

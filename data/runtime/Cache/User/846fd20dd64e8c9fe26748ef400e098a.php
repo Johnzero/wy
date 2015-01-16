@@ -1,8 +1,4 @@
 <?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE html>
-	<html lang="en">
-	<head>
-		<title>ThinkCMF-跳转提示</title>
-		<!DOCTYPE html>
 <!--[if IE 8]>
 <html class="ie ie8">
 <![endif]-->
@@ -260,88 +256,167 @@
         </header>
         <!-- Header End -->
 
-		<style type="text/css">
-		*{ padding: 0; margin: 0; }
-		body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
-		.system-message{ padding: 24px 48px;text-align: center; }
-		.system-message h1{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; text-align: center;}
-		.system-message .jump{ padding-top: 10px}
-		.system-message .success,.system-message .error{ line-height: 1.8em; font-size: 36px }
-		.system-message .detail{ font-size: 12px; line-height: 20px; margin-top: 12px; display:none}
-		</style>
-	</head>
-<body class="body-white">
-	<div class="navbar navbar-fixed-top">
-   <div class="navbar-inner">
-     <div class="container">
-       <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-         <span class="icon-bar"></span>
-       </a>
-       <a class="brand" href="/"><img src="/tpl/simplebootx/Public/images/logo.png"/></a>
-       <div class="nav-collapse collapse" id="main-menu">
-       	<?php
- $effected_id=""; $filetpl="<a href='\$href' target='\$target'>\$label</a>"; $foldertpl="<a href='\$href' target='\$target' class='dropdown-toggle' data-toggle='dropdown'>\$label <b class='caret'></b></a>"; $ul_class="dropdown-menu" ; $li_class="" ; $style="nav"; $showlevel=6; $dropdown='dropdown'; echo sp_get_menu("main",$effected_id,$filetpl,$foldertpl,$ul_class,$li_class,$style,$showlevel,$dropdown); ?>
-		
-		<ul class="nav pull-right" id="main-menu-left">
-			<li class="dropdown">
-			<?php if(sp_is_user_login()): ?><a class="dropdown-toggle user" data-toggle="dropdown" href="#">
-	            <?php if(empty($user['avatar'])): ?><img src="/tpl/simplebootx//Public/images/headicon.png" class="headicon"/>
-	            <?php else: ?>
-	            <img src="<?php echo sp_get_user_avatar_url($user['avatar']);?>" class="headicon"/><?php endif; ?>
-	            <?php echo ($user["user_nicename"]); ?><b class="caret"></b></a>
-	            <ul class="dropdown-menu pull-right">
-	               <li><a href="<?php echo u('user/center/index');?>"><i class="fa fa-user"></i> &nbsp;个人中心</a></li>
-	               <li class="divider"></li>
-	               <li><a href="<?php echo u('user/index/logout');?>"><i class="fa fa-sign-out"></i> &nbsp;退出</a></li>
-	            </ul>
-	        <?php else: ?>
-	            <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
-	           		<img src="/tpl/simplebootx//Public/images/headicon.png" class="headicon"/>登录<b class="caret"></b>
-	            </a>
-	            <ul class="dropdown-menu pull-right">
-	               <li><a href="<?php echo U('api/oauth/login',array('type'=>'sina'));?>"><i class="fa fa-weibo"></i> &nbsp;微博登录</a></li>
-	               <li><a href="<?php echo U('api/oauth/login',array('type'=>'qq'));?>"><i class="fa fa-qq"></i> &nbsp;QQ登录</a></li>
-	               <li><a href="<?php echo u('user/login/index');?>"><i class="fa fa-sign-in"></i> &nbsp;登录</a></li>
-	               <li class="divider"></li>
-	               <li><a href="<?php echo u('user/register/index');?>"><i class="fa fa-user"></i> &nbsp;注册</a></li>
-	            </ul><?php endif; ?>
-          	</li>
-		</ul>
-		<div class="pull-right">
-        	<form method="post" class="form-inline" action="<?php echo U('portal/search/index');?>" style="margin:18px 0;">
-				 <input type="text" class="" placeholder="Search" name="keyword" value="<?php echo I('get.keyword');?>"/>
-				 <input type="submit" class="btn btn-info" value="Go" style="margin:0"/>
-			</form>
-		</div>
-       </div>
-     </div>
-   </div>
- </div>
-	<div class="system-message">
-	<?php if(isset($message)): ?><h1>^_^</h1>
-	<p class="success"><?php echo($message); ?></p>
-	<?php else: ?>
-	<h1>&gt;_&lt;</h1>
-	<p class="error"><?php echo($error); ?></p><?php endif; ?>
+<style type="text/css">
+*{ padding: 0; margin: 0; }
+body{ background: #fff; font-family: '微软雅黑'; color: #333; font-size: 16px; }
+.system-message{ padding: 24px 48px;text-align: center; }
+.system-message h1{ font-size: 100px; font-weight: normal; line-height: 120px; margin-bottom: 12px; text-align: center;}
+.system-message .jump{ padding-top: 10px}
+.system-message .success,.system-message .error{ line-height: 1.8em; font-size: 36px }
+.system-message .detail{ font-size: 12px; line-height: 20px; margin-top: 12px; display:none}
+</style>
+<div class="system-message">
+<?php if(isset($message)): ?><h1>^_^</h1>
+<p class="success"><?php echo($message); ?></p>
+<?php else: ?>
+<h1>&gt;_&lt;</h1>
+<p class="error"><?php echo($error); ?></p><?php endif; ?>
 	<p class="detail"></p>
 	<p class="jump">
 	ThinkCMF：页面自动 <a id="href" href="<?php echo($jumpUrl); ?>">跳转</a> 等待时间： <b id="wait"><?php echo($waitSecond); ?></b>
 	</p>
-	</div>
-	<script type="text/javascript">
-	(function(){
-	var wait = document.getElementById('wait'),href = document.getElementById('href').href;
-	var interval = setInterval(function(){
-		var time = --wait.innerHTML;
-		if(time <= 0) {
-			location.href = href;
-			clearInterval(interval);
-		};
-	}, 1000);
-	})();
-	</script>
+</div>
+<script type="text/javascript">
+(function(){
+var wait = document.getElementById('wait'),href = document.getElementById('href').href;
+var interval = setInterval(function(){
+	var time = --wait.innerHTML;
+	if(time <= 0) {
+		location.href = href;
+		clearInterval(interval);
+	};
+}, 1000);
+})();
+</script>
+<!-- Footer Start -->
+        <footer id="footer">
+            <!-- Footer Top Start -->
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <!-- <section class="col-lg-3 col-md-3 col-xs-12 col-sm-3 footer-one">
+                            <h3>
+                                关于我们
+                            </h3>
+                            <p>
+                                微赢生物科技有限公司成立于2014年，注册资本金1000万，是华东地区专业的移动电商生物科技公司。
+                            </p>
+                        </section> -->
 
+                        <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-one">
+                            <h3>联系我们</h3>
+                            <ul class="contact-us">
+                               <li>
+                                  <i class="icon-map-marker"></i>
+                                  <p> 
+                                     <strong>地址:</strong> 合肥市庐阳区财富广场B座西楼604
+                                  </p>
+                               </li>
+                               <li>
+                                  <i class="icon-phone"></i>
+                                  <p><strong>电话:</strong> 0551-68998601</p>
+                               </li>
+                               <li>
+                                  <i class="icon-envelope"></i>
+                                  <p><strong>Email:</strong>info@fifothemes.com</p>
+                               </li>
+                            </ul>
+                        </section>
+
+                        <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-two">
+                            <h3>
+                                官方服务号
+                            </h3>
+                            <img src="/static/img/wx_1.jpg" style="width:50%">
+                        </section>
+
+                        <section class="col-lg-4 col-md-4 col-xs-12 col-sm-4 footer-three">
+                            <h3>
+                                官方订阅号
+                            </h3>
+                            <img src="/static/img/wx_2.jpg" style="width:50%">
+                        </section>
+                        
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Top End -->
+            <!-- Footer Bottom Start -->
+            <div class="footer-bottom">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 text-center">
+                            Copyright &copy; 2014.Company name All rights reserved.
+                        </div>
+                        <!-- <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
+                            <ul class="social social-icons-footer-bottom">
+                                <li class="facebook">
+                                    <a href="/static/#" data-toggle="tooltip" title="Facebook">
+                                        <i class="icon-facebook">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="twitter">
+                                    <a href="/static/#" data-toggle="tooltip" title="Twitter">
+                                        <i class="icon-twitter">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="dribbble">
+                                    <a href="/static/#" data-toggle="tooltip" title="Dribble">
+                                        <i class="icon-dribbble">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="linkedin">
+                                    <a href="/static/#" data-toggle="tooltip" title="LinkedIn">
+                                        <i class="icon-linkedin">
+                                        </i>
+                                    </a>
+                                </li>
+                                <li class="rss">
+                                    <a href="/static/#" data-toggle="tooltip" title="Rss">
+                                        <i class="icon-rss">
+                                        </i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+            <!-- Footer Bottom End -->
+        </footer>
+        <!-- Scroll To Top -->
+        <a href="/static/#" class="scrollup">
+            <i class="icon-angle-up">
+            </i>
+        </a>
+    
+
+    </div>
+    <!-- Wrap End -->
+    <?php echo ($site_tongji); ?>
+    <!-- The Scripts -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/bootstrap.js"></script>
+    <script src="/static/js/jquery.parallax.js"></script>
+    <script src="/static/js/modernizr-2.6.2.min.js"></script>
+    <script src="/static/js/revolution-slider/js/jquery.themepunch.revolution.min.js"></script>
+    <script src="/static/js/jquery.nivo.slider.pack.js"></script>
+    <script src="/static/js/jquery.prettyPhoto.js"></script>
+    <script src="/static/js/superfish.js"></script>
+    <!-- // <script src="/static/js/tweetMachine.js"></script> -->
+    <script src="/static/js/tytabs.js"></script>
+    <script src="/static/js/jquery.gmap.min.js"></script>
+    <script src="/static/js/circularnav.js"></script>
+    <script src="/static/js/jquery.sticky.js"></script>
+    <!-- // <script src="/static/js/jflickrfeed.js"></script> -->
+    <script src="/static/js/imagesloaded.pkgd.min.js"></script>
+    <script src="/static/js/waypoints.min.js"></script>
+    <script src="/static/js/spectrum.js"></script>
+    <!-- // <script src="/static/js/switcher.js"></script> -->
+    <script src="/static/js/custom.js"></script>
 </body>
+
 </html>

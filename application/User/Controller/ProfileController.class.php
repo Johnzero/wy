@@ -83,6 +83,13 @@ class ProfileController extends MemberbaseController {
     	}
     	 
     }
+
+    function authorize(){
+        $userid=sp_get_current_userid();
+        $user=$this->users_model->where(array("id"=>$userid))->find();
+        $this->assign($user);
+        $this->display();
+    }
     
     
     function bang(){

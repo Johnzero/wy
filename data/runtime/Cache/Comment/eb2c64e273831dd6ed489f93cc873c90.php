@@ -267,6 +267,9 @@
 	<!-- <a class="list-group-item" href="<?php echo u('user/profile/bang');?>"><i class="fa fa-exchange"></i> 绑定账号</a> -->
 	<a class="list-group-item" href="<?php echo u('user/favorite/index');?>"><i class="fa fa-star-o"></i> 我的收藏</a>
 	<a class="list-group-item" href="<?php echo u('comment/comment/index');?>"><i class="fa fa-comments-o"></i> 我的评论</a>
+
+	<a class="list-group-item" href="<?php echo u('comment/comment/index');?>"><i class="icon-trophy"></i> 经销商授权 </a>
+
 </div>
 		</div>
 		<div class="span9">

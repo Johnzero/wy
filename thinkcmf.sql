@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50540
 File Encoding         : 65001
 
-Date: 2015-01-14 14:03:35
+Date: 2015-01-16 15:41:45
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -55,11 +55,12 @@ CREATE TABLE `sp_ad` (
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1显示，0不显示',
   PRIMARY KEY (`ad_id`),
   KEY `ad_name` (`ad_name`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sp_ad
 -- ----------------------------
+INSERT INTO `sp_ad` VALUES ('1', '一', '', '1');
 
 -- ----------------------------
 -- Table structure for sp_asset
@@ -108,12 +109,13 @@ CREATE TABLE `sp_comments` (
   KEY `comment_parent` (`parentid`),
   KEY `table_id_status` (`post_table`,`post_id`,`status`),
   KEY `createtime` (`createtime`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sp_comments
 -- ----------------------------
 INSERT INTO `sp_comments` VALUES ('1', 'posts', '1', 'index.php?g=&amp;m=article&amp;a=index&amp;id=1', '1', '0', 'admin', 'wangsong12332@sina.com', '2015-01-08 10:45:30', 'asdasd', '1', '0', '0-1', '1');
+INSERT INTO `sp_comments` VALUES ('2', 'posts', '2', 'index.php?g=&amp;m=article&amp;a=index&amp;id=2', '3', '0', 'test', 'wangsong123327212126@126.com', '2015-01-14 14:18:39', 'asd', '1', '0', '0-2', '1');
 
 -- ----------------------------
 -- Table structure for sp_common_action_log
@@ -130,7 +132,7 @@ CREATE TABLE `sp_common_action_log` (
   PRIMARY KEY (`id`),
   KEY `user_object_action` (`user`,`object`,`action`),
   KEY `user_object_action_ip` (`user`,`object`,`action`,`ip`)
-) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sp_common_action_log
@@ -138,9 +140,11 @@ CREATE TABLE `sp_common_action_log` (
 INSERT INTO `sp_common_action_log` VALUES ('1', '1', 'posts1', 'Portal-Article-do_like', '3', '1420685114', '0.0.0.0');
 INSERT INTO `sp_common_action_log` VALUES ('2', '1', 'posts1', 'Portal-Article-index', '1', '1420685127', '0.0.0.0');
 INSERT INTO `sp_common_action_log` VALUES ('3', '0', 'posts1', 'Portal-Article-index', '1', '1420685138', '0.0.0.0');
-INSERT INTO `sp_common_action_log` VALUES ('4', '0', 'posts2', 'Portal-Article-index', '3', '1421134732', '0.0.0.0');
-INSERT INTO `sp_common_action_log` VALUES ('5', '3', 'posts2', 'Portal-Article-index', '33', '1421214618', '0.0.0.0');
-INSERT INTO `sp_common_action_log` VALUES ('6', '3', 'posts2', 'Portal-Article-do_like', '3', '1421205690', '0.0.0.0');
+INSERT INTO `sp_common_action_log` VALUES ('4', '0', 'posts2', 'Portal-Article-index', '6', '1421218604', '0.0.0.0');
+INSERT INTO `sp_common_action_log` VALUES ('5', '3', 'posts2', 'Portal-Article-index', '78', '1421222654', '0.0.0.0');
+INSERT INTO `sp_common_action_log` VALUES ('6', '3', 'posts2', 'Portal-Article-do_like', '4', '1421216305', '0.0.0.0');
+INSERT INTO `sp_common_action_log` VALUES ('7', '3', 'posts', 'Portal-Article-index', '10', '1421222594', '0.0.0.0');
+INSERT INTO `sp_common_action_log` VALUES ('8', '3', 'posts37', 'Portal-Article-index', '1', '1421220889', '0.0.0.0');
 
 -- ----------------------------
 -- Table structure for sp_guestbook
@@ -184,7 +188,6 @@ CREATE TABLE `sp_links` (
 -- ----------------------------
 -- Records of sp_links
 -- ----------------------------
-INSERT INTO `sp_links` VALUES ('1', 'http://www.thinkcmf.com', 'ThinkCMF', '', '_blank', '', '1', '0', '', '0');
 
 -- ----------------------------
 -- Table structure for sp_menu
@@ -497,13 +500,22 @@ CREATE TABLE `sp_posts` (
   KEY `post_parent` (`post_parent`),
   KEY `post_author` (`post_author`),
   KEY `post_date` (`post_date`) USING BTREE
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sp_posts
 -- ----------------------------
-INSERT INTO `sp_posts` VALUES ('1', '1', 'sdas', '2015-01-08 10:44:58', '<p>da</p>', 'asda', 'dasdas', '1', '1', '2015-01-08 10:44:50', null, '0', null, '', '1', '{\"thumb\":\"\"}', '2', '1', '0', '0');
-INSERT INTO `sp_posts` VALUES ('2', '1', '微赢简介', '2015-01-13 15:36:20', '<p style=\"text-align: center;\"><img alt=\"\" src=\"http://localhost/data/upload/ueditor/20150113/54b4e09fbd7c3.jpg\" style=\"border-top-right-radius: 0px; border: 0px; width: 580px; height: 380px;\"/></p><p style=\"margin-top: 0px; margin-bottom: 15px; padding: 0px; text-align: center; font-size: 14px; color: rgb(175, 143, 117); text-indent: 2em; line-height: 24px; font-family: Arial, 宋体; white-space: normal; background-color: rgb(255, 255, 255);\">千人齐聚羊城，探讨中国美业界2015年发展走向</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: justify; font-size: 14px; color: rgb(134, 143, 152); text-indent: 2em; line-height: 24px; font-family: Arial, 宋体; white-space: normal; background-color: rgb(255, 255, 255);\">告别2014，展望2015。2015年1月12日，由全国工商联美容化妆品业商会、广东省美容美发行业协会共同举办的“中国化妆品领袖高峰论坛”于广州东方宾馆举行。当日有千名美业界权威人士出席，思埠集团董事长吴召国、思埠传媒事业群总裁马锐、思埠网络事业群总裁王丰、思埠无纺制品公司总裁伍勇等一行领导亲临现场，思埠集团董事长吴召国更为现场嘉宾带来主题演讲——《最初的梦想》。</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: justify; font-size: 14px; color: rgb(134, 143, 152); text-indent: 2em; line-height: 24px; font-family: Arial, 宋体; white-space: normal; background-color: rgb(255, 255, 255);\">本次峰会以“中国精神中国力量”为主题，分为高端渠道篇、营销策略篇、主题演讲篇、国际视野篇。现场嘉宾围绕“如何把中国化妆品带向世界舞台”、“购物中心风口下有哪些品牌机会”、“国产化妆品的品牌新征途发展前景”、“洋为中用，走向世界”等问题展开对话。气氛十分活跃，各业界权威人士纷纷建言献策，展现了中国美业界进取、创新和实干的风采。</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: justify; font-size: 14px; color: rgb(134, 143, 152); text-indent: 2em; line-height: 24px; font-family: Arial, 宋体; white-space: normal; background-color: rgb(255, 255, 255);\">在主题演讲篇环节中，思埠集团董事长吴召国演讲了《最初的梦想》，讲述了2014年思埠的发展历程和自己的五个梦想：有自己的大厦、将广告打到央视春晚、产品有知名度且有一线明星代言、到北京人民大会堂举办思埠年会和一定要做一个上市公司。而此时此刻，这些梦想均已实现。当谈到2015年思埠集团的发展规划时，吴召国表示今后将和国内顶尖的护肤、彩妆品牌合作，帮助他们进入微商，提供一个完美的平台让中国护肤品牌做大做强，走出国门，共同铸就一流民族品牌，2015年的思埠将成为汇集生产、研发、销售为一体的平台，成为中国最好的销售平台。演讲结束后，思埠集团被授予为“微商指定教学基地”，思埠集团董事长吴召国被授予“中国化妆品领袖主席团品牌副主席”称号，这是业界对思埠集团一直以来努力的肯定。</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: justify; font-size: 14px; color: rgb(134, 143, 152); text-indent: 2em; line-height: 24px; font-family: Arial, 宋体; white-space: normal; background-color: rgb(255, 255, 255);\">当晚，美业界各权威人士还出席了由思埠集团赞助的中国化妆品领袖高峰论坛答谢晚宴。在晚宴中，思埠集团荣膺“年会特殊贡献大奖”和“爱心企业奖”，以表彰思埠集团在过去一年引导美妆消费、社会服务中的贡献。思埠集团也将一如既往精心为亚洲女性肌肤研制开发每款产品，严抓产品品质，打造出可以与国际大牌相媲美的国民品牌，推动民族化妆品行业的崛起！</p><p><br/></p>', '微赢简介', '微赢简介微赢简介微赢简介微赢简介微赢简介微赢简介微赢简介微赢简介微赢简介微赢简介', '1', '1', '2015-01-13 15:34:49', null, '0', null, '', '0', '{\"thumb\":\"54b4caf067993.jpg\",\"photo\":[{\"url\":\"54b4cadad17fa.jpg\",\"alt\":\"slider0\"},{\"url\":\"54b4cae700320.jpg\",\"alt\":\"slider2\"}]}', '2', '1', '0', '0');
+INSERT INTO `sp_posts` VALUES ('2', '1', '微赢简介1', '2015-01-15 15:36:20', '<p style=\"text-align: center;\"><img alt=\"\" src=\"http://localhost/data/upload/ueditor/20150113/54b4e09fbd7c3.jpg\" style=\"border-top-right-radius: 0px; border: 0px; width: 580px; height: 380px;\"/></p><p style=\"margin-top: 0px; margin-bottom: 15px; padding: 0px; text-align: center; font-size: 14px; color: rgb(175, 143, 117); text-indent: 2em; line-height: 24px; font-family: Arial, 宋体; white-space: normal; background-color: rgb(255, 255, 255);\">千人齐聚羊城，探讨中国美业界2015年发展走向</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: justify; font-size: 14px; color: rgb(134, 143, 152); text-indent: 2em; line-height: 24px; font-family: Arial, 宋体; white-space: normal; background-color: rgb(255, 255, 255);\">告别2014，展望2015。2015年1月12日，由全国工商联美容化妆品业商会、广东省美容美发行业协会共同举办的“中国化妆品领袖高峰论坛”于广州东方宾馆举行。当日有千名美业界权威人士出席，思埠集团董事长吴召国、思埠传媒事业群总裁马锐、思埠网络事业群总裁王丰、思埠无纺制品公司总裁伍勇等一行领导亲临现场，思埠集团董事长吴召国更为现场嘉宾带来主题演讲——《最初的梦想》。</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: justify; font-size: 14px; color: rgb(134, 143, 152); text-indent: 2em; line-height: 24px; font-family: Arial, 宋体; white-space: normal; background-color: rgb(255, 255, 255);\">本次峰会以“中国精神中国力量”为主题，分为高端渠道篇、营销策略篇、主题演讲篇、国际视野篇。现场嘉宾围绕“如何把中国化妆品带向世界舞台”、“购物中心风口下有哪些品牌机会”、“国产化妆品的品牌新征途发展前景”、“洋为中用，走向世界”等问题展开对话。气氛十分活跃，各业界权威人士纷纷建言献策，展现了中国美业界进取、创新和实干的风采。</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: justify; font-size: 14px; color: rgb(134, 143, 152); text-indent: 2em; line-height: 24px; font-family: Arial, 宋体; white-space: normal; background-color: rgb(255, 255, 255);\">在主题演讲篇环节中，思埠集团董事长吴召国演讲了《最初的梦想》，讲述了2014年思埠的发展历程和自己的五个梦想：有自己的大厦、将广告打到央视春晚、产品有知名度且有一线明星代言、到北京人民大会堂举办思埠年会和一定要做一个上市公司。而此时此刻，这些梦想均已实现。当谈到2015年思埠集团的发展规划时，吴召国表示今后将和国内顶尖的护肤、彩妆品牌合作，帮助他们进入微商，提供一个完美的平台让中国护肤品牌做大做强，走出国门，共同铸就一流民族品牌，2015年的思埠将成为汇集生产、研发、销售为一体的平台，成为中国最好的销售平台。演讲结束后，思埠集团被授予为“微商指定教学基地”，思埠集团董事长吴召国被授予“中国化妆品领袖主席团品牌副主席”称号，这是业界对思埠集团一直以来努力的肯定。</p><p style=\"margin-top: 0px; margin-bottom: 0px; padding: 0px; text-align: justify; font-size: 14px; color: rgb(134, 143, 152); text-indent: 2em; line-height: 24px; font-family: Arial, 宋体; white-space: normal; background-color: rgb(255, 255, 255);\">当晚，美业界各权威人士还出席了由思埠集团赞助的中国化妆品领袖高峰论坛答谢晚宴。在晚宴中，思埠集团荣膺“年会特殊贡献大奖”和“爱心企业奖”，以表彰思埠集团在过去一年引导美妆消费、社会服务中的贡献。思埠集团也将一如既往精心为亚洲女性肌肤研制开发每款产品，严抓产品品质，打造出可以与国际大牌相媲美的国民品牌，推动民族化妆品行业的崛起！</p><p><br/></p>', '微赢简介', '微赢简介微赢简介微赢简介微赢简介微赢简介微赢简介微赢简介微赢简介微赢简介微赢简介', '1', '1', '2015-01-13 15:34:49', null, '0', null, '', '1', '{\"thumb\":\"54b4caf067993.jpg\",\"photo\":[{\"url\":\"54b4cadad17fa.jpg\",\"alt\":\"slider0\"},{\"url\":\"54b4cae700320.jpg\",\"alt\":\"slider2\"}]}', '2', '1', '0', '0');
+INSERT INTO `sp_posts` VALUES ('29', '1', ' 阿萨德发', '2015-01-14 15:32:57', null, '阿萨德发', '阿萨德发', '1', '1', '2015-01-14 15:32:51', null, '0', null, '', '0', '{\"thumb\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `sp_posts` VALUES ('30', '1', '123', '2015-01-14 15:33:00', null, '1213', '123123123', '1', '1', '2015-01-14 15:32:58', null, '0', null, '', '0', '{\"thumb\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `sp_posts` VALUES ('31', '1', '撒旦法师', '2015-01-14 15:33:05', null, '从自行车', '啊阿萨德', '1', '1', '2015-01-14 15:33:01', null, '0', null, '', '0', '{\"thumb\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `sp_posts` VALUES ('32', '1', ' 阿萨德发', '2015-01-14 15:33:10', null, 'V字形啊所发生的', '阿萨德发生后', '1', '1', '2015-01-14 15:33:06', null, '0', null, '', '0', '{\"thumb\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `sp_posts` VALUES ('33', '1', '12312', '2015-01-14 15:33:16', null, '发达输入法额2 ', '1231231', '1', '1', '2015-01-14 15:33:11', null, '0', null, '', '0', '{\"thumb\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `sp_posts` VALUES ('34', '1', '在V字形成', '2015-01-14 15:33:22', null, '自行车V字形成', ' 在V字形成v', '1', '1', '2015-01-14 15:33:17', null, '0', null, '', '0', '{\"thumb\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `sp_posts` VALUES ('35', '1', '沙发松岛枫', '2015-01-14 15:33:27', null, '121', '阿萨德发斯蒂芬', '1', '1', '2015-01-14 15:33:23', null, '0', null, '', '0', '{\"thumb\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `sp_posts` VALUES ('36', '1', '1231', '2015-01-14 15:33:30', null, '13123', '13123', '1', '1', '2015-01-14 15:33:27', null, '0', null, '', '0', '{\"thumb\":\"\"}', '0', '0', '0', '0');
+INSERT INTO `sp_posts` VALUES ('37', '1', '发生的 阿萨德发', '2015-01-14 15:33:36', null, '次在V字', ' 大法师', '1', '1', '2015-01-14 15:33:31', null, '0', null, '', '0', '{\"thumb\":\"\"}', '1', '0', '0', '0');
+INSERT INTO `sp_posts` VALUES ('28', '1', 'testtest', '2015-01-14 15:30:47', '<p>testtest</p>', 'test', 'testtest', '1', '1', '2015-01-14 15:30:39', null, '0', null, '', '0', '{\"thumb\":\"\"}', '0', '0', '0', '0');
 
 -- ----------------------------
 -- Table structure for sp_role
@@ -595,7 +607,7 @@ CREATE TABLE `sp_slide_cat` (
   `cat_status` int(2) NOT NULL DEFAULT '1',
   PRIMARY KEY (`cid`),
   KEY `cat_idname` (`cat_idname`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sp_slide_cat
@@ -622,12 +634,15 @@ CREATE TABLE `sp_terms` (
   `listorder` int(5) NOT NULL DEFAULT '0' COMMENT '排序',
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`term_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sp_terms
 -- ----------------------------
-INSERT INTO `sp_terms` VALUES ('1', '通用文章模板', '', 'article', '', '0', '0', '0-1', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `sp_terms` VALUES ('1', '走进微赢', '', 'article', '走进微赢', '0', '0', '0-1', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `sp_terms` VALUES ('3', '品牌动态', '', 'article', '品牌动态', '0', '0', '0-3', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `sp_terms` VALUES ('4', '微赢商学院', '', 'article', '微赢商学院', '0', '0', '0-4', '', '', '', 'list', 'article', '0', '1');
+INSERT INTO `sp_terms` VALUES ('5', '会员中心', '', 'article', '会员中心', '0', '0', '0-5', '', '', '', 'list', 'article', '0', '1');
 
 -- ----------------------------
 -- Table structure for sp_term_relationships
@@ -641,13 +656,23 @@ CREATE TABLE `sp_term_relationships` (
   `status` int(2) NOT NULL DEFAULT '1' COMMENT '状态，1发布，0不发布',
   PRIMARY KEY (`tid`),
   KEY `term_taxonomy_id` (`term_id`)
-) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sp_term_relationships
 -- ----------------------------
 INSERT INTO `sp_term_relationships` VALUES ('1', '1', '2', '0', '0');
 INSERT INTO `sp_term_relationships` VALUES ('2', '2', '1', '0', '1');
+INSERT INTO `sp_term_relationships` VALUES ('3', '28', '1', '0', '1');
+INSERT INTO `sp_term_relationships` VALUES ('4', '29', '1', '0', '1');
+INSERT INTO `sp_term_relationships` VALUES ('5', '30', '1', '0', '1');
+INSERT INTO `sp_term_relationships` VALUES ('6', '31', '1', '0', '1');
+INSERT INTO `sp_term_relationships` VALUES ('7', '32', '1', '0', '1');
+INSERT INTO `sp_term_relationships` VALUES ('8', '33', '1', '0', '1');
+INSERT INTO `sp_term_relationships` VALUES ('9', '34', '1', '0', '1');
+INSERT INTO `sp_term_relationships` VALUES ('10', '35', '1', '0', '1');
+INSERT INTO `sp_term_relationships` VALUES ('11', '36', '1', '0', '1');
+INSERT INTO `sp_term_relationships` VALUES ('12', '37', '1', '0', '1');
 
 -- ----------------------------
 -- Table structure for sp_users
@@ -672,17 +697,19 @@ CREATE TABLE `sp_users` (
   `role_id` smallint(6) DEFAULT NULL COMMENT '用户角色id',
   `score` int(11) NOT NULL DEFAULT '0' COMMENT '用户积分',
   `user_type` smallint(1) DEFAULT '1' COMMENT '用户类型，1:admin ;2:会员',
+  `authorize` text,
   PRIMARY KEY (`id`),
   KEY `user_login_key` (`user_login`),
   KEY `user_nicename` (`user_nicename`)
-) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sp_users
 -- ----------------------------
-INSERT INTO `sp_users` VALUES ('1', 'admin', 'c535018ee946e10adc3949ba59abbe56e057f20f883e89af', 'admin', 'wangsong12332@sina.com', '', null, '0', null, null, '0.0.0.0', '2015-01-13 09:10:44', '2015-01-07 04:24:04', '', '1', '1', '0', '1');
-INSERT INTO `sp_users` VALUES ('2', '汪松', 'c535018ee946202cb962ac59075b964b07152d234b7089af', '', 'wangsong1233276@sina.com', '', null, '0', null, null, '0.0.0.0', '2015-01-08 11:14:27', '0000-00-00 00:00:00', '', '1', '2', '0', '1');
-INSERT INTO `sp_users` VALUES ('3', 'test', 'c535018ee946c415b069d516eace04d5a76b242150b589af', 'test', 'wangsong123327212126@126.com', '', null, '0', null, null, '0.0.0.0', '2015-01-13 15:43:14', '2015-01-13 15:43:14', '', '1', null, '0', '2');
+INSERT INTO `sp_users` VALUES ('1', 'admin', 'c535018ee946e10adc3949ba59abbe56e057f20f883e89af', 'admin', 'wangsong12332@sina.com', '', null, '0', null, null, '0.0.0.0', '2015-01-16 15:33:16', '2015-01-07 04:24:04', '', '1', '1', '0', '1', null);
+INSERT INTO `sp_users` VALUES ('2', '汪松', 'c535018ee946202cb962ac59075b964b07152d234b7089af', '', 'wangsong1233276@sina.com', '', null, '0', null, null, '0.0.0.0', '2015-01-08 11:14:27', '0000-00-00 00:00:00', '', '1', '2', '0', '1', null);
+INSERT INTO `sp_users` VALUES ('3', 'test', 'c535018ee946c415b069d516eace04d5a76b242150b589af', 'test', 'wangsong123327212126@126.com', '', null, '0', null, null, '0.0.0.0', '2015-01-13 15:43:14', '2015-01-13 15:43:14', '', '1', null, '0', '2', null);
+INSERT INTO `sp_users` VALUES ('4', 'zero', 'c535018ee946e10adc3949ba59abbe56e057f20f883e89af', 'zero', 'wangsong121113327212126@126.com', '', null, '0', null, null, '0.0.0.0', '2015-01-16 15:38:02', '2015-01-15 15:46:46', '', '1', null, '0', '2', '<p style=\"text-align: center;\"><img src=\"http://localhost/data/upload/ueditor/20150116/54b8bf095270e.png\" title=\"logo.png\" alt=\"logo.png\"/></p>');
 
 -- ----------------------------
 -- Table structure for sp_user_favorites
@@ -699,9 +726,10 @@ CREATE TABLE `sp_user_favorites` (
   `createtime` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `uid` (`uid`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of sp_user_favorites
 -- ----------------------------
 INSERT INTO `sp_user_favorites` VALUES ('1', '1', 'asda', '/index.php?g=portal&amp;m=article&amp;a=index&amp;id=1', null, 'posts', '1', '1420685119');
+INSERT INTO `sp_user_favorites` VALUES ('2', '3', '微赢简介', '/old/index.php?g=portal&amp;m=article&amp;a=index&amp;id=2', null, 'posts', '2', '1421216305');
