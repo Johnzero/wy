@@ -15,7 +15,13 @@ class RegisterController extends HomeBaseController {
 		if($_SESSION['_verify_']['verify']!=strtolower($_POST['verify'])){
     		$this->error("验证码错误！");
     	}
-    	
+
+        $option = D("Common/Options")->where("option_name='site_options'")->find();
+        $option = (array)json_decode($option['option_value']);
+        if ( $_POST['authorize'] != $option['site_authorize'] ) {
+            $this->error("邀请码错误！请联系管理员获取。");
+        }
+
     	$users_model=M("Users");
     	$rules = array(
     			//array(验证字段,验证规则,错误提示,验证条件,附加规则,验证时间)

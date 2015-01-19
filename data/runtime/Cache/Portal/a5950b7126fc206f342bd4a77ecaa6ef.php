@@ -71,11 +71,11 @@
                                 </i>
                                 电话 : <?php echo ($site_admin_tel); ?>
                             </a>
-                            <a href="/static/mail%40example.html">
+                            <!-- <a href="/static/mail%40example.html">
                                 <i class="icon-envelope">
                                 </i>
                                 邮件 : <?php echo ($site_admin_email); ?>
-                            </a>
+                            </a> -->
                         </div>
                         <div class="pull-right">
                             <ul class="social pull-left">
@@ -183,8 +183,8 @@
                                <ul>
                                   <li><a href="<?php echo U('portal/article/index',array('id'=>2));?>" class="sf-with-ul" target="_blank">微赢简介</a></li>
                                   <li><a href="/static/index-4.html" class="sf-with-ul" target="_blank">微赢动态</a></li>
-                                  <li><a href="/static/index-nivo.html" class="sf-with-ul" target="_blank">微赢团队</a></li>
-                                  <li><a href="/static/index-nivo.html" class="sf-with-ul" target="_blank">微赢风貌</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=26" class="sf-with-ul" target="_blank">微赢团队</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=27" class="sf-with-ul" target="_blank">微赢风貌</a></li>
                                </ul>
                             </li>
                             <li>
@@ -195,22 +195,9 @@
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/static/shortcodes.html" class="sf-with-ul" target="_blank">品牌简介</a></li>
-                                  <li><a href="/static/icons.html" class="sf-with-ul" target="_blank">品牌专利</a></li>
-                                  <li><a href="/static/pricing-table.html" class="sf-with-ul" target="_blank">产品安全</a></li>
-                                  <li style="display:none;">
-                                     <a href="/static/#" class="sf-with-ul"> 
-                                     Third Level Menu 
-                                     <span class="sf-sub-indicator pull-right">
-                                     <i class="icon-angle-right "></i>
-                                     </span>
-                                     </a>
-                                     <ul>
-                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
-                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
-                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
-                                     </ul>
-                                  </li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=15" class="sf-with-ul" target="_blank">品牌简介</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=28" class="sf-with-ul" target="_blank">品牌专利</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=29" class="sf-with-ul" target="_blank">产品安全</a></li>
                                </ul>
                             </li>
                             <li>
@@ -221,10 +208,10 @@
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/static/about.html" class="sf-with-ul" target="_blank">学院介绍</a></li>
-                                  <li><a href="/static/services.html" class="sf-with-ul" target="_blank">师资团队</a></li>
-                                  <li><a href="/static/testimonials.html" class="sf-with-ul" target="_blank">课程大纲</a></li>
-                                  <li><a href="/static/testimonials.html" class="sf-with-ul" target="_blank">创业故事</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=22" class="sf-with-ul" target="_blank">学院介绍</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=24" class="sf-with-ul" target="_blank">师资团队</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=25" class="sf-with-ul" target="_blank">课程大纲</a></li>
+                                  <li><a href="/index.php?g=portal&m=list&a=index&id=6" class="sf-with-ul" target="_blank">创业故事</a></li>
                                </ul>
                             </li>
                             <li>
@@ -235,8 +222,8 @@
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/static/portfolio-two.html" class="sf-with-ul" target="_blank">授权查询</a></li>
-                                  <li><a href="/static/portfolio-three.html" class="sf-with-ul" target="_blank">加盟政策</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=30" class="sf-with-ul" target="_blank">授权查询</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=31" class="sf-with-ul" target="_blank">加盟政策</a></li>
                                </ul>
                             </li>
                             <!-- <li>
@@ -263,19 +250,18 @@
     <div class="fullwidthbanner-container">
         <div class="fullwidthbanner rslider">
             <ul>
-                <!-- THE FIRST SLIDE -->
-                <li data-delay="6000" data-masterspeed="300" data-transition="fade">
+                <li data-delay="2000" data-masterspeed="300" data-transition="fade">
                     <div class="slotholder">
-                        <img src="/static/img/slider/slider-bg-1.jpg" data-fullwidthcentering="on" alt="Pixma">
+                        <img src="/static/img/1.jpg" data-fullwidthcentering="on" alt="Pixma">
                     </div>
-                    <div class="caption modern_big_bluebg h1 lft tp-caption start" data-x="40"
+                    <!-- <div class="caption modern_big_bluebg h1 lft tp-caption start" data-x="40"
                     data-y="85" data-speed="700" data-endspeed="800" data-start="1000" data-easing="easeOutQuint"
                     data-endeasing="easeOutQuint">
                         <h3>
                             我们的产品
                         </h3>
-                    </div>
-                    <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo"
+                    </div> -->
+                    <!-- <div class="caption list_slide lfb tp-caption start" data-easing="easeOutExpo"
                     data-start="1400" data-speed="1050" data-y="180" data-x="40">
                         <div class="list-slide">
                             <i class="icon-camera slide-icon">
@@ -318,12 +304,11 @@
                         <a class="btn-special hidden-xs btn-color" href="#">
                             立即购买
                         </a>
-                    </div>
+                    </div> -->
                 </li>
-                <!-- THE RESPONSIVE SLIDE -->
                 <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
-                    <img src="/static/img/slider/slider-bg-2.jpg" data-fullwidthcentering="on" alt="">
-                    <div class="caption large_text sft" data-x="660" data-y="54" data-speed="300"
+                    <img src="/static/img/2.jpg" data-fullwidthcentering="on" alt="">
+                    <!-- <div class="caption large_text sft" data-x="660" data-y="54" data-speed="300"
                     data-start="800" data-easing="easeOutExpo">
                         TOUCH ENABLED
                     </div>
@@ -398,7 +383,19 @@
                     <div class="caption lfl" data-x="472" data-y="253" data-speed="300" data-start="1600"
                     data-easing="easeOutExpo">
                         <img src="/static/img/slider/responsive-iphone.png" alt="iPhone Responsive">
-                    </div>
+                    </div> -->
+                </li>
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
+                    <img src="/static/img/3.jpg" data-fullwidthcentering="on" alt="">
+                </li>
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
+                    <img src="/static/img/4.jpg" data-fullwidthcentering="on" alt="">
+                </li>
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
+                    <img src="/static/img/5.jpg" data-fullwidthcentering="on" alt="">
+                </li>
+                <li data-transition="fade" data-slotamount="1" data-masterspeed="300">
+                    <img src="/static/img/6.jpg" data-fullwidthcentering="on" alt="">
                 </li>
             </ul>
         </div>
@@ -453,92 +450,95 @@
                          <div class="item active">
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d2">
                                <div class="portfolio-item">
-                                  <a href="img/portfolio/po_1.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                  <a href="/static/img/gs1.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
                                   <span class="portfolio-item-hover"></span>
-                                  <span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/po_1.jpg" alt=" "/>
+                                  <span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/gs1.jpg" alt=" "/>
                                   </a>
                                   <div class="portfolio-item-title">
-                                     <a href="single-project.html">刘总</a>
-                                     <p>
+                                     <a href="">公司图片</a>
+                                     <!-- <p>
                                         刘兴隆
-                                     </p>
+                                     </p> -->
                                   </div>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d3">
                                <div class="portfolio-item">
-                                  <a href="img/portfolio/po_2.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
-                                  <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/po_2_1.jpg" alt=" "/>
+                                  <a href="/static/img/gs2.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                  <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/gs2.jpg" alt=" "/>
                                   </a>
                                   <div class="portfolio-item-title">
-                                     <a href="single-project.html">康总</a>
-                                     <p>
+                                     <a href="">公司图片</a>
+                                     <!-- <p>
                                         康咏铧
-                                     </p>
+                                     </p> -->
                                   </div>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
                             <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d4">
                                <div class="portfolio-item">
-                                  <a href="img/portfolio/po_3.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
-                                  <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/po_3_1.jpg" alt=" "/>
+                                  <a href="/static/img/gs3.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                  <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/gs3.jpg" alt=" "/>
                                   </a>
                                   <div class="portfolio-item-title">
-                                     <a href="single-project.html">营销策划师</a>
-                                     <p>
+                                     <a href="">公司图片</a>
+                                     <!-- <p>
                                         特聘讲师
-                                     </p>
+                                     </p> -->
                                   </div>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
                          </div>
+
                          <div class="item">
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d2">
                                <div class="portfolio-item">
-                                  <a href="img/portfolio/portfolio-4.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
-                                  <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/portfolio-4.jpg" alt=" "/>
+                                  <a href="/static/img/gs1.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                  <span class="portfolio-item-hover"></span>
+                                  <span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/gs1.jpg" alt=" "/>
                                   </a>
                                   <div class="portfolio-item-title">
-                                     <a href="single-project.html">Camera Icon</a>
-                                     <p>
-                                        Icon / Device
-                                     </p>
+                                     <a href="">公司图片</a>
+                                     <!-- <p>
+                                        刘兴隆
+                                     </p> -->
                                   </div>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d3">
                                <div class="portfolio-item">
-                                  <a href="img/portfolio/portfolio-5.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
-                                  <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/portfolio-5.jpg" alt=" "/>
+                                  <a href="/static/img/gs2.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                  <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/gs2.jpg" alt=" "/>
                                   </a>
                                   <div class="portfolio-item-title">
-                                     <a href="single-project.html">Penguin</a>
-                                     <p>
-                                        Animal / Nature
-                                     </p>
+                                     <a href="">公司图片</a>
+                                     <!-- <p>
+                                        康咏铧
+                                     </p> -->
                                   </div>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item">
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item animate_afc d4">
                                <div class="portfolio-item">
-                                  <a href="images/portfolio/portfolio-6.html" class="portfolio-item-link" data-rel="prettyPhoto" >
-                                  <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/portfolio/portfolio-6.jpg" alt=" "/>
+                                  <a href="/static/img/gs3.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
+                                  <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/gs3.jpg" alt=" "/>
                                   </a>
                                   <div class="portfolio-item-title">
-                                     <a href="single-project.html">Sound Box</a>
-                                     <p>
-                                        Audio / Sound
-                                     </p>
+                                     <a href="">公司图片</a>
+                                     <!-- <p>
+                                        特聘讲师
+                                     </p> -->
                                   </div>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
                          </div>
+
                       </div>
                    </div>
                    <div class="clearfix"></div>
@@ -561,42 +561,41 @@
                          <div id="cn-tabs">
                             <div class="service service-1">
                                <div class="cn-content">
-                                  <h4>Premium Sliders</h4>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <a href="#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                                  <h4>微赢商学院</h4>
+                                  <div class="s-bc"><img src="/static/img/sxy.png"></div>
+                                  <p>微赢微商学院是微赢生物科技有限公司联合全国工商联美容化妆品商会、安徽省教育厅大学生再就业中心，安徽省下岗再就业中心做的微营销教育培训平台。微赢微商学院拥有强大的师资力量，聚集了国内顶尖的微营销实战专家，课程内容涵盖微营销咨询、微商实用技能、移动电子商务、O2O服务为一体的移动营销服务平台及解决方案。目前学员人数已超过20万人，遍及全国31省市自治区，为中国最权威的微营销培训学院。曾经荣获中国十大微营销教育学院，中国微商十大教育学院，微赢微商学院致力于打造中国微商的黄埔军校！</p>
+                                  <a href="/index.php?g=portal&m=article&a=index&id=14" target="_blank">更多<i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
                                   <div class="clearfix"></div>
                                </div>
                                <div class="clearfix"></div>
                             </div>
                             <div class="service service-2">
                                <div class="cn-content">
-                                  <h4>Unlimited Colors</h4>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <a href="#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                                  <h4>微赢产品</h4>
+                                  <div class="s-bc"><img src="/static/img/cp.jpg"></div>
+                                  <p>蓝莓虾青素眼贴5大优势</p>
+                                    <p>1）最新能通过血脑、视网膜屏障的健康产品；</p>
+                                    <p>2）与抗炎药物有同等或超越的效果；</p>
+                                    <p>3）最新被学术机构认可抗衰老产品之一；</p>
+                                    <p>4）最新实现五抗（抗氧化、抗衰老、抗肿瘤、抗炎症、抗疲劳）作用的新资源天然品；</p>
+                                    <p>5)至今尚无有不良反应的报道。</p>
+                                  <a href="/index.php?g=portal&m=article&a=index&id=15" target="_blank">更多<i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
                             <div class="service service-3">
                                <div class="cn-content">
-                                  <h4>Shortcodes</h4>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <a href="#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                                  <h4>关注我们</h4>
+                                  <p><img src="/static/img/gz.jpg"></p>
+                                  <a href="#" target="_blank">更多<i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
                                </div>
                                <div class="clearfix"></div>
                             </div>
                             <div class="service service-4">
                                <div class="cn-content">
-                                  <h4>300+ Icons</h4>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
-                                  <a href="#">Read More <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                                  <h4>招贤纳士</h4>
+                                  <p><img src="/static/img/zxns.jpg"></p>
+                                  <!-- <a href="#" target="_blank">更多<i class="icon-angle-right"></i><i class="icon-angle-right"></i></a> -->
                                </div>
                                <div class="clearfix"></div>
                             </div>
@@ -606,10 +605,22 @@
                       <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 col-lg-offset-1 col-md-offset-1 animate_afr">
                          <div class="cn-wrapper">
                             <ul>
-                               <li class="circle-1 circle"><a class="active" href="#"><span class="icon-picture"></span></a></li>
-                               <li class="circle-2 circle"><a href="#"><span class="icon-rocket"></span></a></li>
-                               <li class="circle-3 circle"><a href="#"><span class="icon-puzzle-piece"></span> </a></li>
-                               <li class="circle-4 circle"><a href="#"><span class="icon-thumbs-up-alt"></span></a></li>
+                               <li class="circle-1 circle">
+                                    <a class="active" href="#">微赢商学院</a>
+                               </li>
+                               <li class="circle-2 circle">
+
+                                    <a href="#">微赢产品</a>
+
+                               </li>
+                               <li class="circle-3 circle">
+                                    <a href="#">关注我们</a>
+                                </li>
+
+                               <li class="circle-4 circle">
+                                    <a href="#">招贤纳士</a>
+                                </li>
+
                             </ul>
                             <div class="clearfix"></div>
                          </div>
@@ -643,10 +654,11 @@
                       </div>
                       <div class="content-box-info">
                           <h3>媒体报道</h3>
-                          <img src="/static/img/portfolio/po_1.jpg" alt="">
-                          <p>错过了十年前的淘宝， 你还要错过今天的微商吗？ 2015“首届中国微商博览会·暨微商&O2O行业发展趋势论坛”，由中国微商联盟和沸点天下（中国）联合主办。  中国微商博览会对微商行业的发展意义深远，将行业……
+                          <img src="/static/img/cz.jpg" alt="">
+                          <p><h1>《微赢CEO康咏铧受CCTV央视网采访》</h1></p>
+                          <p>移动浪潮正席卷而来。用户行为变了，从电脑到手机；市场变了，移动应用浮现大量商机；商业模式变了，传统的已没落，新型的正在兴起，我们已经进入一个移动互联网时代!......
                           </p>
-                          <a href="#">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                          <a href="/index.php?g=portal&m=article&a=index&id=16" target="_blank">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
                        </div>
                    </div>
                 </div>
@@ -666,7 +678,7 @@
                           <p>
                              12月27日，由微赢生物科技有限公司举办的“微赢商学院第三届微商交流会”圆满结束。此次交流会共21微商大咖出席，由中国著名实战微营销培训顾问Jordan主持，微赢CEO康咏铧先生担任主讲嘉宾。
                           </p>
-                          <a href="#">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                          <a href="/index.php?g=portal&m=list&a=index&id=6" target="_blank">更多创业故事 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
                        </div>
                    </div>
                 </div>
@@ -682,11 +694,11 @@
                       </div>
                       <div class="content-box-info">
                           <h3>微赢商学院</h3>
-                          <img src="/static/img/portfolio/po_1.jpg" alt=" ">
-                          <p>
-                             半年前，微赢生物科技有限公司是谁都不知道的Nothing，甚至在招聘职员时，别人都以为是传销、是骗子。但是经过短暂的时间，微赢生物科技有限公司发生了天翻地覆的变化。目前微赢生物已经成为中国发展最快的微商企业之一。
+                          <img src="/static/img/sxy.png" alt=" ">
+                          <p><h1>微赢商学院掀起微商快速成长之路</h1></p>
+                          <p>移动浪潮正席卷而来。用户变了，一切有趣的事情都在手机上发生；市场变了，更多商机在移动场景中浮现；商业和商业的法则也变了一些终将没落，另一些注定要崛起。
                           </p>
-                          <a href="#">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                          <a href="/index.php?g=portal&m=article&a=index&id=22" target="_blank">阅读全文 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
                        </div>
                    </div>
                 </div>
@@ -706,7 +718,7 @@
                                 <h3 class="title">
                                     友情链接
                                 </h3>
-                                <div class="carousel-controls pull-right">
+                                <!-- <div class="carousel-controls pull-right">
                                     <a class="prev" href="#client-carousel" data-slide="prev">
                                         <i class="icon-angle-left">
                                         </i>
@@ -717,7 +729,7 @@
                                     </a>
                                     <div class="clearfix">
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                             <div class="clearfix">
                             </div>
@@ -725,92 +737,14 @@
                                 <div id="client-carousel" class="client-carousel slide">
                                     <div class="carousel-inner">
                                         <div class="item active">
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d1">
-                                                <div class="item-inner">
-                                                    <a href="#">
-                                                        <img alt="Upportdash" src="/static/img/clientslogo/logo-1.png">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d2">
-                                                <div class="item-inner">
-                                                    <a href="#">
-                                                        <img alt="Upportdash" src="/static/img/clientslogo/logo-2.png">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d3">
-                                                <div class="item-inner">
-                                                    <a href="#">
-                                                        <img alt="Upportdash" src="/static/img/clientslogo/logo-3.png">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d4">
-                                                <div class="item-inner">
-                                                    <a href="#">
-                                                        <img alt="Upportdash" src="/static/img/clientslogo/logo-4.png">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d3">
-                                                <div class="item-inner">
-                                                    <a href="#">
-                                                        <img alt="Upportdash" src="/static/img/clientslogo/logo-3.png">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d4">
-                                                <div class="item-inner">
-                                                    <a href="#">
-                                                        <img alt="Upportdash" src="/static/img/clientslogo/logo-4.png">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="item">
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item">
-                                                <div class="item-inner">
-                                                    <a href="#">
-                                                        <img alt="Upportdash" src="/static/img/clientslogo/logo-5.png">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item">
-                                                <div class="item-inner">
-                                                    <a href="#">
-                                                        <img alt="Upportdash" src="/static/img/clientslogo/logo-4.png">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item">
-                                                <div class="item-inner">
-                                                    <a href="#">
-                                                        <img alt="Upportdash" src="/static/img/clientslogo/logo-3.png">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item">
-                                                <div class="item-inner">
-                                                    <a href="#">
-                                                        <img alt="Upportdash" src="/static/img/clientslogo/logo-2.png">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d3">
-                                                <div class="item-inner">
-                                                    <a href="#">
-                                                        <img alt="Upportdash" src="/static/img/clientslogo/logo-3.png">
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d4">
-                                                <div class="item-inner">
-                                                    <a href="#">
-                                                        <img alt="Upportdash" src="/static/img/clientslogo/logo-4.png">
-                                                    </a>
-                                                </div>
-                                            </div>
+                                            <?php $links=sp_getlinks(); ?>
+                                            <?php if(is_array($links)): foreach($links as $key=>$vo): ?><div class="col-lg-2 col-md-2 col-sm-2 col-xs-6 item animate_afc d1">
+                                                    <div class="item-inner">
+                                                        <a href="<?php echo ($vo["link_url"]); ?>" target="<?php echo ($vo["link_target"]); ?>">
+                                                            <img alt="Upportdash" src="<?php echo ($vo["link_image"]); ?>">
+                                                        </a>
+                                                    </div>
+                                                </div><?php endforeach; endif; ?>
                                         </div>
                                     </div>
                                 </div>

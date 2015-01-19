@@ -1,0 +1,64 @@
+[ 2015-01-19T13:45:34+08:00 ] 60.166.37.183 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sp_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `sp_users` SET `user_login`='admin',`user_pass`='c535018ee946e10adc3949ba59abbe56e057f20f883e89af',`user_nicename`='admin',`user_email`='wangsong12332@sina.com',`user_url`='',`sex`='0',`last_login_ip`='60.166.37.183',`last_login_time`='2015-01-19 13:45:34',`create_time`='2015-01-07 04:24:04',`user_activation_key`='',`user_status`='1',`role_id`='1',`score`='0',`user_type`='1' WHERE `id` = '1' [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-19T15:18:47+08:00 ] 60.166.136.47 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0166s ]
+SQL: SELECT * FROM `sp_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `sp_users` SET `user_login`='admin',`user_pass`='c535018ee946e10adc3949ba59abbe56e057f20f883e89af',`user_nicename`='admin',`user_email`='wangsong12332@sina.com',`user_url`='',`sex`='0',`last_login_ip`='60.166.136.47',`last_login_time`='2015-01-19 15:18:47',`create_time`='2015-01-07 04:24:04',`user_activation_key`='',`user_status`='1',`role_id`='1',`score`='0',`user_type`='1' WHERE `id` = '1' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-19T16:48:48+08:00 ] 60.166.37.183 /index.php?g=Admin&m=link&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_links` [ RunTime:0.0020s ]
+SQL: INSERT INTO `sp_links` (`link_name`,`link_url`,`link_image`,`link_target`,`link_description`) VALUES ('微博','http://weibo.com/p/1006065454998491/home?from=page_100606&amp;mod=TAB#place','http://img.t.sinajs.cn/t6/style/images/global_nav/WB_logo.png?id=1404211047727','_blank','阿萨德发') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-19T16:56:30+08:00 ] 60.166.37.183 /index.php?g=Admin&m=link&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_links` [ RunTime:0.0029s ]
+SQL: INSERT INTO `sp_links` (`link_name`,`link_url`,`link_image`,`link_target`,`link_description`) VALUES ('微赢生物科技有限公司','http://tieba.baidu.com/f?ie=utf-8&amp;kw=%E5%BE%AE%E8%B5%A2%E7%94%9F%E7%89%A9%E7%A7%91%E6%8A%80%E6%9C%89%E9%99%90%E5%85%AC%E5%8F%B8&amp;fr=ibaidu&amp;qq-pf-to=pcqq.c2c','http://tb2.bdstatic.com/tb/static-common/img/search_logo_7835b03.png','_blank','') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-19T16:58:36+08:00 ] 60.166.37.183 /index.php?g=Admin&m=link&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_links` [ RunTime:0.0020s ]
+SQL: INSERT INTO `sp_links` (`link_name`,`link_url`,`link_image`,`link_target`,`link_description`) VALUES ('新浪博客','http://blog.sina.com.cn/u/5454998491','http://simg.sinajs.cn/blog7style/images/common/topbar/topbar_logo.gif','_blank','') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-19T16:59:13+08:00 ] 60.166.37.183 /index.php?g=Admin&m=link&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_links` [ RunTime:0.0020s ]
+SQL: INSERT INTO `sp_links` (`link_name`,`link_url`,`link_image`,`link_target`,`link_description`) VALUES (' 豆瓣','http://www.douban.com/people/120095444/?qq-pf-to=pcqq.c2c','http://s.doubanio.com/f/shire/8308f83ca66946299fc80efb1f10ea21f99ec2a5/pics/nav/lg_main_a11_1.png','_blank','') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+

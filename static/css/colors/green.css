@@ -194,3 +194,20 @@ nav.menu {
 	background: url(../../img/bg.jpg) 50% 0 no-repeat fixed;
 }
 */
+.s-bc {
+	float: left;
+	width: 30%;
+	height: 200px;
+	margin-right: 20px;
+	vertical-align: middle;
+}
+.content-box-info img{
+	height: 200px;
+}
+.content-box-info h1 {
+	font-size: 16px;
+	font-weight: bold;
+}
+.service-reasons { 
+	padding-top: 0
+}

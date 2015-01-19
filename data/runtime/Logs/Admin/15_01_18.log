@@ -1,0 +1,14 @@
+[ 2015-01-18T09:49:38+08:00 ] 101.47.33.36 /index.php?g=Admin&m=setting&a=site_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_options` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sp_options` WHERE ( option_name='site_options' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `sp_options` SET `option_id`='2',`option_name`='site_options',`option_value`='{\"site_name\":\"ThinkCMF\\u5185\\u5bb9\\u7ba1\\u7406\\u6846\\u67b6\",\"site_host\":\"http:\\/\\/dns.hfnacai.com\\/\",\"site_root\":\"\\/\",\"site_tpl\":\"simplebootx\",\"site_adminstyle\":\"bluesky\",\"site_icp\":\"\",\"site_admin_email\":\"\",\"site_admin_tel\":\"0551-68998601\",\"site_authorize\":\"123456\",\"site_tongji\":\"\",\"site_copyright\":\"\",\"site_seo_title\":\"\\u5fae\\u8d62\\u751f\\u7269\\u79d1\\u6280\\u6709\\u9650\\u516c\\u53f8\",\"site_seo_keywords\":\"\\u5fae\\u8d62\\u751f\\u7269\\u79d1\\u6280\\u6709\\u9650\\u516c\\u53f8\",\"site_seo_description\":\"\\u5fae\\u8d62\\u751f\\u7269\\u79d1\\u6280\\u6709\\u9650\\u516c\\u53f8\",\"urlmode\":\"0\",\"html_suffix\":\"\"}' WHERE ( option_name='site_options' ) [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sp_options` WHERE ( option_name='cmf_settings' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `sp_options` SET `option_name`='cmf_settings',`option_value`='{\"banned_usernames\":\"\"}' WHERE ( option_name='cmf_settings' ) [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+

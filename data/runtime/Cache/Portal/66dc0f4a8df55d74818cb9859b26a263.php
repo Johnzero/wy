@@ -31,6 +31,7 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <!-- Skin -->
     <link rel="stylesheet" href="/static/css/colors/green.css" id="colors">
+
     <!-- Responsive CSS -->
     <link rel="stylesheet" href="/static/css/theme-responsive.css">
     <!-- Switcher CSS -->
@@ -42,6 +43,9 @@
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/ico/apple-touch-icon-72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/static/img/ico/apple-touch-icon-114.png">
     <link rel="apple-touch-icon" sizes="144x144" href="/static/img/ico/apple-touch-icon-144.png">
+
+    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':8080/livereload.js?snipver=1"></' + 'script>')</script>
+
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
         <script src="/static///html5shim.googlecode.com/svn/trunk/html5.js">
@@ -68,11 +72,11 @@
                                 </i>
                                 电话 : <?php echo ($site_admin_tel); ?>
                             </a>
-                            <a href="/static/mail%40example.html">
+                            <!-- <a href="/static/mail%40example.html">
                                 <i class="icon-envelope">
                                 </i>
                                 邮件 : <?php echo ($site_admin_email); ?>
-                            </a>
+                            </a> -->
                         </div>
                         <div class="pull-right">
                             <ul class="social pull-left">
@@ -110,22 +114,23 @@
                             <ul class="nav pull-right" id="main-menu-left">
                                 <li class="dropdown">
                                 <?php if(sp_is_user_login()): ?><a class="dropdown-toggle user" data-toggle="dropdown" href="#">
-                                    <?php if(empty($user['avatar'])): ?><img src="/tpl/simplebootx//Public/images/headicon.png" class="headicon"/>
-                                    <?php else: ?>
-                                    <img src="<?php echo sp_get_user_avatar_url($user['avatar']);?>" class="headicon"/><?php endif; ?>
-                                    <?php echo ($user["user_nicename"]); ?><b class="caret"></b></a>
+	                                    <?php if(empty($user['avatar'])): ?><i class="icon-user"></i>
+	                                    <?php else: ?>
+	                                    <img src="<?php echo sp_get_user_avatar_url($user['avatar']);?>" class="headicon"/><?php endif; ?>
+	                                    <?php echo ($user["user_nicename"]); ?><b class="caret"></b>
+                                    </a>
                                     <ul class="dropdown-menu pull-right">
                                        <li><a href="<?php echo u('user/center/index');?>"><i class="fa fa-user"></i> &nbsp;个人中心</a></li>
                                        <li class="divider"></li>
                                        <li><a href="<?php echo u('user/index/logout');?>"><i class="fa fa-sign-out"></i> &nbsp;退出</a></li>
                                     </ul>
                                 <?php else: ?>
-                                    <a class="dropdown-toggle user" data-toggle="dropdown" href="#">
-                                        <img src="/tpl/simplebootx//Public/images/headicon.png" class="headicon"/>登录<b class="caret"></b>
+                                    <a class="dropdown-toggle user" data-toggle="dropdown" href="#" style="padding: 4px 10px;">
+                                        <i class="icon-user"></i>会员登录<b class="caret"></b>
                                     </a>
                                     <ul class="dropdown-menu pull-right">
-                                       <li><a href="<?php echo U('api/oauth/login',array('type'=>'sina'));?>"><i class="fa fa-weibo"></i> &nbsp;微博登录</a></li>
-                                       <li><a href="<?php echo U('api/oauth/login',array('type'=>'qq'));?>"><i class="fa fa-qq"></i> &nbsp;QQ登录</a></li>
+                                       <!-- <li><a href="<?php echo U('api/oauth/login',array('type'=>'sina'));?>"><i class="fa fa-weibo"></i> &nbsp;微博登录</a></li>
+                                       <li><a href="<?php echo U('api/oauth/login',array('type'=>'qq'));?>"><i class="fa fa-qq"></i> &nbsp;QQ登录</a></li> -->
                                        <li><a href="<?php echo u('user/login/index');?>"><i class="fa fa-sign-in"></i> &nbsp;登录</a></li>
                                        <li class="divider"></li>
                                        <li><a href="<?php echo u('user/register/index');?>"><i class="fa fa-user"></i> &nbsp;注册</a></li>
@@ -168,7 +173,7 @@
                     <!-- Menu Start -->
                     <nav class="collapse navbar-collapse menu">
                         <ul class="nav navbar-nav sf-menu">
-                            <li><a id="current" href="/static/contact.html">首页</a></li>
+                            <li><a id="current" href="/">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
                             <li>
                                <a href="/index.php?g=portal&m=list&a=index&id=1">
                                     走进微赢
@@ -179,8 +184,8 @@
                                <ul>
                                   <li><a href="<?php echo U('portal/article/index',array('id'=>2));?>" class="sf-with-ul" target="_blank">微赢简介</a></li>
                                   <li><a href="/static/index-4.html" class="sf-with-ul" target="_blank">微赢动态</a></li>
-                                  <li><a href="/static/index-nivo.html" class="sf-with-ul" target="_blank">微赢团队</a></li>
-                                  <li><a href="/static/index-nivo.html" class="sf-with-ul" target="_blank">微赢风貌</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=26" class="sf-with-ul" target="_blank">微赢团队</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=27" class="sf-with-ul" target="_blank">微赢风貌</a></li>
                                </ul>
                             </li>
                             <li>
@@ -191,22 +196,9 @@
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/static/shortcodes.html" class="sf-with-ul" target="_blank">品牌简介</a></li>
-                                  <li><a href="/static/icons.html" class="sf-with-ul" target="_blank">品牌专利</a></li>
-                                  <li><a href="/static/pricing-table.html" class="sf-with-ul" target="_blank">产品安全</a></li>
-                                  <li style="display:none;">
-                                     <a href="/static/#" class="sf-with-ul"> 
-                                     Third Level Menu 
-                                     <span class="sf-sub-indicator pull-right">
-                                     <i class="icon-angle-right "></i>
-                                     </span>
-                                     </a>
-                                     <ul>
-                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
-                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
-                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
-                                     </ul>
-                                  </li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=15" class="sf-with-ul" target="_blank">品牌简介</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=28" class="sf-with-ul" target="_blank">品牌专利</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=29" class="sf-with-ul" target="_blank">产品安全</a></li>
                                </ul>
                             </li>
                             <li>
@@ -217,9 +209,10 @@
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/static/about.html" class="sf-with-ul" target="_blank">学院介绍</a></li>
-                                  <li><a href="/static/services.html" class="sf-with-ul" target="_blank">师资团队</a></li>
-                                  <li><a href="/static/testimonials.html" class="sf-with-ul" target="_blank">课程大纲</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=22" class="sf-with-ul" target="_blank">学院介绍</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=24" class="sf-with-ul" target="_blank">师资团队</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=25" class="sf-with-ul" target="_blank">课程大纲</a></li>
+                                  <li><a href="/index.php?g=portal&m=list&a=index&id=6" class="sf-with-ul" target="_blank">创业故事</a></li>
                                </ul>
                             </li>
                             <li>
@@ -230,20 +223,18 @@
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/static/portfolio-two.html" class="sf-with-ul" target="_blank">授权查询</a></li>
-                                  <li><a href="/static/portfolio-three.html" class="sf-with-ul" target="_blank">加盟政策</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=30" class="sf-with-ul" target="_blank">授权查询</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=31" class="sf-with-ul" target="_blank">加盟政策</a></li>
                                </ul>
                             </li>
-
-                            <li>
+                            <!-- <li>
                                <a href="/static/#" class="sf-with-ul">
                                会员登录
                                <span class="sf-sub-indicator">
                                <i class="icon-user"></i>
                                </span>
                                </a><ul class="display"></ul>
-                            </li>
-                           
+                            </li> -->
                         </ul>
                         </nav>
                     <!-- Menu End -->

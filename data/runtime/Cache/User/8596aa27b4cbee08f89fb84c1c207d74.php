@@ -71,11 +71,11 @@
                                 </i>
                                 电话 : <?php echo ($site_admin_tel); ?>
                             </a>
-                            <a href="/static/mail%40example.html">
+                            <!-- <a href="/static/mail%40example.html">
                                 <i class="icon-envelope">
                                 </i>
                                 邮件 : <?php echo ($site_admin_email); ?>
-                            </a>
+                            </a> -->
                         </div>
                         <div class="pull-right">
                             <ul class="social pull-left">
@@ -224,7 +224,7 @@
                                   <li><a href="/static/about.html" class="sf-with-ul" target="_blank">学院介绍</a></li>
                                   <li><a href="/static/services.html" class="sf-with-ul" target="_blank">师资团队</a></li>
                                   <li><a href="/static/testimonials.html" class="sf-with-ul" target="_blank">课程大纲</a></li>
-                                  <li><a href="/static/testimonials.html" class="sf-with-ul" target="_blank">创业故事</a></li>
+                                  <li><a href="/index.php?g=portal&m=list&a=index&id=6" class="sf-with-ul" target="_blank">创业故事</a></li>
                                </ul>
                             </li>
                             <li>

@@ -1,0 +1,26 @@
+[ 2015-01-16T15:59:58+08:00 ] ::1 /index.php?g=&m=AdminPost&a=delete
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0080s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0070s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0080s ]
+SQL: UPDATE `sp_term_relationships` SET `status`='0' WHERE ( tid in (12,11,10,9,8,7,6,4,3) ) [ RunTime:0.0070s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-16T16:00:03+08:00 ] ::1 /index.php?g=&m=AdminPost&a=delete
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003000s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0120s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `sp_posts` [ RunTime:0.0100s ]
+SQL: SHOW COLUMNS FROM `sp_terms` [ RunTime:0.0090s ]
+SQL: SHOW COLUMNS FROM `sp_term_relationships` [ RunTime:0.0080s ]
+SQL: UPDATE `sp_term_relationships` SET `status`='0' WHERE ( tid in (5) ) [ RunTime:0.0020s ]
+NOTIC: [8] Undefined index: data E:\ThinkCMFX\application\Common\Controller\AppframeController.class.php 第 62 行.
+
