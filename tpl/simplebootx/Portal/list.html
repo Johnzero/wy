@@ -42,9 +42,12 @@
 					      <div class="blog-entry-meta">
 					         <div class="blog-entry-meta-date">
 					            <i class="icon-time"></i>
-					            <span class="blog-entry-meta-date-month">{$vo.post_date}</span>
+					            <?php 
+					            	$date = explode(" ",$vo['post_date'])[0];
+					            ?>
+					            <span class="blog-entry-meta-date-month">{$date}</span>
 					         </div>
-					         <div class="blog-entry-meta-author">
+					         <!-- <div class="blog-entry-meta-author">
 					            <i class="icon-user"></i>
 					            <a href="#" class="blog-entry-meta-author">{$vo.post_author}</a>
 					         </div>
@@ -55,27 +58,29 @@
 					         <div class="blog-entry-meta-comments">
 					            <i class="icon-comments"></i>
 					            <a href="#" class="blog-entry-meta-comments">{$vo.post_hits}</a>
-					         </div>
+					         </div> -->
 					      </div>
 					   </header>
 					   <div class="post-content">
+					   		 <?php if($smeta['thumb']) { ?>
+						    <div class="post-image">
+						      <a href="/data/upload/{$smeta.thumb}" data-rel="prettyPhoto">
+						      <span class="img-hover"></span>
+						      <span class="fullscreen"><i class="icon-search"></i></span>
+						      <img src="/data/upload/{$smeta.thumb}" alt="">
+						      </a>
+						    </div>
+						    <?php } ?>
+
 					      <p>
 					        {$vo.post_excerpt}
 					      </p>
 					   </div>
-<!-- 					   <footer class="post-footer">
+					   <footer class="post-footer">
 					      <a href="{:leuu('article/index',array('id'=>$vo['tid']))}" class="btn-small btn-color">查看更多</a>
-					   </footer> -->
-					   <?php if($smeta['thumb']) { ?>
-					    <div class="post-image">
-					      <a href="/data/upload/{$smeta.thumb}" data-rel="prettyPhoto">
-					      <span class="img-hover"></span>
-					      <span class="fullscreen"><i class="icon-search"></i></span>
-					      <img src="/data/upload/{$smeta.thumb}" alt="">
-					      </a>
-					    </div>
-					    <?php } ?>
+					   </footer>
 					</article>
+					<div class="clearfix"></div>
 					<div class="blog-divider"></div>
 				</volist>
 				

@@ -1,0 +1,42 @@
+[ 2015-01-20T21:54:20+08:00 ] 60.166.159.66 /index.php?g=Asset&m=Ueditor&a=upload&action=uploadimage
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wy-master\simplewind\Core\Library\Think\Upload.class.php 第 170 行.
+
+[ 2015-01-20T21:54:58+08:00 ] 60.166.159.66 /index.php?g=Asset&m=Ueditor&a=upload&action=uploadimage
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wy-master\simplewind\Core\Library\Think\Upload.class.php 第 170 行.
+
+[ 2015-01-20T21:57:52+08:00 ] 60.166.159.66 /index.php?g=Asset&m=Ueditor&a=upload&action=uploadimage
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002929s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wy-master\simplewind\Core\Library\Think\Upload.class.php 第 170 行.
+
+[ 2015-01-20T22:03:55+08:00 ] 60.166.159.66 /index.php?g=Asset&m=Ueditor&a=upload&action=uploadimage
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wy-master\simplewind\Core\Library\Think\Upload.class.php 第 170 行.
+
+[ 2015-01-20T22:07:07+08:00 ] 60.166.159.66 /index.php?g=Asset&m=Ueditor&a=upload&action=uploadimage
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wy-master\simplewind\Core\Library\Think\Upload.class.php 第 170 行.
+
+[ 2015-01-20T22:30:21+08:00 ] 60.166.159.66 /index.php?g=Asset&m=Ueditor&a=upload&action=uploadimage
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+NOTIC: [2] call_user_func() expects parameter 1 to be a valid callback, no array or string given D:\wy-master\simplewind\Core\Library\Think\Upload.class.php 第 170 行.
+

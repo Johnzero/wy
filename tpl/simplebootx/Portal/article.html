@@ -27,6 +27,10 @@
     <div class="content">
        <div class="container">
           	<div class="row">
+
+            <tc_include file="Public:sidebar"/>
+
+            
             <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12 bottom-pad">
                 <article class="post hentry">
                    <header class="post-header bottom-pad" style="border-bottom: 1px dashed #CCCCCC;">
@@ -36,7 +40,7 @@
                             <i class="icon-time"></i>
                             <span class="blog-entry-meta-date-month">{$post_date}</span>
                          </div>
-                         <div class="blog-entry-meta-author">
+                         <!-- <div class="blog-entry-meta-author">
                             <i class="icon-user"></i>
                             <a href="javascript:;"><i class="fa fa-eye"></i><span>{$post_hits}</span></a> 人
 							
@@ -50,7 +54,7 @@
                          	<a href="{:U('article/do_like',array('id'=>$object_id))}" class="J_count_btn">
                          		<span class="count">{$post_like}</span>
                          	</a>
-                         </div>
+                         </div> -->
                       </div>
                    </header>
                    <div class="post-content">
@@ -65,7 +69,6 @@
                 
             </div>
              
-			<tc_include file="Public:sidebar"/>
             <!-- Sidebar End --> 
             </div>
        </div>

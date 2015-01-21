@@ -1,0 +1,11 @@
+[ 2015-01-20T20:27:25+08:00 ] 60.166.159.66 /index.php?g=User&m=Indexadmin&a=add_post&id=4
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `sp_users` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `sp_users` SET `authorize`='<p style=\"text-align: center;\"><img src=\"http://weiyingkj.com/data/upload/ueditor/20150120/54be49ab4d6cc.jpg\" title=\"未标题-2-01.jpg\" alt=\"未标题-2-01.jpg\"/></p>' WHERE `id` = 4 [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+

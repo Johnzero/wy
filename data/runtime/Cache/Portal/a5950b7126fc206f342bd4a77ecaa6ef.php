@@ -80,32 +80,8 @@
                         <div class="pull-right">
                             <ul class="social pull-left">
                                 <li class="facebook">
-                                    <a href="/static/#">
-                                        <i class="icon-facebook">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="twitter">
-                                    <a href="/static/#">
-                                        <i class="icon-twitter">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="dribbble">
-                                    <a href="/static/#">
-                                        <i class="icon-dribbble">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="linkedin">
-                                    <a href="/static/#">
-                                        <i class="icon-linkedin">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="rss">
-                                    <a href="/static/#">
-                                        <i class="icon-rss">
+                                    <a href="http://weibo.com/p/1006065454998491/home?from=page_100606&mod=TAB#place">
+                                        <i class="icon-weibo">
                                         </i>
                                     </a>
                                 </li>
@@ -182,7 +158,7 @@
                                </a>
                                <ul>
                                   <li><a href="<?php echo U('portal/article/index',array('id'=>2));?>" class="sf-with-ul" target="_blank">微赢简介</a></li>
-                                  <li><a href="/static/index-4.html" class="sf-with-ul" target="_blank">微赢动态</a></li>
+                                  <li><a href="/index.php?g=portal&m=list&a=index&id=7" class="sf-with-ul" target="_blank">微赢动态</a></li>
                                   <li><a href="/index.php?g=portal&m=article&a=index&id=26" class="sf-with-ul" target="_blank">微赢团队</a></li>
                                   <li><a href="/index.php?g=portal&m=article&a=index&id=27" class="sf-with-ul" target="_blank">微赢风貌</a></li>
                                </ul>
@@ -454,12 +430,6 @@
                                   <span class="portfolio-item-hover"></span>
                                   <span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/gs1.jpg" alt=" "/>
                                   </a>
-                                  <div class="portfolio-item-title">
-                                     <a href="">公司图片</a>
-                                     <!-- <p>
-                                        刘兴隆
-                                     </p> -->
-                                  </div>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
@@ -468,12 +438,6 @@
                                   <a href="/static/img/gs2.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
                                   <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/gs2.jpg" alt=" "/>
                                   </a>
-                                  <div class="portfolio-item-title">
-                                     <a href="">公司图片</a>
-                                     <!-- <p>
-                                        康咏铧
-                                     </p> -->
-                                  </div>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
@@ -482,12 +446,6 @@
                                   <a href="/static/img/gs3.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
                                   <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/gs3.jpg" alt=" "/>
                                   </a>
-                                  <div class="portfolio-item-title">
-                                     <a href="">公司图片</a>
-                                     <!-- <p>
-                                        特聘讲师
-                                     </p> -->
-                                  </div>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
@@ -500,12 +458,6 @@
                                   <span class="portfolio-item-hover"></span>
                                   <span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/gs1.jpg" alt=" "/>
                                   </a>
-                                  <div class="portfolio-item-title">
-                                     <a href="">公司图片</a>
-                                     <!-- <p>
-                                        刘兴隆
-                                     </p> -->
-                                  </div>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
@@ -514,12 +466,6 @@
                                   <a href="/static/img/gs2.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
                                   <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/gs2.jpg" alt=" "/>
                                   </a>
-                                  <div class="portfolio-item-title">
-                                     <a href="">公司图片</a>
-                                     <!-- <p>
-                                        康咏铧
-                                     </p> -->
-                                  </div>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
@@ -528,12 +474,6 @@
                                   <a href="/static/img/gs3.jpg" class="portfolio-item-link" data-rel="prettyPhoto" >
                                   <span class="portfolio-item-hover"></span><span class="fullscreen"><i class="icon-search"></i></span><img src="/static/img/gs3.jpg" alt=" "/>
                                   </a>
-                                  <div class="portfolio-item-title">
-                                     <a href="">公司图片</a>
-                                     <!-- <p>
-                                        特聘讲师
-                                     </p> -->
-                                  </div>
                                   <div class="clearfix"></div>
                                </div>
                             </div>
@@ -554,7 +494,7 @@
        <div class="container">
           <div class="row">
              <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                <h3  class="title">我们的服务</h3>
+                <h3  class="title">走进微赢</h3>
                 <div class="row">
                    <div class="circular-nav">
                       <div class="col-lg-7 col-md-7 col-sm-12 col-xs-12 animate_afl">
@@ -587,7 +527,7 @@
                                <div class="cn-content">
                                   <h4>关注我们</h4>
                                   <p><img src="/static/img/gz.jpg"></p>
-                                  <a href="#" target="_blank">更多<i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
+                                  <!-- <a href="#" target="_blank">更多<i class="icon-angle-right"></i><i class="icon-angle-right"></i></a> -->
                                </div>
                                <div class="clearfix"></div>
                             </div>
@@ -606,19 +546,19 @@
                          <div class="cn-wrapper">
                             <ul>
                                <li class="circle-1 circle">
-                                    <a class="active" href="#">微赢商学院</a>
+                                    <a class="active" href="#"><font style="-webkit-transform: rotate(50deg);display: block;">微赢商学院</font></a>
                                </li>
                                <li class="circle-2 circle">
 
-                                    <a href="#">微赢产品</a>
+                                    <a href="#"><font style="-webkit-transform: rotate(-40deg);display: block;margin-top: 10px;margin-left: 20px;">微赢产品</font></a>
 
                                </li>
                                <li class="circle-3 circle">
-                                    <a href="#">关注我们</a>
+                                    <a href="#"><font style="-webkit-transform: rotate(-130deg);display: block;">关注我们</font></a>
                                 </li>
 
                                <li class="circle-4 circle">
-                                    <a href="#">招贤纳士</a>
+                                    <a href="#"><font style="-webkit-transform: rotate(-220deg);display: block;margin-top: 10px;margin-left: 20px;">招贤纳士</font></a>
                                 </li>
 
                             </ul>
@@ -646,7 +586,9 @@
                    <div class="content-box big ch-item bottom-pad-small">
                       <div class="ch-info-wrap">
                          <div class="ch-info">
-                            <div class="ch-info-front ch-img-1"><i class="icon-bullhorn"></i></div>
+                            <div class="ch-info-front ch-img-1">
+                                <i class="icon-bullhorn"></i>
+                            </div>
                             <div class="ch-info-back">
                                <i class="icon-bullhorn"></i>
                             </div>
@@ -675,8 +617,9 @@
                       <div class="content-box-info">
                           <h3>创业故事</h3>
                           <img src="/static/img/portfolio/po_1.jpg" alt=" ">
+                          <p><h1>微赢生物科技董事长刘兴隆 </h1></p>
                           <p>
-                             12月27日，由微赢生物科技有限公司举办的“微赢商学院第三届微商交流会”圆满结束。此次交流会共21微商大咖出席，由中国著名实战微营销培训顾问Jordan主持，微赢CEO康咏铧先生担任主讲嘉宾。
+                             半年前，微赢生物科技有限公司是谁都不知道的Nothing，甚至在招聘职员时，别人都以为是传销、是骗子。但是经过短暂的时间，微赢生物科技有限公司发生了天翻地覆的变化。
                           </p>
                           <a href="/index.php?g=portal&m=list&a=index&id=6" target="_blank">更多创业故事 <i class="icon-angle-right"></i><i class="icon-angle-right"></i></a>
                        </div>
@@ -884,10 +827,10 @@
                                   <i class="icon-phone"></i>
                                   <p><strong>电话:</strong> 0551-68998601</p>
                                </li>
-                               <li>
+                               <!-- <li>
                                   <i class="icon-envelope"></i>
                                   <p><strong>Email:</strong>info@fifothemes.com</p>
-                               </li>
+                               </li> -->
                             </ul>
                         </section>
 
@@ -914,7 +857,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 text-center">
-                            Copyright &copy; 2014.Company name All rights reserved.
+                            Copyright &copy; 2014.微赢生物科技有限公司 All rights reserved.
                         </div>
                         <!-- <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
                             <ul class="social social-icons-footer-bottom">

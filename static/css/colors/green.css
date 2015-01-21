@@ -131,7 +131,7 @@ header .top-bar {
 	background: #fff;
 }
 .our-clients{
-	background: #fafafa;
+	background: white !important;
 	border-top: 1px solid #DDD;
 	border-bottom: 1px solid #DDD;
 	padding: 60px 0;
@@ -153,27 +153,42 @@ h3.title {
 }
 
 nav.menu {
-	background: -webkit-linear-gradient(#82dc23,#59ab02);
+	background: white;
+/*	background: -webkit-linear-gradient(#82dc23,#59ab02);
 	background: -moz-linear-gradient(#82dc23,#59ab02);
 	background: -o-linear-gradient(#82dc23,#59ab02);
 	background: -ms-linear-gradient(#82dc23,#59ab02);
-	background: linear-gradient(#82dc23,#59ab02);
+	background: linear-gradient(#82dc23*/,#59ab02);
 }
 .menu ul>li>a { 
-	color: white;
+	color: #323B44;
 	font-size: 16px;
+
+}
+.menu > ul li {
+	border: 1px solid #e5e5e5;
+	border-top: none;
+	border-bottom: none;
+	border-right: none;
+}
+.menu > ul li:last-child {
+	border-right: 1px solid #e5e5e5;
 }
 .sfHover a {
 	color: black !important;
 }
 .menu ul>li>a:hover {
-	background-color: white !important;
-	color: black;
+	background-color: #f0f0f0 !important;
+	color: white;
 }
 #current {
-	color: black;
+	color: #59ab02;
 }
-.navbar-nav i {color: white;}
+.navbar-nav i {color: #323B44;}
+.menu ul ul {
+	width:145px;
+}
+
 .sfHover i {
 	color: black !important;
 }
@@ -210,4 +225,69 @@ nav.menu {
 }
 .service-reasons { 
 	padding-top: 0
+}
+.cn-content p img {
+	height: 240px;
+	width: 100%;
+}
+.cn-content h4 {
+	color: #59ab02;
+	/*font-weight: bold;*/
+}
+.ch-info-back {
+	background: none !important;
+}
+.ch-info-front {
+	background-color: rgb(89, 171, 2) !important;
+}
+.sidebar {
+	height: 500px;
+	background: #f8f8f8;
+	margin-top: -60px;
+	padding-top: 80px;
+	padding-left: 0;
+	padding-right: 0;
+	width: 220px;
+}
+
+.widget.category ul li {
+	display: block;
+	height: 52px;
+	line-height: 52px;
+	cursor: pointer;
+	border-bottom: 1px solid #cfcfcf;
+	transition: all 0.5s ease 0s;
+}
+.widget.category ul li {
+	margin-bottom: 0;
+	text-align: center;
+}
+.white {
+	color: #fff !important ;
+}
+.sidebar ul.slide li:hover {
+	background: -webkit-linear-gradient(#82dc23,#59ab02);
+	background: -moz-linear-gradient(#82dc23,#59ab02);
+	background: -o-linear-gradient(#82dc23,#59ab02);
+	background: -ms-linear-gradient(#82dc23,#59ab02);
+	background: linear-gradient(#82dc23,#59ab02);
+	color: #fff !important ;
+}
+
+@media screen and (max-width: 400px) {
+  .sidebar {
+  	display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) { 
+	.sidebar {
+  	display: none;
+  }
+
+}
+.post-image {
+	float: left;
+	width: 35%;
+	margin-right: 20px;
 }

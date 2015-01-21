@@ -80,32 +80,8 @@
                         <div class="pull-right">
                             <ul class="social pull-left">
                                 <li class="facebook">
-                                    <a href="/static/#">
-                                        <i class="icon-facebook">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="twitter">
-                                    <a href="/static/#">
-                                        <i class="icon-twitter">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="dribbble">
-                                    <a href="/static/#">
-                                        <i class="icon-dribbble">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="linkedin">
-                                    <a href="/static/#">
-                                        <i class="icon-linkedin">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="rss">
-                                    <a href="/static/#">
-                                        <i class="icon-rss">
+                                    <a href="http://weibo.com/p/1006065454998491/home?from=page_100606&mod=TAB#place">
+                                        <i class="icon-weibo">
                                         </i>
                                     </a>
                                 </li>
@@ -182,9 +158,9 @@
                                </a>
                                <ul>
                                   <li><a href="<?php echo U('portal/article/index',array('id'=>2));?>" class="sf-with-ul" target="_blank">微赢简介</a></li>
-                                  <li><a href="/static/index-4.html" class="sf-with-ul" target="_blank">微赢动态</a></li>
-                                  <li><a href="/static/index-nivo.html" class="sf-with-ul" target="_blank">微赢团队</a></li>
-                                  <li><a href="/static/index-nivo.html" class="sf-with-ul" target="_blank">微赢风貌</a></li>
+                                  <li><a href="/index.php?g=portal&m=list&a=index&id=7" class="sf-with-ul" target="_blank">微赢动态</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=26" class="sf-with-ul" target="_blank">微赢团队</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=27" class="sf-with-ul" target="_blank">微赢风貌</a></li>
                                </ul>
                             </li>
                             <li>
@@ -195,22 +171,9 @@
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/static/shortcodes.html" class="sf-with-ul" target="_blank">品牌简介</a></li>
-                                  <li><a href="/static/icons.html" class="sf-with-ul" target="_blank">品牌专利</a></li>
-                                  <li><a href="/static/pricing-table.html" class="sf-with-ul" target="_blank">产品安全</a></li>
-                                  <li style="display:none;">
-                                     <a href="/static/#" class="sf-with-ul"> 
-                                     Third Level Menu 
-                                     <span class="sf-sub-indicator pull-right">
-                                     <i class="icon-angle-right "></i>
-                                     </span>
-                                     </a>
-                                     <ul>
-                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
-                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
-                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
-                                     </ul>
-                                  </li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=15" class="sf-with-ul" target="_blank">品牌简介</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=28" class="sf-with-ul" target="_blank">品牌专利</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=29" class="sf-with-ul" target="_blank">产品安全</a></li>
                                </ul>
                             </li>
                             <li>
@@ -221,9 +184,9 @@
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/static/about.html" class="sf-with-ul" target="_blank">学院介绍</a></li>
-                                  <li><a href="/static/services.html" class="sf-with-ul" target="_blank">师资团队</a></li>
-                                  <li><a href="/static/testimonials.html" class="sf-with-ul" target="_blank">课程大纲</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=22" class="sf-with-ul" target="_blank">学院介绍</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=24" class="sf-with-ul" target="_blank">师资团队</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=25" class="sf-with-ul" target="_blank">课程大纲</a></li>
                                   <li><a href="/index.php?g=portal&m=list&a=index&id=6" class="sf-with-ul" target="_blank">创业故事</a></li>
                                </ul>
                             </li>
@@ -235,8 +198,8 @@
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/static/portfolio-two.html" class="sf-with-ul" target="_blank">授权查询</a></li>
-                                  <li><a href="/static/portfolio-three.html" class="sf-with-ul" target="_blank">加盟政策</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=30" class="sf-with-ul" target="_blank">授权查询</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=31" class="sf-with-ul" target="_blank">加盟政策</a></li>
                                </ul>
                             </li>
                             <!-- <li>
@@ -292,7 +255,7 @@
 					</div>
 
 					<div class="control-group">
-						<label class="control-label" for="input_verify">验证码：</label>
+						<label class="control-label" for="input_verify">验证码&nbsp;：</label>
 						<div class="controls">
 							<input type="text" id="input_verify" name="verify"  placeholder="请输入验证码" class="span3">
 							<?php echo sp_verifycode_img('code_len=4&font_size=15&width=100&height=35&charset=1234567890');?>
@@ -359,10 +322,10 @@
                                   <i class="icon-phone"></i>
                                   <p><strong>电话:</strong> 0551-68998601</p>
                                </li>
-                               <li>
+                               <!-- <li>
                                   <i class="icon-envelope"></i>
                                   <p><strong>Email:</strong>info@fifothemes.com</p>
-                               </li>
+                               </li> -->
                             </ul>
                         </section>
 
@@ -389,7 +352,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 text-center">
-                            Copyright &copy; 2014.Company name All rights reserved.
+                            Copyright &copy; 2014.微赢生物科技有限公司 All rights reserved.
                         </div>
                         <!-- <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
                             <ul class="social social-icons-footer-bottom">

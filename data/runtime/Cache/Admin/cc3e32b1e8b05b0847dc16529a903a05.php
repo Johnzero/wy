@@ -109,6 +109,11 @@ var GV = {
 						<td>站长电话：</td>
 						<td><input type="text" class="input" name="options[site_admin_tel]" value="<?php echo ($site_admin_tel); ?>"></td>
 					</tr>
+
+					<tr>
+						<td>授权码：</td>
+						<td><input type="text" class="input" name="options[site_authorize]" value="<?php echo ($site_authorize); ?>"></td>
+					</tr>
 					
 					<tr>
 						<td>统计代码：</td>

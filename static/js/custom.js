@@ -58,6 +58,11 @@ jQuery().waypoint && jQuery("body").imagesLoaded(function () {
 	
     jQuery(function () {
         jQuery('ul.sf-menu').stop().superfish();
+        jQuery(".slide li").hover( function () {
+            jQuery(this).find("a").addClass("white");
+        }, function() {
+        jQuery(this).find("a").removeClass("white");
+        }   )
     });
 	
 
