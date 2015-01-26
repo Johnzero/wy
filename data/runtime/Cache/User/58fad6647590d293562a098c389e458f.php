@@ -12,7 +12,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title><?php echo ($site_seo_title); ?> <?php echo ($site_name); ?></title>
+    <title><?php echo ($site_seo_title); ?></title>
     <meta name="keywords" content="<?php echo ($site_seo_keywords); ?>" />
     <meta name="description" content="<?php echo ($site_seo_description); ?>">
     <meta name="author" content="wangsong1233276@sina.com">
@@ -38,12 +38,12 @@
     <link href="/static/css/spectrum.css" rel="stylesheet">
     <!-- Favicons -->
     <link rel="shortcut icon" href="/static/img/ico/favicon.ico">
-    <link rel="apple-touch-icon" href="/static/img/ico/apple-touch-icon.png">
+ <!--    <link rel="apple-touch-icon" href="/static/img/ico/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/ico/apple-touch-icon-72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/static/img/ico/apple-touch-icon-114.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/ico/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/ico/apple-touch-icon-144.png"> -->
 
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':8080/livereload.js?snipver=1"></' + 'script>')</script>
+    <script>// document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':8080/livereload.js?snipver=1"></' + 'script>')</script>
 
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -80,32 +80,8 @@
                         <div class="pull-right">
                             <ul class="social pull-left">
                                 <li class="facebook">
-                                    <a href="/static/#">
-                                        <i class="icon-facebook">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="twitter">
-                                    <a href="/static/#">
-                                        <i class="icon-twitter">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="dribbble">
-                                    <a href="/static/#">
-                                        <i class="icon-dribbble">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="linkedin">
-                                    <a href="/static/#">
-                                        <i class="icon-linkedin">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="rss">
-                                    <a href="/static/#">
-                                        <i class="icon-rss">
+                                    <a href="http://weibo.com/p/1006065454998491/home?from=page_100606&mod=TAB#place">
+                                        <i class="icon-weibo">
                                         </i>
                                     </a>
                                 </li>
@@ -143,7 +119,7 @@
             <!-- Header Top Bar End -->
             <!-- Main Header Start -->
             <div class="main-header">
-                <div class="container">
+                <div class="container" style="width:1140px;">
                     <!-- TopNav Start -->
                     <div class="topnav navbar-header">
                         <a class="navbar-toggle down-button" data-toggle="collapse" data-target=".slidedown">
@@ -174,7 +150,7 @@
                         <ul class="nav navbar-nav sf-menu">
                             <li><a id="current" href="/">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
                             <li>
-                               <a href="/index.php?g=portal&m=list&a=index&id=1">
+                               <a href="#">
                                     走进微赢
                                    <span class="sf-sub-indicator">
                                    <i class="icon-angle-down "></i>
@@ -188,7 +164,15 @@
                                </ul>
                             </li>
                             <li>
-                               <a  href="/index.php?g=portal&m=list&a=index&id=3" class="sf-with-ul">
+                               <a href="/index.php?g=portal&m=list&a=index&id=8">
+                                    媒体采访
+                                   <span class="sf-sub-indicator">
+                                   <i class="icon-angle-down "></i>
+                                   </span>
+                               </a>
+                            </li>
+                            <li>
+                               <a href="#" class="sf-with-ul">
                                品牌动态 
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
@@ -201,7 +185,7 @@
                                </ul>
                             </li>
                             <li>
-                               <a href="/index.php?g=portal&m=list&a=index&id=4" class="sf-with-ul">
+                               <a href="#" class="sf-with-ul">
                                微赢商学院
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
@@ -215,14 +199,14 @@
                                </ul>
                             </li>
                             <li>
-                               <a href="/index.php?g=portal&m=list&a=index&id=5" class="sf-with-ul">
+                               <a href="#" class="sf-with-ul">
                                会员中心
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/index.php?g=portal&m=article&a=index&id=30" class="sf-with-ul" target="_blank">授权查询</a></li>
+                                  <li><a href="/index.php?g=portal&m=index&a=cha&id=30" class="sf-with-ul" target="_blank">授权查询</a></li>
                                   <li><a href="/index.php?g=portal&m=article&a=index&id=31" class="sf-with-ul" target="_blank">加盟政策</a></li>
                                </ul>
                             </li>

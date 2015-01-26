@@ -1,0 +1,22 @@
+[ 2015-01-23T17:44:27+08:00 ] 117.64.251.156 /index.php?g=Admin&m=authorize&a=edit_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001953s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002929s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_authorize` [ RunTime:0.0029s ]
+SQL: UPDATE `sp_authorize` SET `username`='汪汪',`uid`='123',`wechat_name`='John_zero',`authorize`='&lt;p&gt;&lt;img src=&quot;http://dns.hfnacai.com/data/upload/ueditor/20150123/54c217f23531e.jpg&quot; title=&quot;2555.jpg&quot; alt=&quot;2555.jpg&quot;/&gt;&lt;/p&gt;' WHERE `id` = '13' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-23T17:48:04+08:00 ] 117.64.251.156 /index.php?g=Admin&m=authorize&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `sp_authorize` [ RunTime:0.0020s ]
+SQL: INSERT INTO `sp_authorize` (`username`,`uid`,`wechat_name`,`authorize`,`create_time`) VALUES ('胡晓','008','HX526046543','&lt;p&gt;&lt;img src=&quot;http://dns.hfnacai.com/data/upload/ueditor/20150123/54c218d21219a.jpg&quot; title=&quot;2555.jpg&quot; alt=&quot;2555.jpg&quot;/&gt;&lt;/p&gt;','1422006484') [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+

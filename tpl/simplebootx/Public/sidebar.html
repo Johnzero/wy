@@ -91,6 +91,9 @@
             <a href="/index.php?g=portal&m=list&a=index&id=7"><li>微赢动态</li></a>
             <a href="/index.php?g=portal&m=article&a=index&id=26"><li>微赢团队</li></a>
             <a href="/index.php?g=portal&m=article&a=index&id=27"><li>微赢风貌</li></a>
+        <?php } else if ( in_array( $_GET['id'], array(8) )) { ?>
+
+            <a href="/index.php?g=portal&m=list&a=index&id=8"><li>媒体采访</li></a>
           
         <?php } else if ( in_array( $_GET['id'], array(3,15,28,29) )) { ?>
 
@@ -107,7 +110,7 @@
 
         <?php } else if ( in_array( $_GET['id'], array(5,30,31) ) ) { ?>
             
-            <a href="/index.php?g=portal&m=article&a=index&id=30"><li>授权查询</li></a>
+            <a href="/index.php?g=portal&m=index&a=cha&id=30"><li>授权查询</li></a>
             <a href="/index.php?g=portal&m=article&a=index&id=31"><li>加盟政策</li></a>
 
         <?php } else { ?>

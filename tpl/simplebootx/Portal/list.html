@@ -2,6 +2,9 @@
 
 <!-- Content Start -->
 <div id="main">
+	<div class="row">
+		<img src="/static/img/dh.jpg" width="100%">
+	</div>
     <!-- Title, Breadcrumb Start-->
     <div class="breadcrumb-wrapper">
        <div class="container">
@@ -31,11 +34,13 @@
 			<div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12">
 				<php>
 					$lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;",5);
+					$i = 1;
 				</php>
 				<volist name="lists['posts']" id="vo">
 					<php>
 						$smeta=json_decode($vo['smeta'], true);
 					</php>
+					<?php if ( $i == 1 ) { ?>
 					<article class="post hentry">
 					    <header class="post-header">
 					      <a href="{:leuu('article/index',array('id'=>$vo['tid']))}"> <h3 class="content-title">{$vo.post_title}</h3></a>
@@ -82,8 +87,47 @@
 					</article>
 					<div class="clearfix"></div>
 					<div class="blog-divider"></div>
+					<?php } ?>
+					<php>
+						$i = $i + 1;
+					</php>
 				</volist>
 				
+
+				<php>
+					$lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;",5);
+					$i = 1;
+				</php>
+				<?php if(count($lists['posts']) > 1 ) { ?>
+				<div class="jtxw_asider_connews news">
+				    <p class="jtxw_p1">
+				        <span>
+				            {$term_obj.name}
+				        </span>
+				    </p>
+				    <ul>
+				    	<volist name="lists['posts']" id="vo">
+							<php>
+								$smeta=json_decode($vo['smeta'], true);
+					            $date = explode(" ",$vo['post_date'])[0];
+							</php>
+							<?php if ( $i != 1 ) { ?>
+								<li>
+						            <span class="jtxw_s1">
+						            </span>
+						            <span class="jtxw_s2">
+						                {$date}
+						            </span>
+						            <a href="{:leuu('article/index',array('id'=>$vo['tid']))}" class="jtxw_s3">{$vo.post_title}</a>
+						        </li>
+							<?php } ?>
+							<php>
+								$i = $i + 1;
+							</php>
+						</volist>
+				    </ul>
+				</div>
+				<?php } ?>
 				<div class="pagination-centered">
 					<ul class="pagination">
 						{$lists['page']}

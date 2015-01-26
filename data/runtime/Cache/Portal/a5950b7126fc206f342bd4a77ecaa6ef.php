@@ -12,7 +12,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title><?php echo ($site_seo_title); ?> <?php echo ($site_name); ?></title>
+    <title><?php echo ($site_seo_title); ?></title>
     <meta name="keywords" content="<?php echo ($site_seo_keywords); ?>" />
     <meta name="description" content="<?php echo ($site_seo_description); ?>">
     <meta name="author" content="wangsong1233276@sina.com">
@@ -38,12 +38,12 @@
     <link href="/static/css/spectrum.css" rel="stylesheet">
     <!-- Favicons -->
     <link rel="shortcut icon" href="/static/img/ico/favicon.ico">
-    <link rel="apple-touch-icon" href="/static/img/ico/apple-touch-icon.png">
+ <!--    <link rel="apple-touch-icon" href="/static/img/ico/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/ico/apple-touch-icon-72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/static/img/ico/apple-touch-icon-114.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/ico/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/ico/apple-touch-icon-144.png"> -->
 
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':8080/livereload.js?snipver=1"></' + 'script>')</script>
+    <script>// document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':8080/livereload.js?snipver=1"></' + 'script>')</script>
 
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -119,7 +119,7 @@
             <!-- Header Top Bar End -->
             <!-- Main Header Start -->
             <div class="main-header">
-                <div class="container">
+                <div class="container" style="width:1140px;">
                     <!-- TopNav Start -->
                     <div class="topnav navbar-header">
                         <a class="navbar-toggle down-button" data-toggle="collapse" data-target=".slidedown">
@@ -150,7 +150,7 @@
                         <ul class="nav navbar-nav sf-menu">
                             <li><a id="current" href="/">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
                             <li>
-                               <a href="/index.php?g=portal&m=list&a=index&id=1">
+                               <a href="#">
                                     走进微赢
                                    <span class="sf-sub-indicator">
                                    <i class="icon-angle-down "></i>
@@ -164,7 +164,15 @@
                                </ul>
                             </li>
                             <li>
-                               <a  href="/index.php?g=portal&m=list&a=index&id=3" class="sf-with-ul">
+                               <a href="/index.php?g=portal&m=list&a=index&id=8">
+                                    媒体采访
+                                   <span class="sf-sub-indicator">
+                                   <i class="icon-angle-down "></i>
+                                   </span>
+                               </a>
+                            </li>
+                            <li>
+                               <a href="#" class="sf-with-ul">
                                品牌动态 
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
@@ -177,7 +185,7 @@
                                </ul>
                             </li>
                             <li>
-                               <a href="/index.php?g=portal&m=list&a=index&id=4" class="sf-with-ul">
+                               <a href="#" class="sf-with-ul">
                                微赢商学院
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
@@ -191,14 +199,14 @@
                                </ul>
                             </li>
                             <li>
-                               <a href="/index.php?g=portal&m=list&a=index&id=5" class="sf-with-ul">
+                               <a href="#" class="sf-with-ul">
                                会员中心
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/index.php?g=portal&m=article&a=index&id=30" class="sf-with-ul" target="_blank">授权查询</a></li>
+                                  <li><a href="/index.php?g=portal&m=index&a=cha&id=30" class="sf-with-ul" target="_blank">授权查询</a></li>
                                   <li><a href="/index.php?g=portal&m=article&a=index&id=31" class="sf-with-ul" target="_blank">加盟政策</a></li>
                                </ul>
                             </li>
@@ -411,7 +419,7 @@
              <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 animate_afl d1">
                 <div class="portfolio-desc">
                    <h3 class="title">公司简介</h3>
-                   <p>公司秉承“微信，让世界认识你。”的企业宗旨，紧跟时代步伐，自主创新，依托强大的互联网平台，结合顶尖产品研发团队，通过整合移动领域核心技术、微营销、互联网、顶级策划人才、运营人才、高级工程师、优质资源打破传统商业模式，实现线上线下同步推广销售，让每一位消费者以最便捷的方式最合理的价格，用上好产品。</p>
+                   <p>安徽省微赢生物科技有限公司秉承“微信，让世界认识你。”的企业宗旨，紧跟时代步伐，自主创新，依托强大的互联网平台，结合顶尖产品研发团队，通过整合移动领域核心技术、微营销、互联网、顶级策划人才、运营人才、高级工程师、优质资源打破传统商业模式，实现线上线下同步推广销售，让每一位消费者以最便捷的方式最合理的价格，用上好产品。</p>
                    <div class="carousel-controls">
                       <a class="prev" href="#portfolio-carousel" data-slide="prev"><i class="icon-angle-left"></i></a>
                       <a class="next" href="#portfolio-carousel" data-slide="next"><i class="icon-angle-right"></i></a>

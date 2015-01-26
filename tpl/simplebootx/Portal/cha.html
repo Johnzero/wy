@@ -1,0 +1,68 @@
+
+<tc_include file="Public:head" />
+
+<div id="main">
+
+	<div class="row">
+        <img src="/static/img/dh.jpg" width="100%">
+    </div>
+
+	<div class="breadcrumb-wrapper">
+       <div class="container">
+          <div class="row">
+             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <h2 class="title">会员中心</h2>
+             </div>
+             <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6">
+                <div class="breadcrumbs pull-right">
+                   <ul>
+                      <li>您的位置 : </li>
+                      <li><a href="/">首页</a></li>
+                      <li><a href="{:leuu('list/index',array('id'=>$term['term_id']))}">会员中心</a></li>
+                      <li><a>授权查询</a></li>
+                   </ul>
+                </div>
+             </div>
+          </div>
+       </div>
+    </div>
+
+    <!-- Main Content start-->
+    <div class="content">
+       <div class="container">
+          	<div class="row">
+
+                <tc_include file="Public:sidebar"/>
+
+                <div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12 bottom-pad">
+                    <h3 class="title">授权查询</h3>
+                    <p>
+                       请输入您的授权码查询！
+                    </p>
+                    <div class="divider"></div>
+
+                    <form method="post" class="reply" action="/index.php?g=portal&m=index&a=cha_answer">
+                      <div class="row">
+                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <label>授权码: <span>*</span></label>
+                            <input class="form-control" id="uid" name="uid" type="text" value="" required>
+                         </div>
+                      </div>
+
+                       <input value="查询" id="sb" class="btn-normal btn-color submit  bottom-pad" type="submit">
+
+                       <div class="clearfix"></div>
+
+                    </form>
+                </div>
+             
+            <!-- Sidebar End --> 
+            </div>
+       </div>
+    </div>
+    <!-- Main Content end-->
+</div>
+
+<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"2","bdSize":"32"},"share":{},"image":{"viewList":["weixin","tsina","qzone","tqq","renren"],"viewText":"分享到：","viewSize":"32"},"selectShare":{"bdContainerClass":null,"bdSelectMiniList":["weixin","tsina","qzone","tqq","renren"]}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>  
+
+<tc_include file="Public:footer"/>

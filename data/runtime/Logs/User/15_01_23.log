@@ -1,0 +1,66 @@
+[ 2015-01-23T17:53:42+08:00 ] 117.64.251.156 /index.php?g=User&m=profile&a=avatar_update
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-01-23T17:53:49+08:00 ] 117.64.251.156 /index.php?g=User&m=profile&a=avatar_update
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2015-01-23T17:53:49+08:00 ] 117.64.251.156 /index.php?g=User&m=profile&a=avatar_update
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-01-23T17:53:49+08:00 ] 117.64.251.156 /index.php?g=User&m=profile&a=avatar_update
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000976s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000976s ]
+
+[ 2015-01-23T17:54:22+08:00 ] 117.64.251.156 /index.php?g=User&m=profile&a=edit_post
+ERR: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '1231' for column 'birthday' at row 1
+
+[ 2015-01-23T18:01:59+08:00 ] 117.64.251.156 /index.php?g=User&m=profile&a=edit_post
+ERR: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '' for column 'birthday' at row 1
+
+[ 2015-01-23T18:02:50+08:00 ] 117.64.251.156 /index.php?g=User&m=profile&a=avatar_update
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000977s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000977s ]
+
+[ 2015-01-23T18:02:51+08:00 ] 117.64.251.156 /index.php?g=User&m=profile&a=avatar_update
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000976s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000976s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0020s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000000s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000000s ]
+

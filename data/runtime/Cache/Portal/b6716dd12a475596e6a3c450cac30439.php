@@ -12,7 +12,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title><?php echo ($site_seo_title); ?> <?php echo ($site_name); ?></title>
+    <title><?php echo ($site_seo_title); ?></title>
     <meta name="keywords" content="<?php echo ($site_seo_keywords); ?>" />
     <meta name="description" content="<?php echo ($site_seo_description); ?>">
     <meta name="author" content="wangsong1233276@sina.com">
@@ -38,12 +38,12 @@
     <link href="/static/css/spectrum.css" rel="stylesheet">
     <!-- Favicons -->
     <link rel="shortcut icon" href="/static/img/ico/favicon.ico">
-    <link rel="apple-touch-icon" href="/static/img/ico/apple-touch-icon.png">
+ <!--    <link rel="apple-touch-icon" href="/static/img/ico/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/ico/apple-touch-icon-72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/static/img/ico/apple-touch-icon-114.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/ico/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/ico/apple-touch-icon-144.png"> -->
 
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':8080/livereload.js?snipver=1"></' + 'script>')</script>
+    <script>// document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':8080/livereload.js?snipver=1"></' + 'script>')</script>
 
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -119,7 +119,7 @@
             <!-- Header Top Bar End -->
             <!-- Main Header Start -->
             <div class="main-header">
-                <div class="container">
+                <div class="container" style="width:1140px;">
                     <!-- TopNav Start -->
                     <div class="topnav navbar-header">
                         <a class="navbar-toggle down-button" data-toggle="collapse" data-target=".slidedown">
@@ -150,7 +150,7 @@
                         <ul class="nav navbar-nav sf-menu">
                             <li><a id="current" href="/">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
                             <li>
-                               <a href="/index.php?g=portal&m=list&a=index&id=1">
+                               <a href="#">
                                     走进微赢
                                    <span class="sf-sub-indicator">
                                    <i class="icon-angle-down "></i>
@@ -164,7 +164,15 @@
                                </ul>
                             </li>
                             <li>
-                               <a  href="/index.php?g=portal&m=list&a=index&id=3" class="sf-with-ul">
+                               <a href="/index.php?g=portal&m=list&a=index&id=8">
+                                    媒体采访
+                                   <span class="sf-sub-indicator">
+                                   <i class="icon-angle-down "></i>
+                                   </span>
+                               </a>
+                            </li>
+                            <li>
+                               <a href="#" class="sf-with-ul">
                                品牌动态 
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
@@ -177,7 +185,7 @@
                                </ul>
                             </li>
                             <li>
-                               <a href="/index.php?g=portal&m=list&a=index&id=4" class="sf-with-ul">
+                               <a href="#" class="sf-with-ul">
                                微赢商学院
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
@@ -191,14 +199,14 @@
                                </ul>
                             </li>
                             <li>
-                               <a href="/index.php?g=portal&m=list&a=index&id=5" class="sf-with-ul">
+                               <a href="#" class="sf-with-ul">
                                会员中心
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/index.php?g=portal&m=article&a=index&id=30" class="sf-with-ul" target="_blank">授权查询</a></li>
+                                  <li><a href="/index.php?g=portal&m=index&a=cha&id=30" class="sf-with-ul" target="_blank">授权查询</a></li>
                                   <li><a href="/index.php?g=portal&m=article&a=index&id=31" class="sf-with-ul" target="_blank">加盟政策</a></li>
                                </ul>
                             </li>
@@ -222,6 +230,9 @@
 
 <!-- Content Start -->
 <div id="main">
+	<div class="row">
+		<img src="/static/img/dh.jpg" width="100%">
+	</div>
     <!-- Title, Breadcrumb Start-->
     <div class="breadcrumb-wrapper">
        <div class="container">
@@ -323,23 +334,26 @@
             <a href="/index.php?g=portal&m=list&a=index&id=7"><li>微赢动态</li></a>
             <a href="/index.php?g=portal&m=article&a=index&id=26"><li>微赢团队</li></a>
             <a href="/index.php?g=portal&m=article&a=index&id=27"><li>微赢风貌</li></a>
+        <?php } else if ( in_array( $_GET['id'], array(8) )) { ?>
+
+            <a href="/index.php?g=portal&m=list&a=index&id=8"><li>媒体采访</li></a>
           
-        <?php } else if ( $_GET['id'] == 3 ) { ?>
+        <?php } else if ( in_array( $_GET['id'], array(3,15,28,29) )) { ?>
 
             <a href="/index.php?g=portal&m=article&a=index&id=15"><li>品牌简介</li></a>
             <a href="/index.php?g=portal&m=article&a=index&id=28"><li>品牌专利</li></a>
             <a href="/index.php?g=portal&m=article&a=index&id=29"><li>产品安全</li></a>
 
-        <?php } else if ( $_GET['id'] == 4 ) { ?>
+        <?php } else if ( in_array( $_GET['id'], array(4,6,22,24,25) ) ) { ?>
 
             <a href="/index.php?g=portal&m=article&a=index&id=22"><li>学院介绍</li></a>
             <a href="/index.php?g=portal&m=article&a=index&id=24"><li>师资团队</li></a>
             <a href="/index.php?g=portal&m=article&a=index&id=25"><li>课程大纲</li></a>
             <a href="/index.php?g=portal&m=list&a=index&id=6"><li>创业故事</li></a>
 
-        <?php } else if ( $_GET['id'] == 5 ) { ?>
+        <?php } else if ( in_array( $_GET['id'], array(5,30,31) ) ) { ?>
             
-            <a href="/index.php?g=portal&m=article&a=index&id=30"><li>授权查询</li></a>
+            <a href="/index.php?g=portal&m=index&a=cha&id=30"><li>授权查询</li></a>
             <a href="/index.php?g=portal&m=article&a=index&id=31"><li>加盟政策</li></a>
 
         <?php } else { ?>
@@ -376,8 +390,9 @@
 </div>
 			<!-- Sidebar End -->                
 			<div class="posts-block col-lg-9 col-md-9 col-sm-8 col-xs-12">
-				<?php $lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;",5); ?>
+				<?php $lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;",5); $i = 1; ?>
 				<?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); ?>
+					<?php if ( $i == 1 ) { ?>
 					<article class="post hentry">
 					    <header class="post-header">
 					      <a href="<?php echo leuu('article/index',array('id'=>$vo['tid']));?>"> <h3 class="content-title"><?php echo ($vo["post_title"]); ?></h3></a>
@@ -421,8 +436,35 @@
 					   </footer>
 					</article>
 					<div class="clearfix"></div>
-					<div class="blog-divider"></div><?php endforeach; endif; else: echo "" ;endif; ?>
+					<div class="blog-divider"></div>
+					<?php } ?>
+					<?php $i = $i + 1; endforeach; endif; else: echo "" ;endif; ?>
 				
+
+				<?php $lists = sp_sql_posts_paged("cid:$cat_id;order:post_date DESC;",5); $i = 1; ?>
+				<?php if(count($lists['posts']) > 1 ) { ?>
+				<div class="jtxw_asider_connews news">
+				    <p class="jtxw_p1">
+				        <span>
+				            <?php echo ($term_obj["name"]); ?>
+				        </span>
+				    </p>
+				    <ul>
+				    	<?php if(is_array($lists['posts'])): $i = 0; $__LIST__ = $lists['posts'];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; $smeta=json_decode($vo['smeta'], true); $date = explode(" ",$vo['post_date'])[0]; ?>
+							<?php if ( $i != 1 ) { ?>
+								<li>
+						            <span class="jtxw_s1">
+						            </span>
+						            <span class="jtxw_s2">
+						                <?php echo ($date); ?>
+						            </span>
+						            <a href="<?php echo leuu('article/index',array('id'=>$vo['tid']));?>" class="jtxw_s3"><?php echo ($vo["post_title"]); ?></a>
+						        </li>
+							<?php } ?>
+							<?php $i = $i + 1; endforeach; endif; else: echo "" ;endif; ?>
+				    </ul>
+				</div>
+				<?php } ?>
 				<div class="pagination-centered">
 					<ul class="pagination">
 						<?php echo ($lists['page']); ?>

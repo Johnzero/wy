@@ -1,0 +1,53 @@
+[ 2015-01-24T09:58:51+08:00 ] 117.64.251.156 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000977s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `sp_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `sp_users` SET `user_login`='admin',`user_pass`='c535018ee946e10adc3949ba59abbe56e057f20f883e89af',`user_nicename`='admin',`user_email`='wangsong12332@sina.com',`user_url`='',`sex`='0',`last_login_ip`='117.64.251.156',`last_login_time`='2015-01-24 09:58:51',`create_time`='2015-01-07 04:24:04',`user_activation_key`='',`user_status`='1',`role_id`='1',`score`='0',`user_type`='1' WHERE `id` = '1' [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-24T10:15:52+08:00 ] 117.64.251.156 /index.php?g=Admin&m=authorize&a=add_post
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.001954s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002930s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_authorize` [ RunTime:0.0020s ]
+SQL: INSERT INTO `sp_authorize` (`username`,`uid`,`wechat_name`,`authorize`,`create_time`) VALUES ('丁贞香','阿丁纹绣15956925295','dingtaoxuan187','&lt;p&gt;&lt;img src=&quot;http://dns.hfnacai.com/data/upload/ueditor/20150124/54c30055d4500.jpg&quot; title=&quot;丁贞香授权认证书.jpg&quot; alt=&quot;丁贞香授权认证书.jpg&quot;/&gt;&lt;/p&gt;','1422065752') [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-24T10:15:56+08:00 ] 117.64.251.156 /index.php?g=Admin&m=authorize&a=delete&id=16
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_authorize` [ RunTime:0.0029s ]
+SQL: DELETE FROM `sp_authorize` WHERE `id` = 16 [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-24T10:15:59+08:00 ] 117.64.251.156 /index.php?g=Admin&m=authorize&a=delete&id=13
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000977s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `sp_users` WHERE ( id=1 ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `sp_authorize` [ RunTime:0.0020s ]
+SQL: DELETE FROM `sp_authorize` WHERE `id` = 13 [ RunTime:0.0000s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+
+[ 2015-01-24T17:47:19+08:00 ] 60.166.145.23 /index.php?g=Admin&m=public&a=dologin
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: Run Behavior\CheckLangBehavior [ RunTime:0.000976s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001953s ]
+SQL: SHOW COLUMNS FROM `sp_users` [ RunTime:0.0029s ]
+SQL: SELECT * FROM `sp_users` WHERE `user_login` = 'admin' LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `sp_users` SET `user_login`='admin',`user_pass`='c535018ee946e10adc3949ba59abbe56e057f20f883e89af',`user_nicename`='admin',`user_email`='wangsong12332@sina.com',`user_url`='',`sex`='0',`last_login_ip`='60.166.145.23',`last_login_time`='2015-01-24 17:47:19',`create_time`='2015-01-07 04:24:04',`user_activation_key`='',`user_status`='1',`role_id`='1',`score`='0',`user_type`='1' WHERE `id` = '1' [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: data D:\wy-master\application\Common\Controller\AppframeController.class.php 第 62 行.
+

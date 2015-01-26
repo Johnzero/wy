@@ -12,7 +12,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title><?php echo ($site_seo_title); ?> <?php echo ($site_name); ?></title>
+    <title><?php echo ($site_seo_title); ?></title>
     <meta name="keywords" content="<?php echo ($site_seo_keywords); ?>" />
     <meta name="description" content="<?php echo ($site_seo_description); ?>">
     <meta name="author" content="wangsong1233276@sina.com">
@@ -38,12 +38,12 @@
     <link href="/static/css/spectrum.css" rel="stylesheet">
     <!-- Favicons -->
     <link rel="shortcut icon" href="/static/img/ico/favicon.ico">
-    <link rel="apple-touch-icon" href="/static/img/ico/apple-touch-icon.png">
+ <!--    <link rel="apple-touch-icon" href="/static/img/ico/apple-touch-icon.png">
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/ico/apple-touch-icon-72.png">
     <link rel="apple-touch-icon" sizes="114x114" href="/static/img/ico/apple-touch-icon-114.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/ico/apple-touch-icon-144.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/static/img/ico/apple-touch-icon-144.png"> -->
 
-    <script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':8080/livereload.js?snipver=1"></' + 'script>')</script>
+    <script>// document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':8080/livereload.js?snipver=1"></' + 'script>')</script>
 
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -71,41 +71,17 @@
                                 </i>
                                 电话 : <?php echo ($site_admin_tel); ?>
                             </a>
-                            <a href="/static/mail%40example.html">
+                            <!-- <a href="/static/mail%40example.html">
                                 <i class="icon-envelope">
                                 </i>
                                 邮件 : <?php echo ($site_admin_email); ?>
-                            </a>
+                            </a> -->
                         </div>
                         <div class="pull-right">
                             <ul class="social pull-left">
                                 <li class="facebook">
-                                    <a href="/static/#">
-                                        <i class="icon-facebook">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="twitter">
-                                    <a href="/static/#">
-                                        <i class="icon-twitter">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="dribbble">
-                                    <a href="/static/#">
-                                        <i class="icon-dribbble">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="linkedin">
-                                    <a href="/static/#">
-                                        <i class="icon-linkedin">
-                                        </i>
-                                    </a>
-                                </li>
-                                <li class="rss">
-                                    <a href="/static/#">
-                                        <i class="icon-rss">
+                                    <a href="http://weibo.com/p/1006065454998491/home?from=page_100606&mod=TAB#place">
+                                        <i class="icon-weibo">
                                         </i>
                                     </a>
                                 </li>
@@ -143,7 +119,7 @@
             <!-- Header Top Bar End -->
             <!-- Main Header Start -->
             <div class="main-header">
-                <div class="container">
+                <div class="container" style="width:1140px;">
                     <!-- TopNav Start -->
                     <div class="topnav navbar-header">
                         <a class="navbar-toggle down-button" data-toggle="collapse" data-target=".slidedown">
@@ -174,7 +150,7 @@
                         <ul class="nav navbar-nav sf-menu">
                             <li><a id="current" href="/">&nbsp;&nbsp;首页&nbsp;&nbsp;</a></li>
                             <li>
-                               <a href="/index.php?g=portal&m=list&a=index&id=1">
+                               <a href="#">
                                     走进微赢
                                    <span class="sf-sub-indicator">
                                    <i class="icon-angle-down "></i>
@@ -182,61 +158,56 @@
                                </a>
                                <ul>
                                   <li><a href="<?php echo U('portal/article/index',array('id'=>2));?>" class="sf-with-ul" target="_blank">微赢简介</a></li>
-                                  <li><a href="/static/index-4.html" class="sf-with-ul" target="_blank">微赢动态</a></li>
-                                  <li><a href="/static/index-nivo.html" class="sf-with-ul" target="_blank">微赢团队</a></li>
-                                  <li><a href="/static/index-nivo.html" class="sf-with-ul" target="_blank">微赢风貌</a></li>
+                                  <li><a href="/index.php?g=portal&m=list&a=index&id=7" class="sf-with-ul" target="_blank">微赢动态</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=26" class="sf-with-ul" target="_blank">微赢团队</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=27" class="sf-with-ul" target="_blank">微赢风貌</a></li>
                                </ul>
                             </li>
                             <li>
-                               <a  href="/index.php?g=portal&m=list&a=index&id=3" class="sf-with-ul">
+                               <a href="/index.php?g=portal&m=list&a=index&id=8">
+                                    媒体采访
+                                   <span class="sf-sub-indicator">
+                                   <i class="icon-angle-down "></i>
+                                   </span>
+                               </a>
+                            </li>
+                            <li>
+                               <a href="#" class="sf-with-ul">
                                品牌动态 
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/static/shortcodes.html" class="sf-with-ul" target="_blank">品牌简介</a></li>
-                                  <li><a href="/static/icons.html" class="sf-with-ul" target="_blank">品牌专利</a></li>
-                                  <li><a href="/static/pricing-table.html" class="sf-with-ul" target="_blank">产品安全</a></li>
-                                  <li style="display:none;">
-                                     <a href="/static/#" class="sf-with-ul"> 
-                                     Third Level Menu 
-                                     <span class="sf-sub-indicator pull-right">
-                                     <i class="icon-angle-right "></i>
-                                     </span>
-                                     </a>
-                                     <ul>
-                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
-                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
-                                        <li><a href="/static/#" class="sf-with-ul" target="_blank">Menu Item</a></li>
-                                     </ul>
-                                  </li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=15" class="sf-with-ul" target="_blank">品牌简介</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=28" class="sf-with-ul" target="_blank">品牌专利</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=29" class="sf-with-ul" target="_blank">产品安全</a></li>
                                </ul>
                             </li>
                             <li>
-                               <a href="/index.php?g=portal&m=list&a=index&id=4" class="sf-with-ul">
+                               <a href="#" class="sf-with-ul">
                                微赢商学院
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/static/about.html" class="sf-with-ul" target="_blank">学院介绍</a></li>
-                                  <li><a href="/static/services.html" class="sf-with-ul" target="_blank">师资团队</a></li>
-                                  <li><a href="/static/testimonials.html" class="sf-with-ul" target="_blank">课程大纲</a></li>
-                                  <li><a href="/static/testimonials.html" class="sf-with-ul" target="_blank">创业故事</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=22" class="sf-with-ul" target="_blank">学院介绍</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=24" class="sf-with-ul" target="_blank">师资团队</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=25" class="sf-with-ul" target="_blank">课程大纲</a></li>
+                                  <li><a href="/index.php?g=portal&m=list&a=index&id=6" class="sf-with-ul" target="_blank">创业故事</a></li>
                                </ul>
                             </li>
                             <li>
-                               <a href="/index.php?g=portal&m=list&a=index&id=5" class="sf-with-ul">
+                               <a href="#" class="sf-with-ul">
                                会员中心
                                <span class="sf-sub-indicator">
                                <i class="icon-angle-down "></i>
                                </span>
                                </a>
                                <ul>
-                                  <li><a href="/static/portfolio-two.html" class="sf-with-ul" target="_blank">授权查询</a></li>
-                                  <li><a href="/static/portfolio-three.html" class="sf-with-ul" target="_blank">加盟政策</a></li>
+                                  <li><a href="/index.php?g=portal&m=index&a=cha&id=30" class="sf-with-ul" target="_blank">授权查询</a></li>
+                                  <li><a href="/index.php?g=portal&m=article&a=index&id=31" class="sf-with-ul" target="_blank">加盟政策</a></li>
                                </ul>
                             </li>
                             <!-- <li>
@@ -267,10 +238,10 @@
 </style>
 
 <div class="system-message">
-<?php if(isset($message)): ?><h1>^_^</h1>
+<?php if(isset($message)): ?><!-- <h1>^_^</h1> -->
 <p class="success"><?php echo($message); ?></p>
 <?php else: ?>
-<h1>&gt;_&lt;</h1>
+<!-- <h1>&gt;_&lt;</h1> -->
 <p class="error"><?php echo($error); ?></p><?php endif; ?>
 	<p class="detail"></p>
 	<p class="jump">
@@ -317,10 +288,10 @@ var interval = setInterval(function(){
                                   <i class="icon-phone"></i>
                                   <p><strong>电话:</strong> 0551-68998601</p>
                                </li>
-                               <li>
+                               <!-- <li>
                                   <i class="icon-envelope"></i>
                                   <p><strong>Email:</strong>info@fifothemes.com</p>
-                               </li>
+                               </li> -->
                             </ul>
                         </section>
 
@@ -347,7 +318,7 @@ var interval = setInterval(function(){
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12 text-center">
-                            Copyright &copy; 2014.Company name All rights reserved.
+                            Copyright &copy; 2014.微赢生物科技有限公司 All rights reserved.
                         </div>
                         <!-- <div class="col-lg-6 col-md-6 col-xs-12 col-sm-6 ">
                             <ul class="social social-icons-footer-bottom">

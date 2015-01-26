@@ -58,6 +58,15 @@ jQuery().waypoint && jQuery("body").imagesLoaded(function () {
 	
     jQuery(function () {
         jQuery('ul.sf-menu').stop().superfish();
+
+        jQuery(".navbar-toggle").click( function () {
+            if ( jQuery(".navbar-collapse").hasClass("collapse") ) {
+                jQuery(".navbar-collapse").removeClass("collapse");
+            }else {
+                jQuery(".navbar-collapse").addClass("collapse");
+            }
+        });
+
         jQuery(".slide li").hover( function () {
             jQuery(this).find("a").addClass("white");
         }, function() {
